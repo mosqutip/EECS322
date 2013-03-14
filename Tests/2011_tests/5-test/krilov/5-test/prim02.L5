@@ -1,0 +1,3 @@
+(let ([f (lambda (op arg)
+           (op arg))])
+  (f print 7))

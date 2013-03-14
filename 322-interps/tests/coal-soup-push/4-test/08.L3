@@ -1,0 +1,6 @@
+((:fn 4 :callback)
+ (:fn (n c)
+ 	(let ([x1 (* n 2)])
+ 		(c x1)))
+ (:callback (x)
+ 	(print x)))

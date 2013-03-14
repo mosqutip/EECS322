@@ -1,0 +1,27 @@
+((
+ (x <- 21)
+ (ecx <- x)
+ (call :add)
+ (result <- eax)
+ (eax <- (print result)))
+
+ (:add
+  (x <- ecx)
+  (res <- x = 1)
+  (cjump res = 1 :then0 :else0)
+  :then0
+  (eax <- x)
+  (return)
+  :else0
+  (next <- x)
+  (next -= 3)
+  (next += 1)
+  (ecx <- next)
+  (call :add)
+  (ret <- eax)
+  (ret2 <- ret)
+  (ret2 += x)
+  (ret2 -= 1)
+  (eax <- ret2)
+  (return)))
+  

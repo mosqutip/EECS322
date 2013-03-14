@@ -1,0 +1,5 @@
+((let ([w (:f 1 2 3)])
+    (print w))
+ (:f (x y z)
+     (let ([x1 (+ x y)])
+        (+ x1 z))))

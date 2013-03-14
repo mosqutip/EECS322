@@ -1,0 +1,11 @@
+((let ([x 10])
+      (let ([result (:add x)])
+      	   (print result)))
+ (:add (x)
+       (let ([res (= x 1)])
+              (if res
+	          x
+		  (let ([next (- x 1)])
+		       (let ([ret (:add next)])
+		       	    (let ([ret2 (+ ret x)])
+			    	 ret2)))))))

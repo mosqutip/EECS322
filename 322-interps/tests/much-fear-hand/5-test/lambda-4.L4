@@ -1,0 +1,28 @@
+((let ([__l5_var_v6 (make-closure :__l5_label_l5 (new-tuple ))])
+((closure-proc __l5_var_v6) (closure-vars __l5_var_v6)
+(new-tuple (make-closure :__l5_label_l0 (new-tuple ))
+2
+3
+4
+5)))
+(:__l5_label_l0 (__l5_varstup
+y)
+(print y))
+
+(:__l5_label_l5 (__l5_varstup
+__l5_argstup)
+(let ([x4 (aref __l5_argstup 4)])
+(let ([x3 (aref __l5_argstup 3)])
+(let ([x2 (aref __l5_argstup 2)])
+(let ([x1 (aref __l5_argstup 1)])
+(let ([y (aref __l5_argstup 0)])
+(begin (let ([__l5_var_v1 y])
+((closure-proc __l5_var_v1) (closure-vars __l5_var_v1)
+x1)) (begin (let ([__l5_var_v2 y])
+((closure-proc __l5_var_v2) (closure-vars __l5_var_v2)
+x2)) (begin (let ([__l5_var_v3 y])
+((closure-proc __l5_var_v3) (closure-vars __l5_var_v3)
+x3)) (let ([__l5_var_v4 y])
+((closure-proc __l5_var_v4) (closure-vars __l5_var_v4)
+x4)))))))))))
+)

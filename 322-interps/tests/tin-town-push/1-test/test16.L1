@@ -1,0 +1,14 @@
+(((ecx <- 5)
+  (cjump ecx = 5 :weird :weirder)
+  :weird
+  (goto :huh)
+  :strange
+  (eax <- (print ecx))
+  (goto :ok)
+  :weirder
+  (goto :strange)
+  :huh
+  (ecx *= 2)
+  (ecx += 1)
+  (eax <- (print ecx))
+  :ok))

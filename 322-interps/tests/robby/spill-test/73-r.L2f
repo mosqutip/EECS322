@@ -1,0 +1,1 @@
+((eax <<= g) (eax <<= g) (eax <<= g) (eax <<= g)) r -8 s

@@ -1,0 +1,17 @@
+((print
+  (let ((g11 (make-closure :g12 (new-tuple))))
+    ((closure-proc g11)
+     (closure-vars g11)
+     (new-tuple
+      1
+      1
+      ((closure-proc g11) (closure-vars g11) (new-tuple 1 2 3 4 5))
+      1
+      1))))
+ (:g12
+  (vars args)
+  (let ((n (aref args 4)))
+    (let ((m (aref args 3)))
+      (let ((z (aref args 2)))
+        (let ((y (aref args 1)))
+          (let ((x (aref args 0))) (+ x (- y (* z (+ m n)))))))))))

@@ -1,0 +1,6 @@
+(letrec ((f (lambda (x)
+                (if (= x 0)
+                    1
+                    (+ x (f (- x 1)))))))
+    (print (+ (f 5) (let ((f (lambda (x) (* x 2))))
+                        (f 4)))))

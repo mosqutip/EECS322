@@ -1,0 +1,7 @@
+;; does some basic arithmetic: 2*3+4
+(((eax <- 2)
+  (eax *= 3)
+  (eax += 4)
+  (eax <<= 1)
+  (eax += 1)		;; tag
+  (eax <- (print eax))))

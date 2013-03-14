@@ -1,0 +1,7 @@
+((x <- 4)
+ (y <- 13)
+ (eax <- (allocate x y))
+ (ebx <- (allocate y x))
+ (q <- 18)
+ (z <- 33)
+ (ecx <- (allocate z q)))

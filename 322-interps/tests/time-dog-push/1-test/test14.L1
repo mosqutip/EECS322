@@ -1,0 +1,14 @@
+(((cjump 145 <= 143 :option1 :option2)
+  :option1
+  (eax <- (print 3))
+
+  :option2
+  (eax <- (print 5))
+  (cjump 1 = 1 :option4 :option3)  
+
+  :option3
+  (eax <- (print 7))
+ 
+
+  :option4
+  (eax <- (print 9))))

@@ -1,0 +1,1 @@
+((print (alen (new-array (+ 1 2) 4))))

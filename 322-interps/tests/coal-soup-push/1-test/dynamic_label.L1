@@ -1,0 +1,9 @@
+;; stores a label location in a register, then goes to it.
+(((eax <- :gohere)
+  (call eax))
+  (:gohere
+  (eax <- (print 201))
+  (return))
+  (:nothere
+  (eax <- (print 401))
+  (return)))

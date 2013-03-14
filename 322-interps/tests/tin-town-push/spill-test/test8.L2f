@@ -1,0 +1,7 @@
+((eax <- (allocate a b))
+ (b += a)
+ (a <<= b)
+ (return))
+ b
+ -4
+ s

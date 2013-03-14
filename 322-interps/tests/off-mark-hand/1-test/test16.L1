@@ -1,0 +1,35 @@
+((
+ (esi <- 21)
+ (eax <- (allocate esi 201))
+ (ebx <- eax)
+ (ebx += 4)
+
+
+ (esi <- ebx)
+ (ecx <- 1)
+ :for1
+ (cjump ecx < 21 :cont :exit_for1)
+ :cont
+ ((mem esi 0) <- ecx)
+ (ecx += 2)
+ (esi += 4)
+ (goto :for1)
+ :exit_for1
+
+ (edx <- 1)
+ (esi <- ebx)
+ (ecx <- 1)
+ :for2
+ (cjump ecx < 21 :cont2 :exit_for2)
+ :cont2
+ (eax <- (mem esi 0))
+ (edx += eax)
+ (edx -= 1)
+ (esi += 4)
+ (ecx += 2)
+ (goto :for2)
+ :exit_for2
+
+ (eax <- (print edx))
+
+))

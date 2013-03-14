@@ -1,0 +1,10 @@
+(((eax <- (allocate 3 0))
+  (ebx <- eax)
+  (ebx &= 1)
+  (cjump ebx = 1 :notarr :arr)
+  :arr
+   (eax <- (print 3))
+   (goto :done)
+  :notarr
+   (eax <- (print 1))
+  :done))

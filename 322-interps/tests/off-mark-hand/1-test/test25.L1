@@ -1,0 +1,9 @@
+((
+  (esi <- 11)
+  (eax <- (allocate esi 31))
+  (edx <- 21)
+  (cjump esi < edx :outbound :ok)
+  :outbound
+  (eax <- (array-error eax edx))
+  :ok
+))

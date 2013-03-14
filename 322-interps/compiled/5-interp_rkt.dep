@@ -1,0 +1,1 @@
+("5.2" ("1f185a89bb1915bdf889890b856de5c013792b7f" . "96e9d5fcf6a4b945b3f5df5d94c47a7c1db64892") (collects #"racket" #"base.rkt") #"/Users/robby/git/robby/compilers/interp/5-lang.rkt" #"/Users/robby/git/robby/compilers/interp/L.rkt" (collects #"racket" #"runtime-path.rkt") (collects #"racket" #"base" #"lang" #"reader.rkt"))

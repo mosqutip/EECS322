@@ -1,0 +1,8 @@
+; x = 1 + 1
+
+(((ecx <- 3)
+  (edx <- 3)
+  (edx += ecx)
+  (edx -= 1)
+  (eax <- (print edx))))
+

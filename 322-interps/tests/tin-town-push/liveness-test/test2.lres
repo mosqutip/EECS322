@@ -1,0 +1,9 @@
+((in (eax edi esi)
+     (eax edi edx esi)
+     (eax edi edx esi)
+     (eax edi esi))
+ (out (eax edi edx esi)
+      (eax edi edx esi)
+      (eax edi esi)
+      ()))
+

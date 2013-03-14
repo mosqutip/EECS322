@@ -1,0 +1,3 @@
+((let ([array (new-array 11 1)])
+   (let ([check (a? array)])
+     (print check))))

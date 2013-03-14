@@ -1,0 +1,7 @@
+((let ([n (* 4 2)])
+	(:p n))
+ (:p (x)
+  (if (a? x)
+  	(begin (print 1)
+  		   (print x))
+  	(print x))))

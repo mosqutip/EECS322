@@ -1,0 +1,17 @@
+(
+  (eax <- 7)
+  (eax += 8)
+  (eax -= 1)
+  (eax >>= 1)
+  (x <- 1000)
+  (x <- x)
+  (eax *= x)
+  (y <- eax)
+  (x <- y)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))
+ )
+x
+-100
+spill_

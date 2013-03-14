@@ -1,0 +1,14 @@
+(((mem ebp -4) <- 5)
+ (n <- 3)
+ (eax <- 1)
+ :loop
+ (cjump n = 0 :done :continue)
+ :continue
+ (s_0 <- (mem ebp -4))
+ (eax *= s_0)
+ (n -= 1)
+ (goto :loop)
+ :done
+ (eax <<= 1)
+ (eax += 1)
+ (eax <- (print eax)))

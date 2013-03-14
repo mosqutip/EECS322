@@ -1,0 +1,1 @@
+((eax <- (allocate CQ 2)) (eax <- (allocate CQ 2))) CQ 0 s

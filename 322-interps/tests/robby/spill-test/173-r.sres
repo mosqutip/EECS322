@@ -1,0 +1,1 @@
+((eax <- (allocate edx A)) (eax <- (allocate edx A)) (eax <- (allocate edx A)) (eax <- (allocate edx A)))

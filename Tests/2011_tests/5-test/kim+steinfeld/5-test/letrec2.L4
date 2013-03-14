@@ -1,0 +1,10 @@
+((let ([_x 5])
+   (let ([x (new-tuple 0)])
+     (begin (aset x 0 (make-closure :exp (new-tuple x _x)))
+     (print ((closure-proc (aref x 0)) (closure-vars (aref x 0)) 4 1)))))
+ (:exp (vars y res)
+       (let ([y1 (aref vars 0)])
+         (let ([y2 (aref vars 1)])
+           (if (= y 0)
+               res
+               ((closure-proc (aref y1 0)) (closure-vars (aref y1 0)) (- y 1) (* res y2)))))))

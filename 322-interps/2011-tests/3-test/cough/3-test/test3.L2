@@ -1,0 +1,11 @@
+(((call :__main__))
+(:__main__
+(ecx <- 21)
+(tail-call :f))
+(:f
+(x <- ecx)
+(y <- 15)
+(eax <- (print y))
+(eax <- eax)
+(return)
+(return)))

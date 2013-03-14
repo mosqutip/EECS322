@@ -1,0 +1,45 @@
+(
+(;;main
+    (esi <- 9001)
+    (eax <- (print esi))    ;; 4500
+    (eax <- (allocate 1 5))
+    (ebx <- eax)
+    (eax <- (print ebx))
+    (edx <- (mem ebx 0))
+    (edx <<= 1)
+    (edx += 1)
+    (eax <- (print edx))    ;; 0
+    
+    ((mem ebx 0) <- 7)
+    (edx <- (mem ebx 0))
+    (edx <<= 1)
+    (edx += 1)
+    (eax <- (print edx))    ;; 7
+    
+    (ebx <- (mem ebx 0))
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 7
+    
+    (ebx += 2)
+    (eax <- (print ebx))    ;; 8
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 17
+    
+    (ecx <- 2)
+    (ebx <<= ecx)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 70
+    
+    (ebx <- ebx = ebx)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+    
+    (ebx <- 1 = 2)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+)
+)

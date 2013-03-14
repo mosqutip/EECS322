@@ -1,0 +1,9 @@
+((
+ (eax <- 3)
+ (eax <<= 2)
+ (eax += 1)
+ (eax &= 4)
+ (eax *= 7)
+ (eax += 1)
+ (eax <- (print eax))
+))

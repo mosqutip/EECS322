@@ -1,0 +1,8 @@
+(letrec ((f (if 1 (lambda (x)
+                    (if (< x 2)
+                        1
+                        (+ (f (- x 1))
+                           (f (- x 2)))))
+               (lambda (x)
+                    (+ x 1)))))
+    (print (f 10)))

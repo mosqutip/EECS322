@@ -1,0 +1,8 @@
+((let ([x 2])
+  (let ([cls (make-closure :cls x)])
+    (let ([proc (closure-proc cls)])
+      (let ([var (closure-vars cls)])
+        (let ([val (proc 3 var)])
+          (print val))))))
+ (:cls (n x)
+   (* n x)))

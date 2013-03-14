@@ -1,0 +1,9 @@
+(((eax <- 21)
+  (cjump eax = 10 :stillnotake :nottake)
+  :take
+  (eax <- (print eax))
+  :nottake
+  :stillnotake
+  (eax += eax)
+  (eax += 1)
+  (eax <- (print eax))))

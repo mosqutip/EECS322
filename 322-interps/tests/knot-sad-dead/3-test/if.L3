@@ -1,0 +1,11 @@
+((if 0
+     (print 0)
+     (if 1
+         (let ([x 1])
+           (if x
+               (let ([y 0])
+                 (if y
+                     (print 0)
+                     (print 5)))
+               (print 0)))
+         (print 0))))

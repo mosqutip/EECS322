@@ -1,0 +1,4 @@
+ (let ([x (< 5 6)])
+   (if x
+     (print 11)
+     (print 10)))

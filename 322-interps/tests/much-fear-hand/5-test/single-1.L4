@@ -1,0 +1,39 @@
+((let ([op1 (make-closure :__l5_label_l0 (new-tuple ))])
+(let ([op2 (make-closure :__l5_label_l1 (new-tuple ))])
+(let ([op3 (make-closure :__l5_label_l2 (new-tuple ))])
+(let ([op4 (make-closure :__l5_label_l3 (new-tuple ))])
+(begin (let ([__l5_var_v5 op3])
+((closure-proc __l5_var_v5) (closure-vars __l5_var_v5)
+(let ([__l5_var_v4 op1])
+((closure-proc __l5_var_v4) (closure-vars __l5_var_v4)
+3)))) (begin (let ([__l5_var_v7 op3])
+((closure-proc __l5_var_v7) (closure-vars __l5_var_v7)
+(let ([__l5_var_v6 op2])
+((closure-proc __l5_var_v6) (closure-vars __l5_var_v6)
+op1)))) (begin (let ([__l5_var_v9 op3])
+((closure-proc __l5_var_v9) (closure-vars __l5_var_v9)
+(let ([__l5_var_v8 op3])
+((closure-proc __l5_var_v8) (closure-vars __l5_var_v8)
+5)))) (let ([__l5_var_v11 op3])
+((closure-proc __l5_var_v11) (closure-vars __l5_var_v11)
+(let ([__l5_var_v10 op4])
+((closure-proc __l5_var_v10) (closure-vars __l5_var_v10)
+(new-tuple 4
+5
+6))))))))))))
+(:__l5_label_l0 (__l5_varstup
+x0)
+(number? x0))
+
+(:__l5_label_l1 (__l5_varstup
+x0)
+(a? x0))
+
+(:__l5_label_l2 (__l5_varstup
+x0)
+(print x0))
+
+(:__l5_label_l3 (__l5_varstup
+x0)
+(alen x0))
+)

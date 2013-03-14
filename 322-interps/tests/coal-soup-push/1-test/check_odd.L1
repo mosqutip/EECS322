@@ -1,0 +1,28 @@
+;; Function that returns 1 if a number is odd. Else 0
+
+(((eax <- 3)
+  (call :check_odd)
+  (eax <<= 1)		;; tag
+  (eax += 1)
+  (eax <- (print eax))
+  (eax <- 6)
+  (call :check_odd)
+  (eax <<= 1)		;; tag
+  (eax += 1)
+  (eax <- (print eax)))
+
+  (:check_odd
+
+  :loop
+  (cjump eax = 0 :not_odd :continue)
+  :continue
+  (cjump eax = 1 :odd :continue2)
+  :continue2
+  (eax -= 2)
+  (goto :loop)
+  :odd
+  (eax <- 1)
+  (return)
+  :not_odd
+  (eax <- 0)
+  (return)))

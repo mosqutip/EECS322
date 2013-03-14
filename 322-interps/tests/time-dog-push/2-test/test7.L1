@@ -1,0 +1,8 @@
+((
+  (ebx <- :fun)
+  (eax <- 1)
+  (call ebx))
+ 
+ (:fun
+  (eax += 1)
+  (return)))

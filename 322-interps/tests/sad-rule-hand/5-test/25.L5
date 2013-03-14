@@ -1,0 +1,7 @@
+(let ((g (lambda (g) (+ g g))))
+  (print
+    (+ (g 1) (let ((f g))
+            (let ((g 1))
+                (let ((g (lambda (g) (* g 10))))
+                    (let ((g 2))
+                        (f (f (f (f g)))))))))))

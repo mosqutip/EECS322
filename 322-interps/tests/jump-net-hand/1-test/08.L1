@@ -1,0 +1,6 @@
+; a[4] = {1,1,1,1}
+; print a
+
+(((esi <- 9)
+  (eax <- (allocate esi 3))
+  (eax <- (print eax))))

@@ -1,0 +1,4 @@
+((cjump eax = 4 :lbl :lbl))
+x
+-4
+spill_

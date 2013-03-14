@@ -1,0 +1,54 @@
+(
+(;;main
+    (eax <- 3)  ;; 1
+    (edx <- 5)  ;; 2
+    (ecx <- 7)  ;; 3
+    (esi <- 11) ;; 5
+    (edi <- 13) ;; 6
+    (ebx <- 17) ;; 8
+    
+    (eax <- (print eax))
+    (edx <- 5)
+    (eax <- (print edx))
+    (ecx <- 7)
+    (eax <- (print ecx))
+    (eax <- (print esi))
+    (eax <- (print edi))
+    (eax <- (print ebx))
+    
+    (eax <- (allocate 1001 5))
+    (ebx <- eax)
+    (eax <- (print ebx))
+    (ecx <- (mem ebx 0))
+    (ecx <<= 1)
+    (ecx += 1)
+    (eax <- (print ecx))
+    
+    (eax <- (allocate 1 5))
+    (ebx <- eax)
+    (eax <- (print ebx))
+    (ecx <- (mem ebx 0))
+    (ecx <<= 1)
+    (ecx += 1)
+    (eax <- (print ecx))
+    
+    (esi <- 1)
+    (esi <<= 30)
+    (esi -= 1)
+    
+    (esi <- 1001)
+    (eax <- (allocate esi 5))
+    (ebx <- eax)
+    (ecx <- (mem ebx 0))
+    (ecx <<= 1)
+    (ecx += 1)
+    (eax <- (print ecx))
+    
+    (eax <- (allocate esi 5))
+    (ebx <- eax)
+    (ecx <- (mem ebx 0))
+    (ecx <<= 1)
+    (ecx += 1)
+    (eax <- (print ecx))
+)
+)

@@ -1,0 +1,54 @@
+#!/usr/bin/env python
+
+import sys, subprocess
+
+preamble = """  .text
+   .globl go
+  .type   go, @function
+go:
+
+"""
+
+postamble = """
+  .size     go, .-go
+  .section  .note.GNU-stack,"",@progbits
+"""
+
+def main():
+  if (len(sys.argv) != 2):
+    raise NameError('wrong number of args')
+
+  subprocess.check_call(["gcc", "-m32", "-c", "-O2", "-o", "runtime.o",
+    "runtime.c"])
+
+  arg = sys.argv[1]
+
+  f = open(arg, 'r')
+  L1 = f.readlines()
+  f.close()
+
+  compile_file = open("x.L1", 'w')
+  for line in L1:
+    compile_file.write(line)
+  compile_file.close()
+
+  subprocess.check_call(["racket","L1.rkt"], stdout=subprocess.PIPE)
+
+  newfile = open("prog.temp", 'r')
+  asm = newfile.readlines()
+
+  outfile = open('prog.S', 'w')
+  outfile.write(preamble)
+
+  for line in asm:
+    outfile.write(line)
+
+  outfile.write(postamble)
+  outfile.close()
+  newfile.close()
+
+  subprocess.check_call(["as", "--32", "-o", "prog.o", "prog.S"])
+  subprocess.check_call(["gcc", "-m32", "-o", "a.out", "prog.o", "runtime.o"])
+
+if __name__ == '__main__':
+  main()

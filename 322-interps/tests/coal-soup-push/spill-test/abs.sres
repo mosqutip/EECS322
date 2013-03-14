@@ -1,0 +1,12 @@
+(((mem ebp -4) <- -4)
+ (s_0 <- (mem ebp -4))
+ (cjump s_0 < 0 :neg :pos)
+ :neg
+ (s_1 <- (mem ebp -4))
+ (s_1 *= -1)
+ ((mem ebp -4) <- s_1)
+ :pos
+ (ebx <- (mem ebp -4))
+ (ebx <<= 1)
+ (ebx += 1)
+ (eax <- (print ebx)))

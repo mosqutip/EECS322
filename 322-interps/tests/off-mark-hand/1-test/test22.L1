@@ -1,0 +1,13 @@
+((
+  (edx <- 1); i=0;
+  (call :foobar)
+  (eax <- (print eax)))
+
+ (:foobar
+   (cjump 19 < edx :ret :cont)
+  :ret
+   (eax <- edx)
+   (return)	 
+  :cont
+   (edx += 2)
+   (tail-call :foobar)))

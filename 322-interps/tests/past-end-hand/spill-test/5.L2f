@@ -1,0 +1,4 @@
+((ebx <- eax)
+ (ecx <- ebx)
+ (alpha <- ecx))
+alpha -4 rep_

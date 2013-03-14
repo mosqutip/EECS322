@@ -1,0 +1,6 @@
+((let ([var (new-array 5 0)])
+   (let ([x1 (aset var 1 1)])
+     (let ([x2 (aset var 2 2)])
+       (let ([x4 (aset var 4 4)])
+         (let ([x3 (aref var 3)])
+           (print x3)))))))

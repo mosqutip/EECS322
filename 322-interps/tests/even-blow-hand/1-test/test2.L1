@@ -1,0 +1,56 @@
+(
+(;;main
+    (ebx <- 1)
+    (call :f)
+)
+
+(:f
+    (eax <- (print ebx))
+    (ebx += 6)
+    (cjump ebx < 2001 :continuef :endf)
+    
+    :continuef
+    
+    (ecx <- ebx)
+    (ecx >>= 2)
+    (ecx &= 1)
+    (cjump ecx = 1 :callf :callg)
+    
+    :callf
+    (call :f)
+    (goto :endf)
+    
+    :callg
+    (call :g)
+    (goto :endf)
+    
+    :endf
+    
+    (return)
+)
+
+(:g
+    (eax <- (print ebx))
+    (ebx -= 2)
+    (cjump ebx < 2001 :continuef2 :endf2)
+    
+    :continuef2
+    
+    (ecx <- ebx)
+    (ecx >>= 2)
+    (ecx &= 1)
+    (cjump ecx = 1 :callf2 :callg2)
+    
+    :callf2
+    (call :f)
+    (goto :endf2)
+    
+    :callg2
+    (call :g)
+    (goto :endf2)
+    
+    :endf2
+    
+    (return)
+)
+)

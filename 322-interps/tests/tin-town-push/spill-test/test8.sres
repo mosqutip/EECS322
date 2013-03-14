@@ -1,0 +1,9 @@
+((s0 <- (mem ebp -4))
+ (eax <- (allocate a s0))
+ (s1 <- (mem ebp -4))
+ (s1 += a)
+ ((mem ebp -4) <- s1)
+ (s2 <- (mem ebp -4))
+ (a <<= s2)
+ (return))
+ 

@@ -1,0 +1,6 @@
+((print (:exp 3 3))
+(:exp (a b)
+      (if (= b 0)
+          a
+          (:exp (* a a)
+                (- b 1)))))

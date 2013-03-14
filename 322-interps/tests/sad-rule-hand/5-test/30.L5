@@ -1,0 +1,3 @@
+(letrec ((x 1))
+    (let ((f (lambda (y) (+ y x))))
+        (print (f 10))))

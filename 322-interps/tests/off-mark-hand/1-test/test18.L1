@@ -1,0 +1,20 @@
+((
+ (edx <- 21)
+ (call :add_num)
+ (eax <- (print eax)))
+
+ (:add_num
+  (eax <- 1)
+  (ecx <- 1)
+  :do
+  (ebx <- ecx)
+  (ebx >>= 1)
+  (ebx *= ebx)
+  (ebx <<= 1)
+  (ebx += 1)
+  (eax += ebx)
+  (eax -= 1)
+  (ecx += 2)
+  (cjump ecx <= edx :do :exit_do)
+  :exit_do
+  (return)))

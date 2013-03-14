@@ -1,0 +1,10 @@
+;; function that multiplies eax and ebx
+(((eax <- 2)
+  (ebx <- 3)
+  (call :mult)
+  (eax <<= 1)		;; tag
+  (eax += 1)
+  (eax <- (print eax)))
+
+  (:mult (eax *= ebx)
+  		 (return)))

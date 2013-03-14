@@ -1,0 +1,12 @@
+(
+  (x <- 11)
+  (eax <- (allocate x 31))
+  (y <- 21)
+  (cjump x < y :outbound :ok)
+  :outbound
+  (eax <- (array-error eax y))
+  :ok
+)
+y
+-8
+sec_

@@ -1,0 +1,7 @@
+((
+	(esi <- 1001)
+	(eax <- (allocate esi 3))
+	(edi <- eax)
+	(ecx <- (mem edi 400))
+	(eax <- (print ecx))
+))

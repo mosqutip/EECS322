@@ -1,0 +1,7 @@
+((:fact
+  :loop
+  (ebx *= ecx)
+  (ecx -= 1)
+  (cjump ecx = 0 :done :loop)
+  :done
+   (return)))

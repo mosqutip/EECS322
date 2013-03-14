@@ -1,0 +1,9 @@
+((x <- 1)
+ (y <- 2)
+ (z <- 3)
+ (eax <- x)
+ (eax *= y)
+ (eax += z)
+ (eax <<= 1)	; tag
+ (eax += 1)
+ (eax <- (print eax))) y -4 s_

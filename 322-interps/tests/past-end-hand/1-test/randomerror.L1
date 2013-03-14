@@ -1,0 +1,9 @@
+(((ebx <- 7)
+  (eax <- (allocate ebx 9))
+  (ebx <- eax)
+  (call :one))
+ (:one
+  (tail-call :two))
+ (:two
+  (eax <- (array-error ebx 17))
+  (return)))

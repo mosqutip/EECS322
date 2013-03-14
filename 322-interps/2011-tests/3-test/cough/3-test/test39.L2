@@ -1,0 +1,38 @@
+(((call :__main__))
+(:__main__
+(eax <- (allocate 7 15))
+(a <- eax)
+(b <- 5)
+(b >>= 1)
+(__temp0 <- (mem a 0))
+(cjump __temp0 <= b :__temp1 :__temp3)
+:__temp1
+(b <<= 1)
+(b += 1)
+(eax <- (array-error a b))
+:__temp3
+(cjump b < 0 :__temp1 :__temp2)
+:__temp2
+(b += 1)
+(b *= 4)
+(b += a)
+((mem b 0) <- 19)
+(b <- 1)
+(v <- 5)
+(v >>= 1)
+(__temp4 <- (mem a 0))
+(cjump __temp4 <= v :__temp5 :__temp7)
+:__temp5
+(v <<= 1)
+(v += 1)
+(eax <- (array-error a v))
+:__temp7
+(cjump v < 0 :__temp5 :__temp6)
+:__temp6
+(v += 1)
+(v *= 4)
+(v += a)
+(v <- (mem v 0))
+(eax <- (print v))
+(eax <- eax)
+(return)))

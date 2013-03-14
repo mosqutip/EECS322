@@ -1,0 +1,7 @@
+((cjump 3 < 5 :go :end)
+ :go
+ ((mem ebp -16) <- 5)
+ (eax <- (mem ebp -16))
+ :end
+ (return))
+ 

@@ -1,0 +1,18 @@
+((x <- 1)
+ (y <- 1)
+ (goto :first)
+ :last
+ (goto :end)
+ :step
+  (t <- z)
+  (z <- x)
+  (x += t)
+  (x += y)
+  (y <- t)
+ (goto :last)
+ :first
+  (z <- x)
+  (z += y)
+ (goto :step)
+ :end
+  return

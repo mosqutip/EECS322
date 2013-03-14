@@ -1,0 +1,1 @@
+((eax <- (print 0)) (eax <- (print 0)) (eax <- (print 0)) (eax <- (print 0))) r -4 s

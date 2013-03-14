@@ -1,0 +1,41 @@
+((
+	(edx <- 1)
+	(ecx <- 3)
+	(ebx <- 5)
+	(edx <- edx < ebx)
+	(ecx <- ebx <= edx)
+	(edx <- edx = ecx)
+	(ebx <- edx = ebx)
+	(ecx <- edx < edx)
+
+	(ebx *= 2)
+	(ebx += 1)
+	(eax <- (print ebx))
+
+	(edx <- 1)
+	(ecx <- 3)
+	(ebx <- 5)
+	(edx <- edx < ebx)
+	(ecx <- ebx <= edx)
+	(edx <- edx = ecx)
+	(ebx <- edx = ebx)
+	(ecx <- edx < edx)
+
+	(ecx *= 2)
+	(ecx += 1)
+	(eax <- (print ecx))
+
+	(edx <- 1)
+	(ecx <- 3)
+	(ebx <- 5)
+	(edx <- edx < ebx)
+	(ecx <- ebx <= edx)
+	(edx <- edx = ecx)
+	(ebx <- edx = ebx)
+	(ecx <- edx < edx)
+
+	(edx *= 2)
+	(edx += 1)
+	(eax <- (print edx))
+
+))

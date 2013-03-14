@@ -1,0 +1,1 @@
+((print (let ([x (new-array 4 4)]) (begin (aset x (+ 2 1) (new-tuple 2 2)) (new-tuple x 1 x)))))

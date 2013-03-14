@@ -1,0 +1,17 @@
+((let ([x (make-closure :__l5_label_l0 (new-tuple ))])
+(let ([y (make-closure :__l5_label_l2 (new-tuple ))])
+(let ([__l5_var_v3 y])
+((closure-proc __l5_var_v3) (closure-vars __l5_var_v3)
+x
+5))))
+(:__l5_label_l0 (__l5_varstup
+x0)
+(print x0))
+
+(:__l5_label_l2 (__l5_varstup
+z
+v)
+(let ([__l5_var_v1 z])
+((closure-proc __l5_var_v1) (closure-vars __l5_var_v1)
+v)))
+)

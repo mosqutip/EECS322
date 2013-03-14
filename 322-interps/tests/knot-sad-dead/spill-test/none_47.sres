@@ -1,0 +1,1 @@
+((cjump eax < 4 :lbl :lbl))

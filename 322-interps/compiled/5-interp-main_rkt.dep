@@ -1,0 +1,1 @@
+("5.2" ("1028855424f802851686f07d1e6e1b05b0ccce74" . "cfe2a2fa09d9299d63515984a08c74fe8587b011") (collects #"scheme" #"main.rkt") #"/Users/robby/git/robby/compilers/interp/5-interp.rkt" (collects #"scheme" #"lang" #"reader.rkt"))

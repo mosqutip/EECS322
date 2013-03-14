@@ -1,0 +1,3 @@
+((let ([x1 (new-tuple 1 2 3)])
+    (let ([x2 (aref x1 1)])
+      (print x2))))

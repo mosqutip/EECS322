@@ -1,0 +1,7 @@
+((x <- 7)
+ (eax <- (allocate x 9))
+ (y <- eax)
+ (jmp :two)
+ :two
+  (eax <- (array-error y 17))
+  (return))

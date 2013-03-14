@@ -1,0 +1,13 @@
+(
+  :_main
+  (x <- eax)
+  (y <- edx)
+  (cjump x < y :l :ge)
+  :l
+  (eax <- 1)
+  (goto :exit)
+  :ge
+  (ebx <- 2)
+  :exit
+  (return)
+ )

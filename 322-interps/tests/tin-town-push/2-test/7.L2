@@ -1,0 +1,22 @@
+(((eax <- (allocate 5 3))
+  (array <- eax)
+  (size <- (mem array 0))
+  (pointer <- array)
+  (pointer += 4)
+  (eax <- pointer)
+  (edx <- size)
+  (call :print_array))
+ (:print_array
+  (pointer <- eax)
+  (size <- edx)
+  (i <- 0)
+  :loop
+  (cjump i < size :continue :done)
+  :continue
+  (element <- (mem pointer 0))
+  (eax <- (print element))
+  (i += 1)
+  (pointer += 4)
+  (goto :loop)
+  :done
+  (return)))

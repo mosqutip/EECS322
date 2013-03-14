@@ -1,0 +1,13 @@
+((product <- 1)
+
+ :loop
+ (cjump 0 < eax :do_work :done)
+   
+ :do_work
+ (product *= eax) ;; do multiplication
+ (eax -= 1) ;; decrement counter
+ (goto :loop)   
+
+ :done
+ (eax <- product)
+ (return)) product -4 s

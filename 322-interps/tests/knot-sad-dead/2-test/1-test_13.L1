@@ -1,0 +1,10 @@
+(((eax <- :printOne)
+  (call eax)
+  (eax <- :printTwo)
+  (call eax))
+ (:printOne
+  (eax <- (print 3))
+  (return))
+ (:printTwo
+  (eax <- (print 5))
+  (return)))

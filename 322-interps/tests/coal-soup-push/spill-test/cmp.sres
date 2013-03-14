@@ -1,0 +1,12 @@
+((x <- 4)
+ (y <- 9)
+ (s_0 <- x < y)
+ ((mem ebp -4) <- s_0)
+ (s_1 <- (mem ebp -4))
+ (cjump s_1 = 1 :true :false)
+ :true
+ (eax <- (print 123))
+ (goto :done)
+ :false
+ (eax <- (print 455))
+ :done)

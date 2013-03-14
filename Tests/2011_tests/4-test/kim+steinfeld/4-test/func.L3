@@ -1,0 +1,5 @@
+((let ([x (+ 3 2)])
+   (let ([res (:square x)])
+     (print res)))
+ (:square (x)
+          (* x x)))

@@ -1,0 +1,8 @@
+ (let ([x 17])
+   (let ([y 21])
+     (let ([z 34])
+       (let ([t x])
+         (let ([u (+ t y)])
+	   (let ([v (+ u z)])
+	     (let ([w (+ x v)])
+	       (print w))))))))

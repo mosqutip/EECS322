@@ -1,0 +1,3 @@
+(print ((lambda (x y z m n)
+            (+ x (+ y (+ z (+ m n)))))
+ 1 1 1 1 1))

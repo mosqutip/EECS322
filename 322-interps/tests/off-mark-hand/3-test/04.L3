@@ -1,0 +1,6 @@
+((let ([array (new-tuple 9 8 7 6 5 4 3 2 1 0)])
+      (let ([arrayFive (aref array 5)])
+      	   (let ([compare (= arrayFive 4)])
+	   	(if compare
+		    (print 1)
+		    (print 0))))))

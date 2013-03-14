@@ -1,0 +1,5 @@
+((let ([x 5])
+  (let ([x1 (:addsome x 2)])
+    (print x1)))
+ (:addsome (x y)
+   (+ x y)))

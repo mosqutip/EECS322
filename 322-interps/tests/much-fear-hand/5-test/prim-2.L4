@@ -1,0 +1,8 @@
+((let ([x (make-closure :__l5_label_l0 (new-tuple ))])
+(let ([__l5_var_v1 x])
+((closure-proc __l5_var_v1) (closure-vars __l5_var_v1)
+5)))
+(:__l5_label_l0 (__l5_varstup
+x0)
+(print x0))
+)

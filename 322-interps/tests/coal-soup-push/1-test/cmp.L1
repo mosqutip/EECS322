@@ -1,0 +1,7 @@
+;; Saves the result of a comparison and prints it
+(((eax <- 20)
+  (ebx <- eax < 50)
+  
+  (ebx <<= 1) ;; tag
+  (ebx += 1)
+  (eax <- (print ebx))))

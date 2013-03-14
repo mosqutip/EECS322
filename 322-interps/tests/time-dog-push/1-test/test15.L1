@@ -1,0 +1,11 @@
+(((ebx <- 7)
+  (goto :jump)
+  (ebx <- 10)
+
+  :jump
+  (eax <- (print ebx))
+  (goto :jump2)
+  (ebx <- 13)
+
+  :jump2
+  (eax <- (print ebx))))

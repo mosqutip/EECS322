@@ -1,0 +1,170 @@
+((let ((allocatebinding (new-array 1 1)))
+   (let ((arr 5))
+     (let ((allocatebindingx (new-array 1 1)))
+       (let ((arr (new-tuple 1 2 arr 4)))
+         (let ((allocatebindingxx (new-array 1 1)))
+           (let ((trash (print arr)))
+             (let ((allocatebindingxxx (new-array 1 1)))
+               (let ((x 2))
+                 (let ((allocatebindingxxxx (new-array 1 1)))
+                   (let ((x (aref arr x)))
+                     (let ((allocatebindingxxxxx (new-array 1 1)))
+                       (let ((trash (print x)))
+                         (let ((allocatebindingxxxxxx (new-array 1 1)))
+                           (let ((x 1))
+                             (let ((allocatebindingxxxxxxx (new-array 1 1)))
+                               (let ((arr (aref arr x)))
+                                 (let ((allocatebindingxxxxxxxx
+                                        (new-array 1 1)))
+                                   (let ((trash (print arr)))
+                                     (let ((allocatebindingxxxxxxxxx
+                                            (new-array 1 1)))
+                                       (let ((arr (new-tuple 1 2 3 4)))
+                                         (let ((allocatebindingxxxxxxxxxx
+                                                (new-array 1 1)))
+                                           (let ((x 1))
+                                             (let ((allocatebindingxxxxxxxxxxx
+                                                    (new-array 1 1)))
+                                               (let ((y 5))
+                                                 (let ((allocatebindingxxxxxxxxxxxx
+                                                        (new-array 1 1)))
+                                                   (let ((x (aset arr x y)))
+                                                     (let ((allocatebindingxxxxxxxxxxxxx
+                                                            (new-array 1 1)))
+                                                       (let ((trash
+                                                              (print arr)))
+                                                         (let ((allocatebindingxxxxxxxxxxxxxx
+                                                                (new-array
+                                                                 1
+                                                                 1)))
+                                                           (let ((arr
+                                                                  (new-tuple
+                                                                   1
+                                                                   2
+                                                                   3
+                                                                   4)))
+                                                             (let ((allocatebindingxxxxxxxxxxxxxxx
+                                                                    (new-array
+                                                                     1
+                                                                     1)))
+                                                               (let ((x 1))
+                                                                 (let ((allocatebindingxxxxxxxxxxxxxxxx
+                                                                        (new-array
+                                                                         1
+                                                                         1)))
+                                                                   (let ((y 5))
+                                                                     (let ((allocatebindingxxxxxxxxxxxxxxxxx
+                                                                            (new-array
+                                                                             1
+                                                                             1)))
+                                                                       (let ((y
+                                                                              (aset
+                                                                               arr
+                                                                               x
+                                                                               y)))
+                                                                         (let ((allocatebindingxxxxxxxxxxxxxxxxxx
+                                                                                (new-array
+                                                                                 1
+                                                                                 1)))
+                                                                           (let ((trash
+                                                                                  (print
+                                                                                   arr)))
+                                                                             (let ((allocatebindingxxxxxxxxxxxxxxxxxxx
+                                                                                    (new-array
+                                                                                     1
+                                                                                     1)))
+                                                                               (let ((arr
+                                                                                      (new-tuple
+                                                                                       1
+                                                                                       2
+                                                                                       3
+                                                                                       4)))
+                                                                                 (let ((allocatebindingxxxxxxxxxxxxxxxxxxxx
+                                                                                        (new-array
+                                                                                         1
+                                                                                         1)))
+                                                                                   (let ((x
+                                                                                          1))
+                                                                                     (let ((allocatebindingxxxxxxxxxxxxxxxxxxxxx
+                                                                                            (new-array
+                                                                                             1
+                                                                                             1)))
+                                                                                       (let ((y
+                                                                                              5))
+                                                                                         (let ((allocatebindingxxxxxxxxxxxxxxxxxxxxxx
+                                                                                                (new-array
+                                                                                                 1
+                                                                                                 1)))
+                                                                                           (let ((arr2
+                                                                                                  arr))
+                                                                                             (let ((allocatebindingxxxxxxxxxxxxxxxxxxxxxxx
+                                                                                                    (new-array
+                                                                                                     1
+                                                                                                     1)))
+                                                                                               (let ((arr
+                                                                                                      (aset
+                                                                                                       arr
+                                                                                                       x
+                                                                                                       y)))
+                                                                                                 (let ((allocatebindingxxxxxxxxxxxxxxxxxxxxxxxx
+                                                                                                        (new-array
+                                                                                                         1
+                                                                                                         1)))
+                                                                                                   (let ((trash
+                                                                                                          (print
+                                                                                                           arr2)))
+                                                                                                     (let ((allocatebindingxxxxxxxxxxxxxxxxxxxxxxxxx
+                                                                                                            (new-tuple
+                                                                                                             0
+                                                                                                             1
+                                                                                                             2
+                                                                                                             3
+                                                                                                             4
+                                                                                                             5
+                                                                                                             6
+                                                                                                             7
+                                                                                                             8
+                                                                                                             9
+                                                                                                             10
+                                                                                                             11
+                                                                                                             12
+                                                                                                             13
+                                                                                                             14
+                                                                                                             15
+                                                                                                             16
+                                                                                                             17
+                                                                                                             18
+                                                                                                             19
+                                                                                                             20
+                                                                                                             21
+                                                                                                             22
+                                                                                                             23
+                                                                                                             24
+                                                                                                             25
+                                                                                                             26
+                                                                                                             27
+                                                                                                             28
+                                                                                                             29
+                                                                                                             30
+                                                                                                             31
+                                                                                                             32
+                                                                                                             33
+                                                                                                             34
+                                                                                                             35
+                                                                                                             36
+                                                                                                             37
+                                                                                                             38
+                                                                                                             39
+                                                                                                             40
+                                                                                                             41
+                                                                                                             42
+                                                                                                             43
+                                                                                                             44
+                                                                                                             45
+                                                                                                             46
+                                                                                                             47
+                                                                                                             48
+                                                                                                             49
+                                                                                                             50)))
+                                                                                                       (print
+                                                                                                        arr)))))))))))))))))))))))))))))))))))))))))))))))))))))

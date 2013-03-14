@@ -1,0 +1,9 @@
+; 2<=2?
+
+(((ebx <- 2 <= 2)
+
+  ; encode result
+  (ebx *= 2)
+  (ebx += 1)
+
+  (eax <- (print ebx))))

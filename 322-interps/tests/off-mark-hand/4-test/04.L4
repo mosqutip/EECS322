@@ -1,0 +1,4 @@
+((let ((x (make-closure :call (new-tuple 10 20))))
+      (print ((closure-proc x) (closure-vars x))))
+ (:call (x)
+	(+ (aref x 0) (aref x 1))))

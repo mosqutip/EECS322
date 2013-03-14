@@ -1,0 +1,5 @@
+((ebx <- 5)
+ (eax <- (allocate ebx 3))
+ (ebx <- eax)
+ (call x)
+ (eax <- (print eax)))

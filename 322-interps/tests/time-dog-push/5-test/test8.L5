@@ -1,0 +1,3 @@
+(let ([fun (lambda (x a b)
+             (x a b))])
+  (print (fun + 1 4)))

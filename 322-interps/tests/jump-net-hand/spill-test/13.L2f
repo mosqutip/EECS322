@@ -1,0 +1,20 @@
+((ebx <- eax)
+ (ebx *= ebx)
+ (x <- ebx)
+ (k <- 10)
+ (goto :label2)
+ :label1
+ (x -= 3)
+ (eax += x)
+ (eax -= 1)
+ :label2
+ (k -= 1)
+ (cjump k <= 0 :label3 :label1)
+ :label3
+ (eax <- (print x))
+ (eax <- (print eax))
+ (eax <- (print 7))
+ (return))
+k
+-8
+z_

@@ -1,0 +1,8 @@
+(((x <- 3)
+  (y <- 2)
+  (mult <- x)
+  (mult *= y)
+  (tmp0 <- mult)
+  (tmp0 <<= 1)
+  (tmp0 += 1)
+  (eax <- (print tmp0))))

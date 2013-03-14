@@ -1,0 +1,18 @@
+(((call :__main__))
+(:__main__
+(eax <- (allocate 7 15))
+(x_0 <- eax)
+(x_2 <- x_0)
+(x_2 &= 1)
+(x_2 *= -2)
+(x_2 += 3)
+(__temp0 <- x_2)
+(cjump __temp0 = 1 :__temp2 :__temp1)
+:__temp1
+(eax <- (print 3))
+(eax <- eax)
+(return)
+:__temp2
+(eax <- (print 1))
+(eax <- eax)
+(return)))

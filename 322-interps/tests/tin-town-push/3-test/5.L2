@@ -1,0 +1,31 @@
+(((call :main))
+  (:main 
+   (n <- 9)
+   (n &= 1) 
+   (n <<= 1)
+   (n += 1)
+   (n2 <- n)
+   (n2 &= 1)
+   (n2 <<= 1)
+   (n2 += 1)
+   (cjump n = 1 :l1 :l2) 
+   :l2
+   (cjump n2 = 1 :l3 :l4) 
+   :l4 
+   (eax <- (print 1))
+   (eax <- 1)
+   (return)
+   :l3 
+   (eax <- (print 3))
+   (eax <- 1)
+   (return)
+   :l1 
+   (cjump n2 = 1 :l5 :l6)
+   :l6 
+   (eax <- (print 5))
+   (eax <- 1)
+   (return)
+   :l5
+   (eax <- (print 7))
+   (eax <- 1)
+   (return)))

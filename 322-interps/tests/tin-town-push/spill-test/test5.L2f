@@ -1,0 +1,8 @@
+(((mem eax 4) <- 5)
+ (abc <- 5)
+ (a <- abc < 7)
+ (eax <- (print a))
+ (return))
+ abc
+ -4
+ s

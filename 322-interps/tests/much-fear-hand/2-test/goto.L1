@@ -1,0 +1,7 @@
+(((ebx <- 3)
+  (ecx <- 7)
+  (goto :good)
+  :bad
+  (eax <- (print ebx))
+  :good
+  (eax <- (print ecx))))

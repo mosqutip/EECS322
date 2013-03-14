@@ -1,0 +1,6 @@
+((let ([x 5])
+ (if (number? x)
+     (let ([x 6])
+       (print x))
+     (let ([x 7])
+       (print x)))))

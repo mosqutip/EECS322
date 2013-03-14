@@ -1,0 +1,7 @@
+(((ebx <- 59)
+  (call :nippledicks)
+  (ebx += 79))
+ (:nippledicks
+  (ebx += 2)
+  (eax <- (print ebx))
+  (return)))

@@ -1,0 +1,9 @@
+((let ((x (:fac 4)))
+  (print x))
+ (:fac (n)
+  (let ((test (<= n 1)))
+  	(if test
+  		1
+  		(let ((n_1 (- n 1)))
+  		  (let ((n_2 (:fac n_1)))
+  		    (* n n_2)))))))

@@ -1,0 +1,7 @@
+(letrec ((g (lambda (x y)
+                (if (= x 0)
+                    1
+                    (begin (aset y 1 (g (- x 1) (new-tuple 0 0)))
+                        y)))))
+    (let ((f g))
+      (print (f 3 (new-array 2 2)))))

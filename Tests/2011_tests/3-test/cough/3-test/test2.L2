@@ -1,0 +1,6 @@
+(((call :__main__))
+(:__main__
+(x <- 15)
+(eax <- (print x))
+(eax <- eax)
+(return)))

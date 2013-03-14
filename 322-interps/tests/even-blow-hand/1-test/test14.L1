@@ -1,0 +1,21 @@
+(
+(;;main
+    (edi <- 5)
+    (eax <- (print edi))    ;; 2
+    (edi <<= 1)
+    (edi += 1)
+    (eax <- (print edi))    ;; 5
+    (edi >>= 2)
+    (edi += 1)
+    (eax <- (print edi))    ;; 1
+
+    (ecx <- 2)
+    (edi <<= ecx)
+    (edi += 1)
+    (eax <- (print edi))    ;; 6
+
+    (ecx <- 2)
+    (edi >>= ecx)
+    (eax <- (print edi))    ;; 1
+)
+)

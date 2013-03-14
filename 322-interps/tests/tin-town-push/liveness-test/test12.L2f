@@ -1,0 +1,9 @@
+((eax += 3)
+ (cjump eax < edx :true :true)
+ (ecx += 3)
+ :true
+ (cjump eax < edx :end :different)
+ :different
+ (eax *= 2)
+ :end
+ (return))

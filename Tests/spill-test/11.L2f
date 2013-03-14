@@ -1,0 +1,12 @@
+((x <- :jump1)
+ (y <- :jump2)
+ (ebx <- 7)
+ (eax <- 8)
+ :jump0
+  (cjump eax < ebx x y)
+ :jump1
+  ebx += 1
+  (goto :jump0)
+ :jump2
+  (eax <- (print ebx))
+y -8 s_

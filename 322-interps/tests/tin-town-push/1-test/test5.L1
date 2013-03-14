@@ -1,0 +1,14 @@
+(((esi <- 11)
+  (eax <- (allocate esi 1))
+  (edi <- eax)
+  (edi += 4)
+  (ecx <- edi)
+  (ecx += 20)
+  (eax <- 0)
+  :loop
+  (edx <- (mem edi 0))
+  (eax += edx)
+  (edi += 4)
+  (cjump ecx <= edi :end :loop)
+  :end
+  (eax <- (print eax))))

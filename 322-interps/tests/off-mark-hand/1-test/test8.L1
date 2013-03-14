@@ -1,0 +1,7 @@
+((
+  (eax <- 2001)
+  (goto :avoid_error)
+  (eax -= 1)
+:avoid_error
+(eax <- (print eax))
+ ))

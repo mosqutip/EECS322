@@ -1,0 +1,6 @@
+(
+	(x <- 2)
+	:meaningless_label
+	(eax += x)
+	(return)
+)

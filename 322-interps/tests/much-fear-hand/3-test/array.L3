@@ -1,0 +1,1 @@
+((let ([x (new-array 4 5)]) (let ([y (aref x 0)]) (let ([z (print y)]) (print z)))))

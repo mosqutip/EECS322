@@ -1,0 +1,3 @@
+((let ([x (print (+ 2 (* 3 4)))])
+    (let ([x (new-tuple x x x)])
+        (print x))))

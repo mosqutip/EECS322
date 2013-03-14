@@ -1,0 +1,5 @@
+((let ((allocatebinding (new-array 1 1)))
+   (let ((x (< 1 2)))
+     (if x
+       (let ((allocatebindingx (new-tuple 0 1 2))) (print x))
+       (let ((allocatebindingx (new-tuple 0 1 2))) (print 1234))))))

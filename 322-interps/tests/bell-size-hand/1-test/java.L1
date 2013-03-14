@@ -1,0 +1,8 @@
+(((esi <- 500)
+  :alloc
+  (eax <- (allocate 5 3))
+  (esi -= 1)
+  (cjump esi = 0 :done :alloc)
+  :done
+  (eax <- (mem eax 4))
+  (eax <- (print eax))))

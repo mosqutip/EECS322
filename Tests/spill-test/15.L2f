@@ -1,0 +1,8 @@
+((dood <- 5)
+ (ecx <- dood)
+ (ecx -= 1)
+ (call :fact)
+ (dood *= 2)
+ (dood += 1)
+ (eax <- (print dood)))
+dood -16 s_

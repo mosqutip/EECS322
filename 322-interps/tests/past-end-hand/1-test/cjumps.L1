@@ -1,0 +1,15 @@
+(((ecx <- :jump1)
+  (edx <- :jump2)
+  (ebx <- 7)
+  (eax <- 8)
+  :jump0
+   (cjump eax < ebx :jump2 :jump1)
+  :jump1
+   (call :inc)
+   (goto :jump0)
+  :jump2
+   (eax <- (print ebx)))
+
+  (:inc
+   (ebx += 1)
+   (return)))

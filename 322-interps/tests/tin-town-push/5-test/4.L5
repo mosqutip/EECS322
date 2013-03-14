@@ -1,0 +1,7 @@
+(let ((a (letrec ((b (lambda (x)
+                       (if (< x 0)
+		           0
+			   (begin (print x)
+			          (b (- x 1)))))))
+	    b)))
+   (a 5))

@@ -1,0 +1,9 @@
+((label <- :label)
+ (call label)
+ :label2
+ (a <- label)
+ (eax <- a)
+ (return))
+ label
+ -12
+ s

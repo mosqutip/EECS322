@@ -1,0 +1,2 @@
+((let ([dummy (print 2)])
+0))

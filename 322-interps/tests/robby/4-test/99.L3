@@ -1,0 +1,8 @@
+((let ((x_7 (:main))) (print x_7))
+ (:main
+  ()
+  (let ((x_8 (< 36 41))) (if x_8 (new-tuple 13 11) (new-tuple 13 37))))
+ (:fn (x_1 y_2 z_3) y_2)
+ (:gn (x_4 y_5) y_5)
+ (:hn (x_6) (aref x_6 0))
+ (:in () 42))

@@ -1,0 +1,3 @@
+(let ([lambdafunc (lambda (x y)
+                    (+ x y))])
+  (print (lambdafunc 3 5)))

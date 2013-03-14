@@ -1,0 +1,7 @@
+(
+	(y <- ebp)
+	(x <- (mem y -4))
+	(x += 4)
+	(eax <- x)
+	(return)
+)

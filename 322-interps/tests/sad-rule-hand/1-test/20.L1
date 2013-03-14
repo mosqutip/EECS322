@@ -1,0 +1,4 @@
+(((esi <- 5)
+  (ecx <- 10 = esi)
+  (ecx += esi)
+  (eax <- (print ecx))))

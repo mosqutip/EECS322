@@ -1,0 +1,8 @@
+((let ([x (new-tuple 0 0)])
+    (let ([x1 (print x)])
+        (let ([y (new-array 0 0)])
+            (let ([y1 (print y)])
+                (let ([x2 (print x)])
+                    (let ([y2 (print y)])
+                        (let ([z (print 0)])
+                            (print 0)))))))))

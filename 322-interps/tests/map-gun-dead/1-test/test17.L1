@@ -1,0 +1,16 @@
+((
+	(edx <- 100000)
+	(ebx <- 0)
+	:loop
+	(cjump ebx < 100000 :continue :end)
+	:continue
+	(edx >>= 1)
+	(ebx += 1)
+	(goto :loop)
+
+	:end
+	(edx *= 2)
+	(edx += 1)
+	(eax <- (print edx))
+
+)) 

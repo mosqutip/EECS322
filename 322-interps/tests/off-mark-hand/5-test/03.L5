@@ -1,0 +1,5 @@
+(let ([x 10])
+     (let ([y 20])
+     	  (let ([w 30])
+	       (let ([mult (lambda (z1 z2 z3) (* x (* y (* w (+ z1 (+ z2 z3))))))])
+	       	    (print (mult 1 1 -1))))))

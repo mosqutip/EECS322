@@ -1,0 +1,7 @@
+((:f (:g (:h)))
+ (:f (x)
+  (print x))
+ (:g (x)
+  (print x))
+ (:h ()
+  (print 1)))

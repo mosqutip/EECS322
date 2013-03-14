@@ -1,0 +1,27 @@
+;; sums an array
+(((eax <- (allocate 9 1))
+  ((mem eax 4) <- 1)
+  ((mem eax 8) <- 9)
+  ((mem eax 12) <- 3)
+  ((mem eax 16) <- 5)
+  (call :sum_array)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax)))
+
+  (:sum_array
+  (ecx <- eax)
+  (edx <- (mem ecx 0))
+  (edx *= 4)
+  (edx += 1)
+  (edx += eax)
+  (eax <- 0)
+  :loop
+  (ecx += 4)
+  (cjump ecx < edx :continue :done)
+  :continue
+  (ebx <- (mem ecx 0))
+  (eax += ebx)
+  (goto :loop)
+  :done
+  (return)))

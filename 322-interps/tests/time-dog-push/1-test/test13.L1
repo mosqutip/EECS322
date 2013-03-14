@@ -1,0 +1,7 @@
+(((cjump 2 < 3 :true :false)
+
+  :true
+  (eax <- (print 3))
+
+  :false
+  (eax <- (print 1))))

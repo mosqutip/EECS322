@@ -1,0 +1,5 @@
+(let ((f (lambda (x) 
+            (let ((g (lambda (y)
+                        (+ y 10))))
+                (+ x (g 10))))))
+    (print (f 10)))

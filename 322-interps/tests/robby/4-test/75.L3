@@ -1,0 +1,6 @@
+((let ((x_7 (:main))) (print x_7))
+ (:main () (if 11 (new-tuple 3) (new-tuple 4)))
+ (:fn (x_1 y_2 z_3) y_2)
+ (:gn (x_4 y_5) y_5)
+ (:hn (x_6) (aref x_6 0))
+ (:in () 42))

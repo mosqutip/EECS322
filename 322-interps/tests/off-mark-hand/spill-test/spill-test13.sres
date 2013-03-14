@@ -1,0 +1,35 @@
+(
+  (x <- 201)
+  (eax <- (allocate x 201))
+  (p <- eax)
+  (p += 4)
+  (tmp_p <- p)
+  (cnt <- 1)
+  :for1
+  (cjump cnt < 101 :cont :exit_for1)
+  :cont
+  ((mem tmp_p 0) <- cnt)
+  (cnt += 2)
+  (tmp_p += 4)
+  (goto :for1)
+  :exit_for1
+  (num2find <- 81)
+  (tmp_p <- p)
+  (cnt <- 1)
+  :for2
+  (cjump cnt < 101 :cont2 :exit_for2)
+  :cont2
+  (eax <- (mem tmp_p 0))
+  ((mem ebp -4) <- eax)
+  (tmp0 <- (mem ebp -4))
+  (cjump tmp0 = num2find :found :not_found)
+  :not_found
+  (tmp_p += 4)
+  (cnt += 2)
+  (goto :for2)
+  :exit_for2
+  (goto :exit)
+  :found
+  (eax <- (print cnt))
+  :exit
+)

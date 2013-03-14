@@ -1,0 +1,8 @@
+((let ([t (new-array 5 1)])
+	(:p t))
+ (:p (x)
+ 	(let ([x1 (a? x)])
+ 		(if x1
+ 			(let ([unused (print 1)])
+ 				(print x))
+ 			(print x)))))

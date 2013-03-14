@@ -1,0 +1,4 @@
+((let ((x (+ 2 2)))
+  (let ((y (new-array 2 x)))
+   (let ((z (aref y 1)))
+    (print z)))))

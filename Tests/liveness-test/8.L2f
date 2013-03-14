@@ -1,0 +1,10 @@
+((x <- 10)
+ (cjump 5 <= x :if :then)
+ :if
+ (ebx <- 15)
+ (goto :dfn)
+ :then
+ (ebx <- 24)
+ :dfn
+ (x += ebx)
+ (eax <- (print x)))

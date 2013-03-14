@@ -1,0 +1,27 @@
+(((esi <- 3)
+  (eax <- (allocate esi 3))
+  (goto :des1)
+  
+  :des3
+  (ebx <- (mem eax 4))
+  (ebx &= 26)
+  (ecx <- 1)
+  (ebx >>= ecx)
+  (ebx *= 2)
+  (ebx += 1)
+  ((mem eax 4) <- ebx)
+  (goto :des4)
+  
+  :des2
+  (ebx <- (mem eax 4))
+  (ebx *= 3)
+  ((mem eax 4) <- ebx)
+  (goto :des3)
+  
+  :des1
+  (ebx <- 9)
+  ((mem eax 4) <- ebx)
+  (goto :des2)
+  
+  :des4
+  (eax <- (print eax))))

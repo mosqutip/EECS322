@@ -1,0 +1,7 @@
+((eax <- 2)
+ (x <- a)
+ (b <- (mem x 4))
+ (ebx <- b < eax)
+ (y *= ebx)
+ (ecx <- ebx = eax)
+ (return))

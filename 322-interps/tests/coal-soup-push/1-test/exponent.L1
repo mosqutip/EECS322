@@ -1,0 +1,14 @@
+;; Exponents - calculates x^n (n >= 0)
+(((ebx <- 5)	;; x
+  (ecx <- 3)	;; n
+  (eax <- 1)	;; accumulator
+  :loop
+  (cjump ecx = 0 :done :continue)
+  :continue
+  (eax *= ebx)
+  (ecx -= 1)
+  (goto :loop)
+  :done
+  (eax <<= 1)   ;; tag
+  (eax += 1)
+  (eax <- (print eax))))

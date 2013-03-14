@@ -1,0 +1,7 @@
+((if 0
+   (if 0
+     (let ((allocatebinding (new-tuple 0))) (print 1))
+     (let ((allocatebinding (new-tuple 0))) (print 2)))
+   (if 0
+     (let ((allocatebinding (new-tuple 0))) (print 3))
+     (let ((allocatebinding (new-tuple 0))) (print 4)))))

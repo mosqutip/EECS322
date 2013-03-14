@@ -1,0 +1,6 @@
+((print (:main))
+ (:main () (new-tuple (if (* 38 39) 40 11) 14))
+ (:fn (x y z) y)
+ (:gn (x y) y)
+ (:hn (x) (aref x 0))
+ (:in () 42))

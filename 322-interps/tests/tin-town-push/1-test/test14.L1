@@ -1,0 +1,9 @@
+(((ecx <- 5)
+  (call :add3)
+  (ecx <<= 1)
+  (ecx += 1)
+  (eax <- (print ecx)))
+ 
+ (:add3
+  (ecx += 3)
+  (return)))

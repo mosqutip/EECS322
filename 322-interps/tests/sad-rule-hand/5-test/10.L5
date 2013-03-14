@@ -1,0 +1,3 @@
+(let ((x 1))
+    (let ((f (lambda (y z) (+ x (+ y z)))))
+        (print (f 1 (f 1 1)))))

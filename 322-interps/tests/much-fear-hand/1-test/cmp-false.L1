@@ -1,0 +1,6 @@
+(((eax <- 10)
+  (ebx <- 20)
+  (ecx <- ebx < eax)
+  (ecx += ecx)
+  (ecx += 1)
+  (eax <- (print ecx))))

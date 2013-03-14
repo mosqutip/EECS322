@@ -1,0 +1,44 @@
+(( 
+	(edx <- 1)
+	:repeat
+	(cjump edx = 1 :keep_going :end)
+	:keep_going
+	(esi <- 11)
+	(eax <- (allocate esi 3))
+	(edi <- eax)
+	(ebx <- edi)
+	(esi *= 2)
+	(esi += 2)
+	(esi += edi)
+
+	(ebx += 4)
+
+	:loop
+	(cjump ebx < esi :continue :next)
+
+	:continue
+	((mem ebx 0) <- 1)
+	(ebx += 4)
+	(goto :loop)
+
+	:next
+	(ebx <- edi)
+	(ebx += 4)
+
+	:loop2
+	(cjump ebx < esi :print :update)
+	
+	:print
+	(ecx <- (mem edi 4))
+	(eax <- (print ecx))
+	(ebx += 4)
+	(goto :loop2)
+
+	:update
+	(edx <- 3)
+	(goto :repeat)
+
+	:end
+	
+
+))

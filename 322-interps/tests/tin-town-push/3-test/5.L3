@@ -1,0 +1,9 @@
+((let ((n (number? 4)))
+   (let ((n2 (number? n)))
+     (if n
+         (if n2
+	     (print 0)
+	     (print 1))
+	 (if n2
+	     (print 2)
+	     (print 3))))))

@@ -1,0 +1,8 @@
+(((mem ebp -4) <- 3)
+ (temp0 <- (mem ebp -4))
+ (temp0 += temp0)
+ ((mem ebp -4) <- temp0)
+ (temp1 <- (mem ebp -4))
+ (temp1 <<= temp1)
+ ((mem ebp -4) <- temp1)
+ (return))

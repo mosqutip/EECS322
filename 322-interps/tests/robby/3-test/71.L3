@@ -1,0 +1,20 @@
+((let ((allocatebinding (new-array 1 1)))
+   (let ((x_2 (:fib 5)))
+     (let ((allocatebindingx (new-tuple 0 1 2))) (print x_2))))
+ (:fib
+  (n_1)
+  (let ((allocatebinding (new-array 1 1)))
+    (let ((x_3 (< n_1 2)))
+      (if x_3
+        (let ((allocatebindingx (new-tuple 0 1 2 3))) 1)
+        (let ((allocatebindingx (new-array 1 1)))
+          (let ((x_4 (- n_1 1)))
+            (let ((allocatebindingxx (new-array 1 1)))
+              (let ((x_5 (:fib x_4)))
+                (let ((allocatebindingxxx (new-array 1 1)))
+                  (let ((x_6 (- n_1 2)))
+                    (let ((allocatebindingxxxx (new-array 1 1)))
+                      (let ((x_7 (:fib x_6)))
+                        (let ((allocatebindingxxxxx
+                               (new-tuple 0 1 2 3 4 5 6 7 8 9 10 11)))
+                          (+ x_5 x_7)))))))))))))))

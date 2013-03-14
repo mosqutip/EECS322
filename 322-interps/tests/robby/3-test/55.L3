@@ -1,0 +1,19 @@
+((let ((allocatebinding (new-tuple 0))) (:f 21))
+ (:f
+  (x)
+  (let ((allocatebinding (new-array 1 1)))
+    (let ((x (:g x x)))
+      (let ((allocatebindingx (new-tuple 0 1 2 3))) (+ x 1)))))
+ (:g
+  (x y)
+  (let ((allocatebinding (new-array 1 1)))
+    (let ((y (:h x y y)))
+      (let ((allocatebindingx (new-tuple 0 1 2 3 4))) (+ y 1)))))
+ (:h
+  (x y z)
+  (let ((allocatebinding (new-array 1 1)))
+    (let ((d1 (print x)))
+      (let ((allocatebindingx (new-array 1 1)))
+        (let ((d2 (print y)))
+          (let ((allocatebindingxx (new-tuple 0 1 2 3 4 5 6 7)))
+            (print z))))))))

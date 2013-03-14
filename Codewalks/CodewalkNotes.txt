@@ -1,0 +1,60 @@
+EECS 322
+Spill (Assignment 2)
+04/10/2012
+Coded in Racket
+
+First function takes a list of s-expressions, the symbol of the variable to
+spill, the offset, and the prefix
+	Recursively goes through each element in list, and spills one i expression at a time
+	Appends the output of spill i to the output of the rest of the instructions
+		This handles expressions that transform into multiple expressions in the L2 -> L1 compilation
+
+Comments
+	Ted: would it be better to call map to flatten all the lists?
+		Robby: not necessary
+	Robby: map-append function could work, rather than using cons
+	Robby: The contract isn't valid if the arguments passed aren't valid L2 code
+		Should explicitly state that the contract is for L2 programs
+
+Helper function: get-tmp-var
+	Takes prefix, returns a symbol that appends a counter to the input symbol for unique variable names
+
+spill/i function
+	Large match case
+	Specific ordering of the match case to prevent ordering problems
+		This order is important, because otherwise the parsing would fail
+		Robby: note that match is ordered
+  	Everything is returned as a list due to the append function used in the first function
+	Basic pattern: match a variable in the s-expression to the variable passed in
+		If these variables are equal, apply a spill
+
+	Considered passing a lambda expression, due to the similarity between functions like allocate (two variables) and print-error (two variables), but decided to write them all out instead
+
+Comments
+	Robby: how many cases would be saved with find/replace type method?
+		Could almost halve the length of the match expression
+	Search through an s-expression, and replace a given symbol in the s-expression for all instances (since there won't be overlap)
+  		Prototype: replace-symbols : s-exp symbol symbol -> s-exp
+  		This doesn't always work. Why?
+    			Need to handle reading, writing, both, or neither (gen vs. kill)
+			Special case: if x <- x and x isn't spilled, just keep the instruction
+				Robby: this is because the assignment is over-specified
+	Ted: Did you consider matching a datatype rather than direct symbols?
+		Assignment versus symbols, etc.
+		Robby: not necessarily better
+
+8 different match cases for the compare function
+	Ugly and long
+		Due to confusion, the code left this way
+    		Needs to be "optimized" in terms of readability and maintenance, not performance
+
+Comments
+	Ted: wouldn't a define-type with contracts be better code than straight symbol replacement?
+		Robby: in this case, it's less code and works fine, so it's fine
+
+Testing
+Wrote a shell script that takes the expected result file and replaces new lines with spaces, then compares the result with the result of running the program
+  Ted: what about using tr /n <space>?
+	This wasn't working for the input files
+  Stops on failure of test, or if output fails
+

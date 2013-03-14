@@ -1,0 +1,6 @@
+(((eax <- 17)
+  (goto :jump)
+  (eax *= 301)
+  (eax <- (print eax))
+  :jump
+  (eax <- (print eax))))

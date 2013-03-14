@@ -1,0 +1,7 @@
+; x = -7 + 13
+
+(((ecx <- -13)
+  (edx <- 27)
+  (edx += ecx)
+  (edx -= 1)
+  (eax <- (print edx))))

@@ -1,0 +1,7 @@
+(((mem ebp -4) <- 9)
+ :looprinter
+ (s_0 <- (mem ebp -4))
+ (eax <- (print s_0))
+ (s_0 -= 2)
+ (cjump s_0 <= 0 :done :looprinter)
+ :done)

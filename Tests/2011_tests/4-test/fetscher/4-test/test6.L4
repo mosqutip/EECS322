@@ -1,0 +1,8 @@
+((let ((a (new-array 10 0)))
+  (print (:fill a 1)))
+ (:fill (a i)
+  (if (< (alen a) i)
+    a
+    (begin
+      (aset a (- i 1) i)
+      (:fill a (+ i 1))))))

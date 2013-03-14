@@ -1,0 +1,8 @@
+((let ([x 5])
+   (let ([test (< x 4)])
+     (if test   
+         (let ([y (* x 2)])
+           (print y))
+           (let ([y (- x 1)])
+           (print y))))))
+         

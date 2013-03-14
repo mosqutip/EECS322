@@ -1,0 +1,30 @@
+((
+ (edx <- 1365)
+ (ecx <- 65536)
+ :for
+ (cjump 2 <= ecx :cont :exit)
+ :cont
+ (eax <- edx)
+ (eax &= ecx)
+ (cjump 0 < eax :is1 :is0)
+ :is1
+ ((mem esp -4) <- ecx)
+ ((mem esp -8) <- edx)
+ (esp -= 8)
+  (eax <- (print 3))
+ (edx <- (mem esp 0))
+ (ecx <- (mem esp 4))
+ (esp += 8)
+  (goto :exit1)
+ :is0
+ ((mem esp -4) <- ecx)
+ ((mem esp -8) <- edx)
+ (esp -= 8)
+   (eax <- (print 1))
+ (edx <- (mem esp 0))
+ (ecx <- (mem esp 4))
+ (esp += 8)
+ :exit1
+ (ecx >>= 1)
+ (goto :for)
+ :exit))

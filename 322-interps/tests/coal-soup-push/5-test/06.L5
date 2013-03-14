@@ -1,0 +1,2 @@
+(let ([f (lambda (op x) (op x 2))])
+             (print (f + 1)))

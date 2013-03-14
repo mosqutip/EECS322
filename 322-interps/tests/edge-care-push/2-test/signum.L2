@@ -1,0 +1,32 @@
+(((i <- -2)
+
+  :compare
+  (cjump i <= 2 :funcCall :done)
+
+  :funcCall
+  (eax <- i)
+  (call :signum)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))
+  (i += 1)
+  (goto :compare)
+
+  :done)
+
+ (:signum
+  (cjump eax = 0 :zero :not_zero)
+  
+  :zero
+  (return)
+
+  :not_zero
+  (cjump eax < 0 :below :above)
+
+  :below
+  (eax <- -1)
+  (return)
+
+  :above
+  (eax <- 1)
+  (return)))

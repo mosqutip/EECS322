@@ -1,0 +1,31 @@
+(
+  (a <- 1071)
+  (b <- 462)
+  (cjump a = 0 :then :else)
+  :then
+  ((mem ebp -4) <- b)
+  (goto :exit_if)
+  :else
+  :while
+  (cjump b = 0 :exit_while :cont_while)
+  :cont_while
+  (cjump b < a :then1 :else1)
+  :then1
+  (a -= b)
+  (goto :exit_if1)
+  :else1
+  (b -= a)
+  :exit_if1
+  (goto :while)
+  :exit_while
+  ((mem ebp -4) <- a)
+  :exit_if
+  (tmp_0 <- (mem ebp -4))
+  (tmp_0 <<= 1)
+  ((mem ebp -4) <- tmp_0)
+  (tmp_1 <- (mem ebp -4))
+  (tmp_1 += 1)
+  ((mem ebp -4) <- tmp_1)
+  (tmp_2 <- (mem ebp -4))
+  (eax <- (print tmp_2))
+)

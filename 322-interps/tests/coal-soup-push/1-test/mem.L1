@@ -1,0 +1,8 @@
+;; allocates an array of length 4 in memory, saves a value into it, and prints it.
+(((ebx <- 5)
+  (ebx += 7)
+  (ebx <<= 1)		;; tag
+  (ebx += 1)
+  (eax <- (allocate 9 ebx))
+  (esi <- (mem eax 0))
+  (eax <- (print eax))))

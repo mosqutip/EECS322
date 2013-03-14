@@ -1,0 +1,7 @@
+((let ((x1 (:f 3)))
+   (let ((x2 (:f x1)))
+     (:do_print x2)))
+ (:do_print (v)
+   (print v))
+ (:f (x)
+   (+ x 1)))

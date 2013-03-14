@@ -1,0 +1,7 @@
+((self <- :my_fn)
+ (eax += 4)
+ (cjump eax <= 100 :continue :done)
+ :continue
+ (tail-call self)
+ :done
+ (return))

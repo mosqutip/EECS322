@@ -1,0 +1,9 @@
+((cjump 3 < 5 :go :end)
+ :go
+ (a <- 5)
+ (eax <- a)
+ :end
+ (return))
+ a
+ -16
+ s

@@ -1,0 +1,9 @@
+((let ((x_7 (:main))) (print x_7))
+ (:main
+  ()
+  (let ((x_8 (<= 16 17)))
+    (let ((x_9 (:gn 32 11))) (new-tuple 15 x_8 18 19 x_9 20 21))))
+ (:fn (x_1 y_2 z_3) y_2)
+ (:gn (x_4 y_5) y_5)
+ (:hn (x_6) (aref x_6 0))
+ (:in () 42))

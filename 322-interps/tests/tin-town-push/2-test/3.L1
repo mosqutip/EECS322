@@ -1,0 +1,10 @@
+(((eax <- 1)
+  (call :help)
+  (call :help))
+ (:help
+  (ebx <- eax)
+  (ebx *= 2)
+  (ebx += 1)
+  (eax <- (print ebx))
+  (eax <- ebx)
+  (return)))

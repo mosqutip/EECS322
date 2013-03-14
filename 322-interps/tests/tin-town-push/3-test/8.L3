@@ -1,0 +1,6 @@
+((let ((a (new-array 5 0)))
+   (let ((b :f))
+     (b a)))
+ (:f (array)
+   (let ((length (alen array)))
+     (print length))))

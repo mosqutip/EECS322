@@ -1,0 +1,28 @@
+((let ([__l5_var_v4 (make-closure :__l5_label_l3 (new-tuple ))])
+((closure-proc __l5_var_v4) (closure-vars __l5_var_v4)
+(new-tuple 4
+5
+6
+7)))
+(:__l5_label_l1 (__l5_varstup
+__l5_argstup)
+(let ([n (aref __l5_argstup 2)])
+(let ([x (aref __l5_argstup 1)])
+(let ([y (aref __l5_argstup 0)])
+(if (= n 0)
+(print (aref x 0))
+(begin (let ([__l5_var_v0 y])
+((closure-proc __l5_var_v0) (closure-vars __l5_var_v0)
+(new-tuple y
+x
+(- n 1)))) (print (aref x n))))))))
+
+(:__l5_label_l3 (__l5_varstup
+x)
+(let ([y (make-closure :__l5_label_l1 (new-tuple ))])
+(let ([__l5_var_v2 y])
+((closure-proc __l5_var_v2) (closure-vars __l5_var_v2)
+(new-tuple y
+x
+(- (alen x) 1))))))
+)

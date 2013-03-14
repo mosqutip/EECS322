@@ -1,0 +1,11 @@
+(((ebx <- 5)
+  (ecx <- 33)
+  (eax <- ebx < ecx)
+  (eax *= 27)
+  (cjump eax < 30 :correct :incorrect)
+  :correct
+  (eax <- (print 3))
+  (goto :end)
+  :incorrect
+  (eax <- (print 1))
+  :end))

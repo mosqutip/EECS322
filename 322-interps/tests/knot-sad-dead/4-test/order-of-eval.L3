@@ -1,0 +1,7 @@
+((let ((a1 (new-tuple 1)))
+   (let ((trash (print a1)))
+     (let ((a2 (new-tuple 1 1)))
+       (let ((trash (print a2)))
+         (let ((trash (print 1)))
+           (let ((a3 (new-tuple 1 2)))
+             (print a3))))))))

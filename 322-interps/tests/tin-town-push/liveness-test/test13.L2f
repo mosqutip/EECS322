@@ -1,0 +1,4 @@
+((eax += edx)
+ (eax += ecx)
+ (edx += ecx)
+ (tail-call :func))

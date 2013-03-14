@@ -1,0 +1,6 @@
+((print (let ([a (new-array 10 20)])
+          (begin (aset a 
+                       (* (< 5 3)
+                            4)
+                       (a? a))
+                 (aref a (- 5 5))))))

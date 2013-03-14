@@ -1,0 +1,11 @@
+((let ([fib (new-tuple 0)])
+	(begin (aset fib 0 (make-closure :x0 (new-tuple fib)))
+		   (let ([x1 (aref fib 0)])
+		   		(print ((closure-proc x1) (closure-vars x1) 4)))))
+ (:x0 (vars n)
+  (if (< n 2)
+ 	 1
+ 	 (+ (let ([x2 (aref (aref vars 0) 0)])
+ 	 		((closure-proc x2) (closure-vars x2) (- n 1)))
+ 	 	(let ([x3 (aref (aref vars 0) 0)])
+ 	 		((closure-proc x3) (closure-vars x3) (- n 2)))))))

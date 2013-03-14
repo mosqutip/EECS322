@@ -1,0 +1,12 @@
+; x = 3^4
+
+(((edx <- 3)
+  (edx *= 3)
+  (edx *= 3)
+  (edx *= 3)
+
+  ;encode result
+  (edx <<= 1)
+  (edx += 1)
+
+  (eax <- (print edx))))

@@ -1,0 +1,6 @@
+((eax <- (print eax)
+ (eax <- (print ebx)
+ (eax <- (print ecx)
+ (eax <- (print edx)
+ (eax <- (print edi)
+ (eax <- (print esi))

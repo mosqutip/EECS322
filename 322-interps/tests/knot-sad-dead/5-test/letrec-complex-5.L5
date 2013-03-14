@@ -1,0 +1,5 @@
+(print
+ (letrec ((n (if (= 0 5)
+                 (lambda (x) (n x))
+                 6)))
+   n))

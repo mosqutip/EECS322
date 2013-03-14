@@ -1,0 +1,14 @@
+((in
+  (eax x y)
+  (eax x y)
+  (eax x y)
+  (r)
+  (eax)
+  (eax))
+ (out
+  (eax x y)
+  (eax x y)
+  (eax x y)
+  (eax)
+  (eax)
+  ()))

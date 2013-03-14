@@ -1,0 +1,8 @@
+(let ([I (lambda (b c d e f g) (print (* (b c d) (e f g))))])
+  (let ([hope (lambda (x y) (<= x y))])
+    (let ([you 1])
+      (let ([fail 1])
+        (let ([this <])
+          (let ([test 2])
+            (let ([case 3])
+              (I hope you fail this test case))))))))

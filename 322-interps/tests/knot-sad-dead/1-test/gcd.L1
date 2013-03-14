@@ -1,0 +1,29 @@
+(((eax <- 8)
+  (ebx <- 12)
+  (call :gcd)
+  
+  (eax <- 15)
+  (ebx <- 10)
+  (call :gcd)
+  
+  (eax <- 3)
+  (ebx <- 7)
+  (call :gcd))
+ (:gcd
+  (cjump ebx = 0 :done :continue)
+  :done
+  (eax += eax)
+  (eax += 1)
+  (eax <- (print eax))
+  (return)
+  :continue
+  (cjump ebx < eax :abigger :bbigger)
+  :abigger
+  (esp -= 4)
+  ((mem ebp -4) <- eax)
+  (eax <- ebx)
+  (ebx <- (mem ebp -4))
+  (esp += 4)
+  :bbigger
+  (ebx -= eax)
+  (tail-call :gcd)))

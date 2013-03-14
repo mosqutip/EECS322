@@ -1,0 +1,12 @@
+((ebx <- 2)
+ (x <- 10)
+ (edx <- x)
+ (x -= 1)
+ :loop
+  (ebx *= edx)
+  (x -= 1)
+  (cjump x = 0 :done :loop)
+ :done
+  (ebx *= 2)
+  (ebx += 1)
+  (eax <- (print ebx)))

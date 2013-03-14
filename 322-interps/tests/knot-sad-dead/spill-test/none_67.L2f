@@ -1,0 +1,4 @@
+((eax <- (array-error t 4)))
+x
+-4
+spill_

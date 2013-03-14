@@ -1,0 +1,22 @@
+(((esi <- 3)
+  (eax <- (allocate esi 3))
+  (edi <- eax)
+  (ebx <- 0)
+  (ecx <- (mem edi 0))
+  
+  (call :two_exp)
+  (ecx *= 2)
+  (ecx += 1)
+  ((mem eax 4) <- ecx)
+  (eax <- (print eax)))
+  
+  (:two_exp
+   (cjump ebx < 4 :continue :done)
+   
+   :continue 
+   (ecx *= 2)
+   (ebx += 1)
+   (call :two_exp)
+   
+   :done
+   (return)))        

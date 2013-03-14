@@ -1,0 +1,1 @@
+("5.2" ("dfcac2ac335a6ec3b9a79c6a827ff0a857129988" . "d3ba6fbced3e298eb8e319dbbff7fad87a52feb5") (collects #"racket" #"main.rkt") #"/Users/robby/git/robby/compilers/interp/4-anf.rkt" (collects #"slideshow" #"pict.rkt") (collects #"racket" #"lang" #"reader.rkt"))

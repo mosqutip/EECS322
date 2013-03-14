@@ -1,0 +1,13 @@
+((let ((allocatebinding (new-array 1 1)))
+   (let ((t_1 (new-tuple 1 2)))
+     (let ((allocatebindingx (new-array 1 1)))
+       (let ((x_2 (aref t_1 0)))
+         (let ((allocatebindingxx (new-array 1 1)))
+           (let ((x_5 (aref t_1 1)))
+             (let ((allocatebindingxxx (new-array 1 1)))
+               (let ((__3 (aset t_1 0 x_5)))
+                 (let ((allocatebindingxxxx (new-array 1 1)))
+                   (let ((__4 (aset t_1 1 x_2)))
+                     (let ((allocatebindingxxxxx
+                            (new-tuple 0 1 2 3 4 5 6 7 8 9 10)))
+                       (print t_1)))))))))))))

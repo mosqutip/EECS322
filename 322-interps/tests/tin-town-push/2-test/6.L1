@@ -1,0 +1,13 @@
+(((eax <- 5)
+  (edi <- 2) 
+  (edx <- edi)
+  (call :int_print)
+  (edi += 1)
+  (eax <- (print edi)))
+ (:int_print
+  (eax += edx) 
+  (eax <- (print eax))
+  (tail-call :a1))
+ (:a1
+  (eax <- (print 1))
+  (return)))

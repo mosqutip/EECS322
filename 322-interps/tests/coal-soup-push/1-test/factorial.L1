@@ -1,0 +1,14 @@
+;; Factorial - Calculates 5!
+(((eax <- 1)	;; accumulator
+  (ebx <- 2)	;; counter. we're going from 1 to n
+  (ecx <- 5)	;; n
+  :loop
+  (cjump ebx <= ecx :continue :done)
+  :continue
+  (eax *= ebx)
+  (ebx += 1)
+  (goto :loop)
+  :done
+  (eax <<= 1) ;; tag
+  (eax += 1)
+  (eax <- (print eax))))

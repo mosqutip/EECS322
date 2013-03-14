@@ -1,0 +1,13 @@
+(((x <- 5)
+  (eax <- x)
+  (edx <- 2)
+  (call :addsome)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax)))
+ (:addsome
+  (a <- eax)
+  (b <- edx)
+  (a += b)
+  (eax <- a)
+  (return)))

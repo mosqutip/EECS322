@@ -1,0 +1,8 @@
+((x <- y)
+ (goto :here)
+ ((mem ebp -4) <- x)
+ :here
+ ((mem ebp -4) <- eax)
+ (s0 <- (mem ebp -4))
+ (eax <- (print s0)))
+ 

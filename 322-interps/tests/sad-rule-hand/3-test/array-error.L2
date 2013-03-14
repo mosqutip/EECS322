@@ -1,0 +1,15 @@
+(((eax <- (allocate 3 3))
+  (x1 <- eax)
+  (x2 <- 5)
+  (x2 >>= 1)
+  (tmp <- (mem x1 0))
+  (cjump x2 < tmp :pass :fail)
+  :fail
+  (x2 <<= 1)
+  (x2 += 1)
+  (eax <- (array-error x1 x2))
+  :pass
+  (x2 *= 4)
+  (x2 += x1)
+  (x2 <- (mem x2 4))
+  (eax <- (print x2))))

@@ -1,0 +1,30 @@
+(((esi <- 9)
+  (eax <- (allocate esi 1))
+  
+  (ebx <- 19)  
+  (ecx <- 101) 
+  (edi <- ecx)
+  (edi += ebx)
+  (edi *= 2)
+  (edi += 1)
+  ((mem eax 4) <- edi)
+  
+  (edi <- ecx)
+  (edi -= ebx)
+  (edi *= 2)
+  (edi += 1)
+  ((mem eax 8) <- edi)
+  
+  (edi <- ecx)
+  (edi *= ebx)
+  (edi *= 2)
+  (edi += 1)
+  ((mem eax 12) <- edi)
+  
+  (edi <- ecx)
+  (edi &= ebx)
+  (edi *= 2)
+  (edi += 1)
+  ((mem eax 16) <- edi)
+  
+  (eax <- (print eax))))

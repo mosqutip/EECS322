@@ -1,0 +1,7 @@
+((let ([z (make-closure :funclabel 10)])
+   (print
+    (begin
+      (closure-proc z)
+      (closure-vars z))))
+ (:funclabel (a b)
+             (+ a b)))

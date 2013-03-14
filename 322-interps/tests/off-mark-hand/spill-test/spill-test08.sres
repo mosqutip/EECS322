@@ -1,0 +1,30 @@
+(
+  (a <- 0)
+  (b <- 1)
+  ((mem ebp -4) <- 20)
+  (end_0 <- (mem ebp -4))
+  (cjump end_0 = 0 :then :else)
+  :then
+  (a <<= 1)
+  (a += 1)
+  (eax <- (print a))
+  (goto :exit)
+  :else
+  (i <- 2)
+  :for
+  (end_1 <- (mem ebp -4))
+  (cjump i <= end_1 :cont_for :exit_for)
+  :cont_for
+  (c <- a)
+  (c += b)
+  (a <- b)
+  (b <- c)
+  (i += 1)
+  (goto :for)
+  :exit_for
+  (c_print <- c)
+  (c_print <<= 1)
+  (c_print += 1)
+  (eax <- (print c_print))
+  :exit
+)

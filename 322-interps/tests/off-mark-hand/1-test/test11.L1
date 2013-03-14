@@ -1,0 +1,15 @@
+((
+ (esi <- 3)
+ (edx <- 5)
+ (eax <- esi < edx)
+ (cjump eax = 1 :then :else)
+ (esi <- 1)
+ (edx <- 1)
+ :then
+ (esi += 1000)
+ (goto :exit)
+ :else 
+ (esi += 10000)
+ :exit
+ (eax <- (print esi))
+))

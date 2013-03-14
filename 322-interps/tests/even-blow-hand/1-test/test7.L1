@@ -1,0 +1,22 @@
+(
+(;;main
+    (esi <- 1)
+    (eax <- (print esi))    ;; 0
+    (esi <<= 1)
+    (esi += 1)
+    (eax <- (print esi))    ;; 1
+    (esi >>= 1)
+    (eax <- (print esi))    ;; 0    (esi = 1 = 0)
+    
+    (ebx <- 12)
+    (esi += ebx)            ;; (esi = 13 = 6)
+    (eax <- (print esi))    ;; 6
+    (esi += ebx)            ;; (esi = 25 = 12)
+    (eax <- (print esi))    ;; 12
+    
+    (esi <- 5)
+    (eax <- (print esi))    ;; 2
+    (esi += 8)
+    (eax <- (print esi))    ;; 6
+)
+)

@@ -1,0 +1,16 @@
+(
+(let ((x (make-closure :func_0 (new-tuple)))) (let ((y (make-closure :func_1 (new-tuple)))) (begin (print (let ((L5TMPVAR_2 x)) ((closure-proc L5TMPVAR_2) (closure-vars L5TMPVAR_2) (new-tuple (make-closure :func_2 (new-tuple)))))) (let ((L5TMPVAR_3 y)) ((closure-proc L5TMPVAR_3) (closure-vars L5TMPVAR_3) (new-tuple (make-closure :func_3 (new-tuple))))))))(:func_0
+ (free-v orig-v)
+ (let ((func (aref orig-v 0)))
+   (let ((L5TMPVAR_0 func))
+     ((closure-proc L5TMPVAR_0) (closure-vars L5TMPVAR_0) (new-tuple 1 2)))))
+(:func_1
+ (free-v orig-v)
+ (let ((func (aref orig-v 0)))
+   (let ((L5TMPVAR_1 func))
+     ((closure-proc L5TMPVAR_1) (closure-vars L5TMPVAR_1) (new-tuple 100)))))
+(:func_2
+ (free-v orig-v)
+ (let ((x (aref orig-v 0))) (let ((y (aref orig-v 1))) (+ x y))))
+(:func_3 (free-v orig-v) (let ((x (aref orig-v 0))) (print x)))
+)

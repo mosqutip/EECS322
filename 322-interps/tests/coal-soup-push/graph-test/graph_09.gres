@@ -1,0 +1,13 @@
+(
+	(eax ebx ecx edi edx esi i loc max) 
+	(ebx eax ecx edi edx esi) 
+	(ecx eax ebx edi edx esi max) 
+	(edi eax ebx ecx edx esi i loc max tmp) 
+	(edx eax ebx ecx edi esi max) 
+	(esi eax ebx ecx edi edx i loc max tmp) 
+	(i eax edi esi loc max) 
+	(loc eax edi esi i max) 
+	(max eax ecx edi edx esi i loc tmp) 
+	(tmp edi esi max)
+)
+#f

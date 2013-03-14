@@ -1,0 +1,21 @@
+(((call :__l3tmp_label_0)
+)
+(:__l3tmp_label_0
+(__l3tmp_var_1 <- 1)
+(cjump __l3tmp_var_1 = 0 :__l3tmp_label_3 :__l3tmp_label_2)
+:__l3tmp_label_2
+(__l3tmp_var_4 <- 1)
+(__l3tmp_var_4 <<= 1)
+(__l3tmp_var_4 += 1)
+(eax <- (print __l3tmp_var_4))
+(eax <- eax)
+(return)
+:__l3tmp_label_3
+(__l3tmp_var_5 <- 2)
+(__l3tmp_var_5 <<= 1)
+(__l3tmp_var_5 += 1)
+(eax <- (print __l3tmp_var_5))
+(eax <- eax)
+(return)
+)
+)

@@ -1,0 +1,5 @@
+((print
+	(let ([x0 (make-closure :x1 (new-tuple))])
+		((closure-proc x0) (closure-vars x0) 4)))
+ (:x1 (vars x)
+ 	(+ x 2)))

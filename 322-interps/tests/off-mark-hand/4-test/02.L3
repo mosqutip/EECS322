@@ -1,0 +1,9 @@
+((let ((tmp_0 (:call2)))
+      (:call1 tmp_0))
+(:call1 (x)
+	(if x
+	    (let ((tmp_1 (- x x)))
+	    	 (print tmp_1))
+	    (print x)))
+(:call2 ()
+	10))

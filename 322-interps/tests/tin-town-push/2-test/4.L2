@@ -1,0 +1,23 @@
+(((a <- 11)
+  (eax <- (allocate a a))
+  (call :funcall))
+ (:funcall
+  (temp1 <- esi)
+  (temp2 <- edi)
+  (i <- 0)
+  (a <- eax)
+  (n <- (mem a 0))
+  (a += 4)
+  :loop
+  (cjump n <= i :done :doloop)
+  :doloop
+  (var <- (mem a 0))
+  (eax <- (print var))
+  (a += 4)
+  (i += 1)
+  (goto :loop)
+  :done
+  (eax <- 0)
+  (esi <- temp1)
+  (edi <- temp2)
+  (return)))

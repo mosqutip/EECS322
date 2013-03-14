@@ -1,0 +1,7 @@
+((let ([a (make-closure :add 3)])
+   (print 
+    (begin
+      (closure-proc a)
+      (closure-vars a))))
+ (:add (x y)
+       (+ x y)))

@@ -1,0 +1,20 @@
+((num1 <- 1)
+ ((mem ebp -4) <- 1)
+ (count <- eax)
+
+ :loop_und
+ (cjump 0 < count :cont :end)
+
+ :cont
+ (temp <- num1)
+ (s0 <- (mem ebp -4))
+ (temp += s0)
+ (num1 <- (mem ebp -4))
+ ((mem ebp -4) <- temp)
+
+ (count -= 1)
+ (goto :loop_und)
+
+ :end
+ (eax <- num1)
+ (return))

@@ -1,0 +1,19 @@
+((let ((g11 (make-closure :g12 (new-tuple))))
+   (let ((g16 1))
+     (let ((g17 g11))
+       (print
+        (+
+         ((closure-proc g17) (closure-vars g17) 20)
+         (let ((g18 1))
+           (let ((g19 (make-closure :g20 (new-tuple))))
+             ((closure-proc g11)
+              (closure-vars g11)
+              ((closure-proc g11) (closure-vars g11) g18)))))))))
+ (:g20 (vars g) (* g 2))
+ (:g12
+  (vars x)
+  (+
+   x
+   (let ((g14 (make-closure :g15 (new-tuple))))
+     ((closure-proc g14) (closure-vars g14) 10))))
+ (:g15 (vars x) (+ x 1)))

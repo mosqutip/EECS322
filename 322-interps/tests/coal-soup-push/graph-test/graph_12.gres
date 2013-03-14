@@ -1,0 +1,16 @@
+(
+	(eax ebx ecx edi edx esi u v w x y z)
+	(ebx eax ecx edi edx esi)
+	(ecx eax ebx edi edx esi)
+	(edi eax ebx ecx edx esi t u v w x y z)
+	(edx eax ebx ecx edi esi)
+	(esi eax ebx ecx edi edx t u v w x y z)
+	(t edi esi u v w x y z)
+	(u eax edi esi t v w x y z)
+	(v eax edi esi t u w x y z)
+	(w eax edi esi t u v x y z)
+	(x eax edi esi t u v w y z)
+	(y eax edi esi t u v w x z)
+	(z eax edi esi t u v w x y)
+)
+#f

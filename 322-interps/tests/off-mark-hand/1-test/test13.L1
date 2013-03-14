@@ -1,0 +1,20 @@
+((
+  (ecx <- 10)
+  (eax <- -10)
+  :while_loop
+  (cjump eax <= ecx :continue :exit)
+  :continue
+  (edx <- ecx)
+  (edx <<= 1)
+  (edx += 1)
+  ((mem esp -4) <- eax)
+  ((mem esp -8) <- ecx)
+  (esp -= 8)
+  (eax <- (print edx))
+  (ecx <- (mem esp 0))
+  (eax <- (mem esp 4))
+  (esp += 8)
+  (ecx -= 1)
+  (goto :while_loop)
+  :exit
+))

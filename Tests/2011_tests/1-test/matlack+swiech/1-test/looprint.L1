@@ -1,0 +1,7 @@
+(((ebx <- 9)
+  :looprinter
+   (eax <- (print ebx))
+   (ebx -= 2)
+   (cjump ebx <= 0 :done :looprinter)
+  :done
+   ))

@@ -1,0 +1,30 @@
+(
+ (a <- 0)
+ (b <- 1)
+ (n <- 20)
+ (cjump n = 0 :then :else)
+ :then
+ (a <<= 1)
+ (a += 1)
+ (eax <- (print a))
+ (goto :exit)
+ :else
+ (i <- 2)
+ :for
+ (cjump i <= n :cont_for :exit_for)
+ :cont_for
+ (c <- a)
+ (c += b)
+ (a <- b)
+ (b <- c)
+ (i += 1)
+ (goto :for)
+ :exit_for
+ (c_print <- c)
+ (c_print <<= 1)
+ (c_print += 1)
+ (eax <- (print c_print))
+ :exit)
+n
+-4
+end_

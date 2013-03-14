@@ -1,0 +1,9 @@
+(let ([x 50])
+  (let ([g (lambda (a b c d)
+             (+ (aref a b)
+                (* (aref c d)
+                   x)))])
+    (print (g (new-array 5 10)
+              3
+              (new-array 10 3)
+              6))))

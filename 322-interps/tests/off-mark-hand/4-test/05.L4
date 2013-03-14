@@ -1,0 +1,7 @@
+((begin (begin (begin (:call1) (:call2)) (:call3)) (print 1984))
+ (:call1 ()
+   (begin (print 1) (begin (:call2) (:call3))))
+ (:call2 ()
+   (begin (print 2) (:call3)))
+ (:call3 ()
+   (print 3)))

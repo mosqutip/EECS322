@@ -1,0 +1,15 @@
+(
+  :y
+  :_p
+  (k <- 1)
+  :_e
+  (be <- k)
+  (cmp <- :_e)
+  (te <- :_p)
+  ((mem ebp -4) <- te)
+  (g <- (mem ebp -4))
+  (e_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee <- 1000)
+  (te <- (mem ebp -4))
+  :z
+  (ee <- e_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee)
+)

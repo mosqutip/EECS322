@@ -1,0 +1,11 @@
+((let ([x1 (new-tuple 1 2 3 4 5)])
+	(:iter x1 0))
+ (:iter (a i)
+  (let ([x2 (alen a)])
+	  (let ([x5 (< i x2)])
+	  	(if x5
+	  		(let ([x3 (aref a i)])
+	  			(let ([unused (print x3)])
+	  				(let ([x4 (+ i 1)])
+	  					(:iter a x4))))
+	  		(print -1))))))

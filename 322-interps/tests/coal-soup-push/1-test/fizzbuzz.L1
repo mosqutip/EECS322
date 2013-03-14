@@ -1,0 +1,66 @@
+;; fizzbuzz with numbers
+;;		- if number is divisible by 3, then output 88 (fizz)
+;;		- if number is divisible by 5, then output 99 (buzz)
+;;		- if number is divisible by 5 and 3, then output 8899 (fizzbuzz)
+(((edi <- 20) ;; max
+  (esi <- 1)  ;; iterator
+  :loop
+  (cjump esi <= edi :continue :done)
+  :continue
+  (ebx <- esi)
+  (edx <- esi)
+  :fizzloop
+  (ebx -= 3)
+  (cjump ebx = 0 :div3 :fizz1)
+  :fizz1
+  (cjump ebx < 0 :notdiv3 :fizzloop)
+  :div3
+  (ebx <- 1)
+  (goto :buzzloop)
+  :notdiv3
+  (ebx <- 0)
+  (goto :buzzloop)
+
+  :buzzloop
+  (edx -= 5)
+  (cjump edx = 0 :div5 :buzz1)
+  :buzz1
+  (cjump edx < 0 :notdiv5 :buzzloop)
+  :div5
+  (ecx <- 1)
+  (goto :fizztest)
+  :notdiv5
+  (ecx <- 0)
+  (goto :fizztest)
+
+  :fizztest
+  (cjump ebx = 1 :fizzbuzztest :buzztest)
+  :buzztest
+  (cjump ecx = 1 :buzz :none)
+  :fizzbuzztest
+  (cjump ecx = 1 :fizzbuzz :fizz)
+
+  :fizz
+  (eax <- (print 177))    ;; 88 tagged
+  (goto :inc)
+
+  :buzz
+  (eax <- (print 199))    ;; 99 tagged
+  (goto :inc)
+
+  :fizzbuzz
+  (eax <- (print 17799))  ;; 8899 tagged
+  (goto :inc)
+
+  :none
+  (ebx <- esi)
+  (ebx <<= 1)             ;; tag
+  (ebx += 1)
+  (eax <- (print ebx))
+  (goto :inc)
+
+  :inc
+  (esi += 1)
+  (goto :loop)
+
+  :done))

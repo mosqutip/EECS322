@@ -1,0 +1,9 @@
+(let ([printinc (lambda (x)
+                  (begin
+	            (print x)
+		    (+ x 1)))])
+  (let ([f (lambda (x)
+             (printinc (printinc (printinc (printinc (printinc (printinc (printinc x))))))))])
+    (begin
+      (f 1)
+      (f 1))))

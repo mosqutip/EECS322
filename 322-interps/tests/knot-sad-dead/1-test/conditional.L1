@@ -1,0 +1,14 @@
+(((eax <- 5)
+  (call :absValue)
+  (eax <- (print eax))
+  (eax <- -11)
+  (call :absValue)
+  (eax <- (print eax)))
+ (:absValue
+  (cjump eax < 0 :neg :pos)
+  (eax <- 11261)
+  :neg
+  (eax *= -1)
+  (return)
+  :pos
+  (return)))

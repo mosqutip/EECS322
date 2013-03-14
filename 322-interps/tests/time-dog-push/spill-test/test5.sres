@@ -1,0 +1,10 @@
+(((mem ebp -4) <- 15)
+ (eax <- 13)
+ (s_0 <- (mem ebp -4))
+ (cjump eax < s_0 :t :f)
+ :t
+ (goto :finish)
+ :f
+ (s_1 <- (mem ebp -4))
+ (eax += s_1)
+ :finish)

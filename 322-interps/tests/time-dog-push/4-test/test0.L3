@@ -1,0 +1,6 @@
+((let ([x (+ 1 2)])
+   (let ([y (- 2 5)])
+     (let ([small (< x y)])
+       (if small 
+           (print 0)
+           (print 1))))))

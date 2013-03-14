@@ -1,0 +1,1 @@
+((cjump 2 = 0 :t :d) (cjump 2 = 0 :t :d) (cjump 2 = 0 :t :d) (cjump 2 = 0 :t :d)) r -20 s

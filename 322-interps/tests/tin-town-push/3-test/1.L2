@@ -1,0 +1,12 @@
+(((call :main))
+ (:main
+  (a <- 11)
+  (b <- a)
+  (b += 7)
+  (b -= 1)
+  (c <- a)
+  (c += b)
+  (c -= 1)
+  (eax <- (print c))
+  (eax <- 1)
+  (return)))

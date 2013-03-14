@@ -1,0 +1,10 @@
+(((eax <- 10)
+  (cjump 10 < eax :if :then)
+  :if
+  (ebx <- 15)
+  (goto :dicksfornipples)
+  :then
+  (ebx <- 23)
+  :dicksfornipples
+  (eax += ebx)
+  (eax <- (print eax))))

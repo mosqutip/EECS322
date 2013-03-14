@@ -1,0 +1,20 @@
+(((eax <- (allocate 7 0))
+  (ebx <- eax)
+  ((mem ebx 4) <- 3)
+  ((mem ebx 8) <- 4)
+  ((mem ebx 12) <- 5)
+  (call :area)
+  (call :transform)
+  (eax <- (print edx)))
+
+  (:area
+   (edx <- (mem ebx 4))
+   (ecx <- (mem ebx 8))
+   (edx *= ecx)
+   (edx >>= 1)
+   (return))
+
+  (:transform
+   (edx <<= 1)
+   (edx += 1)
+   (return)))

@@ -1,0 +1,8 @@
+((x <- 3)
+ (cjump x < 5 :true :false)
+ :false
+ (y <- 5)
+ (y -= x)
+ (x -= y)
+ :true
+ (eax <- x))

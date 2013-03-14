@@ -1,0 +1,11 @@
+(
+	(self <- :my_fn)
+	(x <- eax)
+	(x += 4)
+	(cjump x <= 100 :continue :done)
+	:continue
+	(eax <- x)
+	(tail-call self)
+	:done
+	(return)
+)

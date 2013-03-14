@@ -1,0 +1,13 @@
+; x = 6 * 2
+
+(((ecx <- 6)
+  (edx <- 2)
+
+  ; perform multiplication
+  (edx *= ecx)
+
+  ; encode result
+  (edx *= 2)
+  (edx += 1)
+
+  (eax <- (print edx))))

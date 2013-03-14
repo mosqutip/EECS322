@@ -1,0 +1,9 @@
+; a[4] = {1,24,4,73}
+; print a
+
+(((esi <- 9)
+  (eax <- (allocate esi 3))
+  ((mem eax 8) <- 49)
+  ((mem eax 12) <- 9)
+  ((mem eax 16) <- 147)
+  (eax <- (print eax))))

@@ -1,0 +1,5 @@
+(((eax <- (allocate 55 21))
+  (ebx <- (mem eax 4))
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx))))

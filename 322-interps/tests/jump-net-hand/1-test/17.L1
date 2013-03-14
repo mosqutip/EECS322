@@ -1,0 +1,16 @@
+; x = 64 - 10/2 - 3*5
+
+(((edx <- 10)
+  (edx >>= 1)
+  (ebx <- 64)
+  (ebx -= edx)
+  (ecx <- 3)
+  (ecx *= 5)
+  (ebx -= ecx)
+
+
+  ;encode result
+  (ebx <<= 1)
+  (ebx += 1)
+
+  (eax <- (print ebx))))

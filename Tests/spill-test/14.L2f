@@ -1,0 +1,12 @@
+((a <- (allocate 7 0))
+ (b <- a)
+ ((mem b 4) <- 3)
+ ((mem b 8) <- 4)
+ ((mem b 12) <- 5)
+ (edx <- (mem b 4))
+ (ecx <- (mem b 8))
+ (edx *= ecx)
+ (edx >>= 1)
+ (edx += 1)
+ (a <- (print edx))
+b -12 tri

@@ -1,0 +1,12 @@
+(
+	(x <- eax)
+	(y <- ecx)
+	(z <- edx)
+	(x2 <- eax)
+	(x2 *= x2)
+	(eax <- x)
+	(eax += y)
+	(eax += x2)
+	(eax *= z)
+	(return)
+)

@@ -1,0 +1,28 @@
+((
+(eax <- 10)
+(call :fib)
+(res <- eax)
+(res <<= 1)
+(res += 1)
+(eax <- (print res)))
+
+(:fib
+(x <- eax)
+(cjump x = 1 :ret_x :cont1)
+:cont1
+(cjump x = 0 :ret_x :cont2)
+:cont2
+(x -= 1)
+(eax <- x)
+(call :fib)
+(r1 <- eax)
+(x -= 1)
+(eax <- x)
+(call :fib)
+(r2 <- eax)
+(eax <- r1)
+(eax += r2)
+(return)
+:ret_x
+(eax <- x)
+(return)))

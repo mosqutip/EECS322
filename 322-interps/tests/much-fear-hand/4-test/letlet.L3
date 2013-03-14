@@ -1,0 +1,5 @@
+((let ([x2 (+ 3 4)])
+(let ([__l4__tmp___var_0 (* x2 x2)])
+(let ([x1 __l4__tmp___var_0])
+(print x1))))
+)

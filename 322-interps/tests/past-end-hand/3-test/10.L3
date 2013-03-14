@@ -1,0 +1,3 @@
+((let ((x (new-array 10 0)))
+ (let ((y (number? x)))
+  (if y (print y) (print 1337)))))

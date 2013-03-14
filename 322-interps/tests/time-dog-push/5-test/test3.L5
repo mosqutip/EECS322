@@ -1,0 +1,6 @@
+(let ([a 3])
+  ((lambda (x)
+     (if (< x a)
+         (print a)
+         (print x)))
+   5))

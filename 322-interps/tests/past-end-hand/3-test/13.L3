@@ -1,0 +1,4 @@
+((let ((x 5))
+ (let ((y 10))
+  (let ((z 15))
+   (if 1 (if 0 (print x) (print y)) (print z))))))

@@ -1,0 +1,7 @@
+(((eax <- 7) ;7
+  (eax += 4) ;7+4=11
+  (eax -= 6) ;11-6=5
+  (eax *= 3) ;5*3=15
+  (eax += eax)
+  (eax += 1) ;translate for printing
+  (eax <- (print eax)))) ;15

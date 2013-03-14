@@ -1,0 +1,10 @@
+(((call :__main__))
+(:__main__
+(eax <- (allocate 15 11))
+(x <- eax)
+(y <- (mem x 0))
+(y <<= 1)
+(y += 1)
+(eax <- (print y))
+(eax <- eax)
+(return)))

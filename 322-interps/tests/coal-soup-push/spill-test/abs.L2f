@@ -1,0 +1,9 @@
+((x <- -4)
+ (cjump x < 0 :neg :pos)
+ :neg
+ (x *= -1)
+ :pos
+ (ebx <- x)
+ (ebx <<= 1)	; tag
+ (ebx += 1)
+ (eax <- (print ebx))) x -4 s_

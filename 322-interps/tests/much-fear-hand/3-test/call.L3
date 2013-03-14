@@ -1,0 +1,8 @@
+((let ([target :foo1])
+(let ([ret (target 4 5)])
+(print ret)))
+(:foo1 (x y)
+(let ([z (+ x y)])
+(:foo2 x z)))
+(:foo2 (x y)
+(+ x y)))

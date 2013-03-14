@@ -1,0 +1,14 @@
+; x = 6 + 8/2 - 5*5
+
+(((edx <- 8)
+  (edx >>= 1)
+  (ecx <- 5)
+  (ecx *= 5)
+  (edx -= ecx)
+  (edx += 6)
+
+  ;encode result
+  (edx <<= 1)
+  (edx += 1)
+
+  (eax <- (print edx))))

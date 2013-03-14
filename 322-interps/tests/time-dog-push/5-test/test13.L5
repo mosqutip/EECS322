@@ -1,0 +1,3 @@
+(let ((f (lambda (x)
+          (aref x 3))))
+  (f (new-array 1 1)))

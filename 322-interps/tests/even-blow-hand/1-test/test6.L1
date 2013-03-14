@@ -1,0 +1,14 @@
+(
+(;;main
+    (ebx <- :f)
+    (call ebx)
+)
+
+(:f
+    (eax <- (print 95))  ;; 47
+    (goto :jmp1)
+    
+    :jmp1
+    (return)
+)
+)

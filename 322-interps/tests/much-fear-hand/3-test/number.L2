@@ -1,0 +1,11 @@
+(((call :__l3tmp_label_0)
+)
+(:__l3tmp_label_0
+(__l3tmp_var_1 <- 3)
+(__l3tmp_var_1 <<= 1)
+(__l3tmp_var_1 += 1)
+(eax <- (print __l3tmp_var_1))
+(eax <- eax)
+(return)
+)
+)

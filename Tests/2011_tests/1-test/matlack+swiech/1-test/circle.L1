@@ -1,0 +1,12 @@
+(((ebx <- 13)
+  (call :square)
+  (call :pi)
+  (eax <- (print ebx)))
+
+  (:square
+   (ebx *= ebx)
+   (return))
+
+  (:pi
+   (ebx *= 3)
+   (return)))

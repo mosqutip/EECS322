@@ -1,0 +1,3 @@
+(let ([f (lambda (var vars varstup free freevars variables closurevars)
+            (+ (+ var vars) (+ (+ varstup free) (+ (+ freevars variables) closurevars))))])
+  (print (f 1 2 3 4 5 6 7)))

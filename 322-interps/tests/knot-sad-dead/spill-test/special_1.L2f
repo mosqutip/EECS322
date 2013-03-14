@@ -1,0 +1,7 @@
+((y <- 5)
+ (eax <- y)
+ (eax += eax)
+ (eax <- (mem ebp -8)))
+x
+-4
+spill_

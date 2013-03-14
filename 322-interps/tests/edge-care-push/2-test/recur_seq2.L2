@@ -1,0 +1,43 @@
+(((var1 <- 0)
+
+  :compare
+  (cjump var1 < 8 :funcCall :done)
+
+  :funcCall
+
+  ;; generate args and run function
+  (eax <- var1)
+  (call :soc)
+
+  ;; encode result
+  (eax <<= 1)
+  (eax += 1)
+  
+  ;; print
+  (eax <- (print eax))
+  
+  (var1 += 1)
+  (goto :compare)
+
+  :done)
+
+ (:soc
+  (var2 <- 5)
+  (var3 <- 6)
+
+  :loop_und
+  (cjump 0 < eax :cont :end)
+
+  :cont
+  (var4 <- var2)
+  (var4 += var3)
+  (var4 += var3)
+  (var2 <- var3)
+  (var3 <- var4)
+
+  (eax -= 1)
+  (goto :loop_und)
+
+  :end
+  (eax <- var2)
+  (return)))

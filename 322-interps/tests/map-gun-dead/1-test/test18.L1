@@ -1,0 +1,18 @@
+((
+	(edx <- 1)
+	(ebx <- 0)
+	(ecx <- 5)
+	:loop
+	(cjump ebx < 5 :continue :end)
+	:continue
+	(edx <<= ecx)
+	(ecx -= 1)
+	(ebx += 1)
+	(goto :loop)
+
+	:end
+	(edx *= 2)
+	(edx += 1)
+	(eax <- (print edx))
+
+)) 

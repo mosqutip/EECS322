@@ -1,0 +1,9 @@
+((:printone 1)
+ (:printone (x)
+   (begin
+     (print x)
+     (:skipone (+ x 1))))
+ (:skipone (x)
+   (if (< 9 x)
+     x
+     (:printone (+ x 1)))))

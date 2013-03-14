@@ -1,0 +1,5 @@
+(letrec ([exp2 (lambda (x)
+                   (if (< x 1)
+                       1
+                       (* 2 (exp2 (- x 1)))))])
+  (print (exp2 10)))

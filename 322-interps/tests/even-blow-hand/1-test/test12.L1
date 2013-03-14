@@ -1,0 +1,66 @@
+(
+(;;main
+    (ebx <- 1 = 1)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+    
+    (ebx <- 1 < 1)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+    
+    (ebx <- 1 <= 1)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+    
+    (esi <- 5)
+    (ebx <- 1 = esi)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+    
+    (ebx <- esi = 1)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+    
+    (ebx <- esi = esi)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+    
+    (esi <- 5)
+    (ebx <- 1 < esi)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+    
+    (ebx <- esi < 1)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+    
+    (ebx <- esi < esi)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+    
+    (esi <- 5)
+    (ebx <- 1 <= esi)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+    
+    (ebx <- esi <= 1)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 0
+    
+    (ebx <- esi <= esi)
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))    ;; 1
+)
+)

@@ -1,0 +1,11 @@
+(((x <- 8)
+  (x &= 1)
+  (cjump x = 0 :not :number)
+  :number
+   (x <<= 1)
+   (x += 1)
+   (eax <- (print x))
+   (goto :done)
+  :not
+   (eax <- (print 2675))
+  :done))

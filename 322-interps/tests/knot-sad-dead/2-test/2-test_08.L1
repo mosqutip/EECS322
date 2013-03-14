@@ -1,0 +1,3 @@
+(((edi <- 17)
+  (esi <- edi)
+  (eax <- (print esi))))

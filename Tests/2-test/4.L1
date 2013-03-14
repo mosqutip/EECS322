@@ -1,0 +1,4 @@
+((ebx <- ecx)
+ (eax <- 2)
+ (eax <- 34)
+ (ebx += eax))

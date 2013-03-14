@@ -1,0 +1,2 @@
+(let ([x 2])
+	(print ((lambda (y) (+ x y)) 1)))

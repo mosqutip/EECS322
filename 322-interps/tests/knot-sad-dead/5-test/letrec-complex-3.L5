@@ -1,0 +1,7 @@
+(letrec ((f (let ((arr (new-tuple 1)))
+              (new-tuple (lambda ()
+                           (begin (aset arr 0 (+ (aref arr 0) 1))
+                                  ((aref f 1) (aref arr 0))))
+                         (lambda (n) (if (< n 1) 1 (* n ((aref f 1) (- n 1)))))))))
+  (let ((f (aref f 0)))
+    (print (new-tuple (f) (f) (f)))))

@@ -1,0 +1,1 @@
+((edx <- (mem f 0)) (edx <- (mem f 0)) (edx <- (mem f 0))) f -36 s

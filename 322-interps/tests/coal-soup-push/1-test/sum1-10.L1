@@ -1,0 +1,14 @@
+;; sums the numbers from one to 10
+(((esi <- 1)
+  (edi <- 10)
+  (eax <- 0)
+  :loop
+  (cjump esi <= edi :continue :done)
+  :continue
+  (eax += esi)
+  (esi += 1)
+  (goto :loop)
+  :done
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))))

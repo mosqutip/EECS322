@@ -1,0 +1,13 @@
+((
+	(ecx <- 3)
+	(ebx <- 1000003)
+	(ecx &= ebx)
+	(eax <- (print ecx))
+
+	(ecx <- 3)
+	(ebx <- 1000001)
+	(ecx &= ebx)
+	(eax <- (print ecx))
+	
+
+))	

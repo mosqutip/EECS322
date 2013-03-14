@@ -1,0 +1,42 @@
+((begin (print (let ((arr (new-array 10 0)))
+                 (:make_array arr :prime)))
+        (print (let ((arr (new-array 10 0)))
+                 (:make_array arr :fib))))
+ (:make_array (arr f)
+              (:make_array_rec arr f 0))
+ (:make_array_rec (arr f n)
+                  (if (= (alen arr) (+ n -1))
+                      arr
+                      (:make_array_rec (begin (aset arr n (new-tuple n (f n)))
+                                              arr)
+                                       f
+                                       (if (= n (- (alen arr) 1))
+                                           (+ n 2)
+                                           (+ n 1)))))
+ (:prime (n)
+         (if (= n 1)
+             0
+             (:prime_rec n n)))
+ (:prime_rec (n x)
+             (if (= x 1)
+                 1
+                 (if (= x n)
+                     (:prime_rec n (- x 1))
+                     (if (:divides x n)
+                         0
+                         (:prime_rec n (- x 1))))))
+ (:divides (x n)
+           (:divides_rec n 0 x))
+ (:divides_rec (n acc x)
+               (if (= n acc)
+                   1
+                   (if (< n acc)
+                       0
+                       (:divides_rec n (+ acc x) x))))
+ (:fib (n)
+       (- (+ 1
+             (if (< n 2)
+                 1
+                 (+ (:fib (- n 1))
+                    (:fib (- n 2)))))
+          1)))

@@ -1,0 +1,24 @@
+(((eax <- (allocate 5 3))
+  (ebx <- (mem eax 0))
+  (eax += 4)
+  (edx <- ebx)
+  (call :print_array)) 
+ (:print_array
+  (esp -= 8)
+  ((mem ebp -4) <- eax)
+  ((mem ebp -8) <- edx)
+  (ebx <- 0)
+  :loop
+  (ecx <- (mem ebp -8))
+  (cjump ebx < ecx :continue :done)
+  :continue
+  (eax <- (mem ebp -4))
+  (eax <- (mem eax 0))
+  (eax <- (print eax))
+  (ebx += 1)
+  (ecx <- (mem ebp -4))
+  (ecx += 4)
+  ((mem ebp -4) <- ecx)
+  (goto :loop) 
+  :done
+  (return)))

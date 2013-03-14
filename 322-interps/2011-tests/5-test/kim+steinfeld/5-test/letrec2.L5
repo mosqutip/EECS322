@@ -1,0 +1,6 @@
+(let ([x 5])
+  (letrec ([exp (lambda (y res)
+                  (if (= y 0)
+                      res
+                      (exp (- y 1) (* res x))))])
+    (print (exp 4 1))))

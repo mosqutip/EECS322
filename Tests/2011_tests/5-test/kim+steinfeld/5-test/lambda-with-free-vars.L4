@@ -1,0 +1,14 @@
+((let ([x 4])
+   (let ([y 6])
+     (let ([z 7])
+       (let ([f (make-closure :f (new-tuple x y z))])
+         (print ((closure-proc f) (closure-vars f) 5 10))))))
+ (:f (vars a b)
+     (let ([y1 (aref vars 0)])
+       (let ([y2 (aref vars 1)])
+         (let ([y3 (aref vars 2)])
+           (+ (+ a y1)
+              (* (- b y2)
+                 y3)))))))
+           
+                

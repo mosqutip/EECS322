@@ -1,0 +1,7 @@
+(((eax <- (allocate 101 5))
+  (ebx <- (mem eax 4))
+  (eax <- (print ebx))
+  (eax <- (allocate 101 5))
+  ((mem eax 4) <- 11)
+  (ebx <- (mem eax 4))
+  (eax <- (print ebx)))) 

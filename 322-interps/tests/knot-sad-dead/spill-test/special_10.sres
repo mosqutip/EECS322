@@ -1,0 +1,10 @@
+(((mem ebp 8) <- 8)
+ (s_0 <- (mem ebp 8))
+ (s_0 += eax)
+ ((mem ebp 8) <- s_0)
+ (eax += 5)
+ :lbl
+ (s_1 <- (mem ebp 8))
+ (eax += s_1)
+ (s_2 <- 1 = ebx)
+ ((mem ebp 8) <- s_2))

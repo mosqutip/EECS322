@@ -1,0 +1,14 @@
+((
+	(ecx <- 1)
+	(cjump ecx = ecx :label :Label)
+	:label
+	(ebx <- 0)
+	(goto :end)
+	:Label
+	(ebx <- 1)
+	:end
+	(ebx *= 2)
+	(ebx += 1)
+	(eax <- (print ebx))
+))
+	

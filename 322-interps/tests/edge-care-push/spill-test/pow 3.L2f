@@ -1,0 +1,15 @@
+((product <- 1)
+ (count <- eax)
+
+ :comp
+ (cjump 0 < count :do :done)
+
+ :do
+ (product *= 3)
+ (count -= 1)
+ (goto :comp)
+
+ :done
+ (eax <- product)
+ (return)) product -4 s
+

@@ -1,0 +1,6 @@
+((x <- (mem y 4))
+ (z <- (mem y 8))
+ (q <- (mem y 12))
+ (x *= z)
+ (x += q)
+ (return))

@@ -1,0 +1,9 @@
+(((call :__main__))
+(:__main__
+(x <- 11)
+(x <- x < 13)
+(x <<= 1)
+(x += 1)
+(eax <- (print x))
+(eax <- eax)
+(return)))

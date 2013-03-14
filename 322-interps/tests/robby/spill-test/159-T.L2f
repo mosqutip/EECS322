@@ -1,0 +1,1 @@
+((eax <- (allocate T T)) (eax <- (allocate T T)) (eax <- (allocate T T)) (eax <- (allocate T T))) T -32 s

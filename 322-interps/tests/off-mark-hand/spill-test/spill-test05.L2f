@@ -1,0 +1,21 @@
+(
+ (val <- 1365)
+ (cbit <- 65536)
+ :for
+ (cjump 2 <= cbit :cont :exit)
+ :cont
+ (tmp <- val)
+ (tmp &= cbit)
+ (cjump 0 < tmp :is1 :is0)
+ :is1
+  (eax <- (print 3))
+  (goto :exit1)
+ :is0
+   (eax <- (print 1))
+ :exit1
+ (cbit >>= 1)
+ (goto :for)
+ :exit)
+val
+-16
+t_

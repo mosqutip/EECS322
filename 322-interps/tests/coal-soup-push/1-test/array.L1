@@ -1,0 +1,13 @@
+;; fills an array of length 10 with numbers from 1 to 10. prints the array
+(((eax <- (allocate 21 1))
+  ((mem eax 4) <- 3)
+  ((mem eax 8) <- 5)
+  ((mem eax 12) <- 7)
+  ((mem eax 16) <- 9)
+  ((mem eax 20) <- 11)
+  ((mem eax 24) <- 13)
+  ((mem eax 28) <- 15)
+  ((mem eax 32) <- 17)
+  ((mem eax 36) <- 19)
+  ((mem eax 40) <- 21)
+  (eax <- (print eax))))

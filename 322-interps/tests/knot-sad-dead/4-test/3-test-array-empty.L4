@@ -1,0 +1,5 @@
+((let ([arr (new-tuple)])
+   (let ([trash (print arr)])
+     (let ([arr (new-array 0 4)])
+       (print arr)))))
+

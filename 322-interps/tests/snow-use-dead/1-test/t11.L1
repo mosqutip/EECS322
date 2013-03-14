@@ -1,0 +1,1 @@
+(( (ebx <- 7) (ebx *= ebx) (eax <- (print ebx)) ))

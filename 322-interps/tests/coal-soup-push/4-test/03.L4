@@ -1,0 +1,7 @@
+((let ([a (new-array 5 1)])
+	(:p a))
+ (:p (x)
+  (if (a? x)
+  	(begin (print 1)
+  		   (print x))
+  	(print x))))

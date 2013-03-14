@@ -1,0 +1,1 @@
+((let ([x (new-array 7 5)]) (let ([y (alen x)]) (print y))))

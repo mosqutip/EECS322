@@ -1,0 +1,7 @@
+((let ([x (+ 2 3)])
+   (let ([pred (< 1 x)])
+     (if pred
+         (let ([r1 (* 2 3)])
+           (print r1))
+         (let ([r2 (+ 1 3)])
+           (print r2))))))

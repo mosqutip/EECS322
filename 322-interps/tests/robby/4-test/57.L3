@@ -1,0 +1,9 @@
+((let ((x_7 (:main))) (print x_7))
+ (:main
+  ()
+  (let ((x_8 (new-array 22 23)))
+    (let ((x_9 (aref x_8 11))) (new-array x_9 12))))
+ (:fn (x_1 y_2 z_3) y_2)
+ (:gn (x_4 y_5) y_5)
+ (:hn (x_6) (aref x_6 0))
+ (:in () 42))

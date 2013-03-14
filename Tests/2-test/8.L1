@@ -1,0 +1,7 @@
+((edi <- 4)
+ (edx <- 13)
+ (eax <- (allocate edi edx))
+ (ebx <- (allocate edx edi))
+ (edi <- 18)
+ (esi <- 33)
+ (ecx <- (allocate esi edi)))

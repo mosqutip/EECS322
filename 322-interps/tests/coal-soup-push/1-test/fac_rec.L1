@@ -1,0 +1,20 @@
+;; factorial recursive. calculates 4! recursively
+
+(((eax <- 4)
+  (call :fac)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax)))
+
+  (:fac
+  (cjump eax <= 1 :done :calc)
+  :calc
+  (esp -= 4)
+  ((mem ebp -4) <- eax)		;; save eax for after recursive call
+  (eax -= 1)
+  (call :fac)
+  (ebx <- (mem ebp -4))
+  (ebx *= eax)
+  (eax <- ebx)
+  :done
+  (return)))

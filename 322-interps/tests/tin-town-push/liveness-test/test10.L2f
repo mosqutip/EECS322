@@ -1,0 +1,7 @@
+((a <- eax)
+ (b <- edx)
+ (c <- ecx)
+ (a += b)
+ (a += c)
+ (eax <- a)
+ (return))

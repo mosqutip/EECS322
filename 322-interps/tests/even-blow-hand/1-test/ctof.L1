@@ -1,0 +1,12 @@
+((  (edx <- 89)     ;; actually 44
+
+    ;; convert C to F
+    (edx <<= 1)
+    (edx += 32)
+    
+    ;; encode
+    (edx <<= 1)
+    (edx += 1)
+    
+    (eax <- (print edx))))
+    

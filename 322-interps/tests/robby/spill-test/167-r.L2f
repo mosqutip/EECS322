@@ -1,0 +1,1 @@
+((eax <- (allocate 3 j)) (eax <- (allocate 3 j)) (eax <- (allocate 3 j))) r -36 s

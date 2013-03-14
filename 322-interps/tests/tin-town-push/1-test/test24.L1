@@ -1,0 +1,9 @@
+(((call :weirdfunc))
+ 
+ (:weirdfunc
+  (goto :skip)
+  :end
+  (return)
+  :skip
+  (eax <- (print 3))
+  (goto :end)))

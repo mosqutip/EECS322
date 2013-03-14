@@ -1,0 +1,4 @@
+((eax <- 13)
+ (ebx <- 42)
+ (eax <- (array-error eax ebx))
+ (return))

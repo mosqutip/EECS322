@@ -1,0 +1,11 @@
+(((eax <- (allocate 21 0))
+  (x <- eax)
+  (x &= 1)
+  (cjump x = 0 :not :array)
+  :array
+   (x <- 1)
+   (eax <- (print x))
+   (goto :done)
+  :not
+   (eax <- (print 2675))
+  :done))

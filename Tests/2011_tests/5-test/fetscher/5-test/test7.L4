@@ -1,0 +1,8 @@
+((let ((a (:alloc)))
+  (begin
+   (print (- (alen a) 4))
+   (:output a)))
+ (:alloc ()
+   (new-array 7 7))
+ (:output (a)
+   (print (aref a 1))))

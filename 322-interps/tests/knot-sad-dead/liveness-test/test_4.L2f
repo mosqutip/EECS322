@@ -1,0 +1,6 @@
+(:start
+ (eax += x)
+ (cjump x < y :start :next)
+ (eax <- r)
+ :next
+ (r <- eax))

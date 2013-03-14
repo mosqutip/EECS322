@@ -1,0 +1,7 @@
+; x = -5 + 2
+
+(((ecx <- -9)
+  (edx <- 5)
+  (edx += ecx)
+  (edx -= 1)
+  (eax <- (print edx))))

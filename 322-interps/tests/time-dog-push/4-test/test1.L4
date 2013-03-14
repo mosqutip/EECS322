@@ -1,0 +1,5 @@
+((let ((result (:square 30)))
+   (print result))
+ 
+ (:square (x)
+          (* x x)))

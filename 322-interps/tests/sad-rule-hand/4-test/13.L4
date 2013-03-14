@@ -1,0 +1,5 @@
+(((if (let ([x (new-tuple 1 2 3 4)]) (begin (aset x 2 (new-array 0 0)) (a? (aref x 2)))) :f :g) 1 2 3)
+ (:f (x y z)
+  (print (+ x (+ y z))))
+ (:g (x y z)
+  (print (* x (* y z)))))

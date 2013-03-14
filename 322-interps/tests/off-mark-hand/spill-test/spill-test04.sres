@@ -1,0 +1,10 @@
+(
+  (eax <- 1)
+  (x <- eax)
+  (x <- x)
+  ((mem ebp -4) <- x)
+  (x <- (mem ebp -4))
+  (tmp_0 <- (mem ebp -4))
+  (x += tmp_0)
+  (eax <- x)
+)

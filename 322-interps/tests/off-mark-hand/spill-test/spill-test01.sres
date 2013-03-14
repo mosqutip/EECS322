@@ -1,0 +1,8 @@
+(
+  :_main
+  ((mem ebp -20) <- 47)
+  (tmp0 <- (mem ebp -20))
+  (eax <- (print tmp0))
+  :print
+  :_
+)

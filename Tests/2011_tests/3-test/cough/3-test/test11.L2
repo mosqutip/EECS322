@@ -1,0 +1,7 @@
+(((call :__main__))
+(:__main__
+(eax <- (allocate 11 11))
+(x <- eax)
+(eax <- (print x))
+(eax <- eax)
+(return)))

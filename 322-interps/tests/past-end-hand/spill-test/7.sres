@@ -1,0 +1,11 @@
+((eax <- 10)
+ (cjump 5 <= eax :if :then)
+ :if
+ ((mem ebp -4) <- 15)
+ (goto :final)
+ :then
+ (ebx <- 24)
+ :final
+ (s_0 <- (mem ebp -4))
+ (eax += s_0)
+ (eax <- (print eax)))

@@ -1,0 +1,6 @@
+(print
+ (let ((x 0))
+   (let ((y 1))
+     ((lambda (x y) (- x y))
+      y x))))
+

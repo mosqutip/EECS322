@@ -1,0 +1,37 @@
+((
+(eax <- 10)
+(call :fib)
+(eax <- eax)
+(eax <<= 1)
+(eax += 1)
+(eax <- (print eax)))
+
+(:fib
+(esp -= 8)
+((mem ebp -8) <- eax)
+(eax <- (mem ebp -8))
+(cjump eax = 1 :ret_x :cont1)
+:cont1
+(eax <- (mem ebp -8))
+(cjump eax = 0 :ret_x :cont2)
+:cont2
+(eax <- (mem ebp -8))
+(eax -= 1)
+((mem ebp -8) <- eax)
+(eax <- (mem ebp -8))
+(call :fib)
+((mem ebp -4) <- eax)
+(eax <- (mem ebp -8))
+(eax -= 1)
+((mem ebp -8) <- eax)
+(eax <- (mem ebp -8))
+(call :fib)
+(ebx <- eax)
+(eax <- (mem ebp -4))
+(eax += ebx)
+(esp += 8)
+(return)
+:ret_x
+(eax <- (mem ebp -8))
+(esp += 8)
+(return)))

@@ -1,0 +1,3 @@
+(let ([x 10])
+     (let ([mult (lambda (y) (* x y))])
+       (print (mult 10))))

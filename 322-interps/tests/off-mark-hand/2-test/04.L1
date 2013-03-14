@@ -1,0 +1,9 @@
+((
+(eax <- 3)
+(eax <- eax)
+(call :test)
+(eax += 2)
+(eax <- (print eax)))
+
+(:test
+(return)))

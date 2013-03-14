@@ -1,0 +1,16 @@
+(
+(;;main
+    (eax <- (print 1))
+    (call :f)
+)
+
+(:f
+    (eax <- (print 7))
+    (tail-call :g)
+)
+
+(:g
+    (eax <- (print 9))
+    (return)
+)
+)

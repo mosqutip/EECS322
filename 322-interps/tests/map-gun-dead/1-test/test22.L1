@@ -1,0 +1,14 @@
+((
+	(ebx <- 1000000)
+	(ecx <- -1)
+	(edx <- 1)
+	
+	(edx *= ecx)
+	(ecx -= 1)
+	(ebx -= edx)
+
+	(edx <- ecx < ebx)
+	(edx *= 2)
+	(edx += 1)
+	(eax <- (print edx))
+))

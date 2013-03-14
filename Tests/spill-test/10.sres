@@ -1,0 +1,13 @@
+(((mem ebp -32) <- 59)
+ (jmp :nd)
+ :top
+ (s_0 <- (mem ebp -32))
+ (s_0 += 79)
+ (jmp :dn)
+ :nd
+ (s_0 += 2)
+ (jmp :top)
+ :dn
+ (eax <- (print s_0))
+ (jmp :exit)
+ :exit)

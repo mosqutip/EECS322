@@ -1,0 +1,7 @@
+(:f
+  (x <- eax)
+  (x += 2)
+  (eax <- x)  
+  (call :g)
+  (eax <- (print eax))
+  (return))

@@ -1,0 +1,22 @@
+(
+ (
+  (edx <- 129)
+  (edx &= 128)
+  (cjump 0 < edx :is1 :is0)
+  :is1
+  (eax <- (print 3))
+  (goto :exit1)
+  :is0
+  (eax <- (print 1))
+  :exit1
+
+  (edx <- 65)
+  (edx &= 128)
+  (cjump 0 < edx :is1_2 :is0_2)
+  :is1_2
+  (eax <- (print 3))
+  (goto :exit2)
+  :is0_2
+  (eax <- (print 1))
+  :exit2
+  ))

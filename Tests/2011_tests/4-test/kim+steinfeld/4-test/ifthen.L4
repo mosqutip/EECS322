@@ -1,0 +1,9 @@
+((print
+  (let ([x (new-array 10 5)])
+    (begin (aset x 2 
+                 (let ([x 3])
+                   (* 2 (if (<= 3 4)
+                            (+ 3 1)
+                            (= 4 x)))))
+           (aref x (+ 1 1))))))
+

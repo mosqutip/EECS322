@@ -1,0 +1,23 @@
+(((eax <- 1)
+  (call :f)
+  (eax <- (print eax)))
+ (:f
+  (esp -= 8)
+  ((mem ebp -4) <- esi)
+  ((mem ebp -8) <- edi)
+  (esi <- eax)
+  (call :g)
+  (edi <- eax)
+  (eax += esi)
+  (call :h)
+  (edi <- edi)
+  (edi *= 5)
+  (eax += edi)
+  (esi <- (mem ebp -4))
+  (edi <- (mem ebp -8))
+  (return))
+ (:g
+  (return))
+ (:h 
+  (return)))
+  

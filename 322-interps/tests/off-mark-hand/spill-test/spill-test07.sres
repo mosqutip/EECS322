@@ -1,0 +1,11 @@
+(
+  (x <- 11)
+  (eax <- (allocate x 31))
+  ((mem ebp -8) <- 21)
+  (sec_0 <- (mem ebp -8))
+  (cjump x < sec_0 :outbound :ok)
+  :outbound
+  (sec_1 <- (mem ebp -8))
+  (eax <- (array-error eax sec_1))
+  :ok
+)

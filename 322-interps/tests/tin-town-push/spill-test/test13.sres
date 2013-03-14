@@ -1,0 +1,8 @@
+(((mem ebp -12) <- :label)
+ (s0 <- (mem ebp -12))
+ (call s0)
+ :label2
+ (a <- (mem ebp -12))
+ (eax <- a)
+ (return))
+ 

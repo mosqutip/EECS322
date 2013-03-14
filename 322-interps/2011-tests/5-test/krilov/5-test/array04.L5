@@ -1,0 +1,4 @@
+  (let ([a (new-array 2 3)])
+    (let ([junk (aset a 0 7)])
+      (let ([x (aref a 0)])
+        (print x))))

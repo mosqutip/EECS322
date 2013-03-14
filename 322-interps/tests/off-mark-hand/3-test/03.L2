@@ -1,0 +1,10 @@
+((
+ (isNum <- 2001)
+ (isNum &= 1)
+ (cjump isNum = 1 :then0 :else0)
+ :then0
+ (eax <- (print 3))
+ (goto :exit0)
+ :else0
+ (eax <- (print 1))
+ :exit0))

@@ -1,0 +1,11 @@
+(letrec ([printone 
+           (lambda (x f)
+             (begin
+	       (print x)
+	       (f (+ x 1))))])
+  (letrec ([skipone
+             (lambda (x)
+	       (if (< x 9)
+	         (printone (+ x 1) skipone)
+		 x))])
+    (printone 1 skipone)))

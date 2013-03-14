@@ -1,0 +1,11 @@
+((
+  ((mem esp -4) <- 85)
+  (esp -= 4)
+  (call :foobar)
+  (esp += 4))
+
+ (:foobar
+  (eax <- (mem esp 8));;due to calling convention the esp has been further decrement by 4
+  (eax <- 85)
+  (eax <- (print eax))
+  (return)))

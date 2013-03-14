@@ -1,0 +1,4 @@
+(let ([apply (lambda (function arg1 arg2)
+               (function arg1 arg2))])
+  (let ([adder (lambda (x y) (+ x y))])
+    (print (apply adder 12 3))))

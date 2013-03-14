@@ -1,0 +1,11 @@
+((let ([x 4])
+(let ([x 5])
+(let ([__l5_var_v1 (make-closure :__l5_label_l0 (new-tuple x))])
+((closure-proc __l5_var_v1) (closure-vars __l5_var_v1)
+30))))
+(:__l5_label_l0 (__l5_varstup
+y)
+(let ([x (aref __l5_varstup 0)])
+(let ([x (+ x x)])
+(print (+ x y)))))
+)

@@ -1,0 +1,16 @@
+; a[2] = {5,10}
+; a[1] = a[1]*2
+; print a
+
+(((esi <- 5)
+  (eax <- (allocate esi 3))
+  ((mem eax 4) <- 11)
+
+  (edx <- 10)
+  ((mem eax 8) <- edx)
+
+  (edx *= 2)
+  (edx *= 2)
+  (edx += 1)
+  ((mem eax 8) <- edx)
+  (eax <- (print eax))))

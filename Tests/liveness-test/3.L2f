@@ -1,0 +1,8 @@
+((eax <- 85)
+ (eax <<= 10)
+ (eax >>= 4)
+ (eax <<= 1)
+ (eax >>= 4)
+ (ecx <- 3)
+ (eax >>= ecx)
+ (eax <- (print eax)))

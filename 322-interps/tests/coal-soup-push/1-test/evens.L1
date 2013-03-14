@@ -1,0 +1,12 @@
+;; Prints out even numbers from 1 to 100
+(((esi <- 2)
+  :loop
+  (cjump esi <= 100 :continue :done)
+  :continue
+  (edi <- esi)		;; tag
+  (edi <<= 1)
+  (edi += 1)
+  (eax <- (print edi))
+  (esi += 2)
+  (goto :loop)
+  :done))

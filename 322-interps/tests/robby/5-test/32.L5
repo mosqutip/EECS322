@@ -1,0 +1,3 @@
+(let ((x 17))
+  (let ((f (lambda (g) (g x))))
+    (begin (f print) (print (f (lambda (x) (+ x x)))))))

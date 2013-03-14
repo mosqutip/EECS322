@@ -1,0 +1,12 @@
+(
+	(x <- eax)
+	(t <- ecx)
+	(omega <- 3)
+	(x *= omega)
+	(v <- 32)
+	(t *= v)
+	(x -= t)
+	(eax <- x)
+	(call :sine)
+	(return)
+)

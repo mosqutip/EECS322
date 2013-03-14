@@ -1,0 +1,6 @@
+((:fun1)
+ (:fun1
+  ()
+  (let ([x (new-array 1 2)])
+    (let ([y (aref x 0)])
+      (print y)))))

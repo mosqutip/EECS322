@@ -1,0 +1,3 @@
+  (let ([a (new-tuple 1 2 3 4 5)])
+    (let ([length (alen a)])
+      (print length)))

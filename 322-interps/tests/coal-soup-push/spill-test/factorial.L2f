@@ -1,0 +1,13 @@
+((acc <- 1)  ;; accumulator
+ (i <- 2)    ;; counter. we're going from 1 to n
+ (n <- 5)    ;; n
+ :loop
+ (cjump i <= n :continue :done)
+ :continue
+ (acc *= i)
+ (i += 1)
+ (goto :loop)
+ :done
+ (acc <<= 1) ;; tag
+ (acc += 1)
+ (eax <- (print acc))) i -4 s_

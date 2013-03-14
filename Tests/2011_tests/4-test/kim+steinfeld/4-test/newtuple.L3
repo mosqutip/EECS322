@@ -1,0 +1,3 @@
+((let ([x (* 10 3)])
+   (let ([y (new-tuple 1 4 x 40)])
+     (print y))))

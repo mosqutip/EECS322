@@ -1,0 +1,17 @@
+((let ((func :printnums))
+ (begin
+  (func)
+  (func)))
+ (:printnums ()
+   (let ((a (:printinc 1)))
+     (let ((b (:printinc a)))
+       (let ((c (:printinc b)))
+         (let ((d (:printinc c)))
+	   (let ((e (:printinc d)))
+	     (let ((f (:printinc e)))
+	         (:printinc f))))))))
+ (:printinc (x)
+   (begin
+     (print x)
+     (+ x 1)))))
+

@@ -1,0 +1,10 @@
+(
+  :_main
+  (x <- 47)
+  (eax <- (print x))
+  :print
+  :_
+ )
+x
+-20
+tmp

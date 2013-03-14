@@ -1,0 +1,3 @@
+((print (:squareAdd 4 5))
+ (:squareAdd (x y)
+             (+ (* x x) (* y y))))

@@ -1,0 +1,8 @@
+(((eax <- 5)
+  (goto :plusplus)
+  (eax -= 4)
+  :plusplus
+  (eax += 1)
+  (eax *= 2)
+  (eax += 1)
+  (eax <- (print eax))))

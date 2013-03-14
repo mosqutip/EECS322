@@ -1,0 +1,11 @@
+; x = 10 << 3 >> 2
+
+(((edx <- 10)
+  (edx <<= 3)
+  (edx >>= 2)
+
+  ;encode result
+  (edx <<= 1)
+  (edx += 1)
+
+  (eax <- (print edx))))

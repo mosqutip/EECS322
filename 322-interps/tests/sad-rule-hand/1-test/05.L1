@@ -1,0 +1,5 @@
+(((ecx <- 5)
+  :loop
+  (goto :done)
+  :done
+  (eax <- (print ecx))))

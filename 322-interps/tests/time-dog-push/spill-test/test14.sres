@@ -1,0 +1,5 @@
+(((mem ebp -4) <- 1)
+ (esi <- 5)
+ (s_0 <- (mem ebp -4))
+ (eax <- (allocate esi s_0))
+ (ebx <- (mem eax 4)))

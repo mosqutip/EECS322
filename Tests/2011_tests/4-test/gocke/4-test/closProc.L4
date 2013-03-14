@@ -1,0 +1,3 @@
+((let ((c (make-closure :a 1)))
+   ((closure-proc c) 2))
+ (:a (x) (print x)))

@@ -1,0 +1,15 @@
+(
+(;;main
+    (eax <- (allocate 1 5))
+    (eax <- (print eax))
+    (eax <- (allocate 7 5))
+    (eax <- (print eax))
+    (ebx <- 9)
+    (eax <- (allocate 7 ebx))
+    (eax <- (print eax))
+    (eax <- (allocate ebx 5))
+    (eax <- (print eax))
+    (eax <- (allocate ebx ebx))
+    (eax <- (print eax))
+)
+)

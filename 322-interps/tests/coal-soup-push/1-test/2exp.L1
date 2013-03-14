@@ -1,0 +1,35 @@
+;; calculates 2^n
+(((eax <- 5)
+  (call :two_exp)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))
+  (eax <- 0)
+  (call :two_exp)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))
+  (eax <- 3)
+  (call :two_exp)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax)))
+
+  (:two_exp
+  (ebx <- eax)
+  (eax <- 2)
+  (ecx <- 1)
+
+  (cjump ebx = 0 :zero :loop)
+  :zero
+  (eax <- 1)
+  (goto :done)
+
+  :loop
+  (cjump ecx = ebx :done :continue)
+  :continue
+  (eax *= 2)
+  (ecx += 1)
+  (goto :loop)
+  :done
+  (return)))

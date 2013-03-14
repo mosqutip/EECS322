@@ -1,0 +1,6 @@
+((x <- (mem y 4))
+ (x += y)
+ (eax <- x)
+ (ebx <- (mem x 8))
+ (z <- ecx)
+ (edx <- (array-error z 4)))

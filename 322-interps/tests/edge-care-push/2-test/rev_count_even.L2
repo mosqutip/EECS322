@@ -1,0 +1,14 @@
+(((i <- 41) ;; loop termination variable = 10
+  (b <- 3) ;; start counting at 1
+  
+  :loop
+  (cjump b <= i :print :done)
+  
+  :print
+  (eax <- (print i)) ;; print ebx
+  (i -= 4) ;; increment ebx by 1
+  (goto :loop)
+
+  :done
+  ))
+  

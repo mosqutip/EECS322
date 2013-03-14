@@ -1,0 +1,6 @@
+;; Divide by 2 - divides a number by 2, tags it, and prints the result
+(((eax <- 10)
+  (eax >>= 1)
+  (eax <<= 1) ;; tag
+  (eax += 1)
+  (eax <- (print eax))))

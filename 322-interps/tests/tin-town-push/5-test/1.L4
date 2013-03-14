@@ -1,0 +1,2 @@
+; No output
+((make-closure :x (new-tuple)) (:x (frees x y) (+ x y)))

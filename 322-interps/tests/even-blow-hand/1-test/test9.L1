@@ -1,0 +1,38 @@
+(
+(;;main
+    (ebx <- 1)
+    
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))
+    (ebx -= 1)
+    (ebx >>= 1)
+    
+    (call :func2)
+)
+
+(:func1
+    (ebx += -5)
+    
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))
+    (ebx -= 1)
+    (ebx >>= 1)
+    
+    (return)
+)
+
+(:func2
+    (ebx += 3)
+    
+    (ebx <<= 1)
+    (ebx += 1)
+    (eax <- (print ebx))
+    (ebx -= 1)
+    (ebx >>= 1)
+    
+    (call :func1)
+    (return)
+)
+)

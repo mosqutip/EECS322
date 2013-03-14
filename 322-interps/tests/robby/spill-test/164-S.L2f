@@ -1,0 +1,1 @@
+((eax <- (allocate S 2)) (eax <- (allocate S 2)) (eax <- (allocate S 2))) S -8 s

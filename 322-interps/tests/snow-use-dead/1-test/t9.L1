@@ -1,0 +1,1 @@
+(( (eax <- (allocate 1 0)) (ebx <- eax) ((mem ebx 0) <- 13) (ecx <- (mem ebx 0)) (eax <- (print ecx)) ))

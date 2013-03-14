@@ -1,0 +1,12 @@
+((z1 <- edi)
+ (z2 <- esi)
+ (eax += z1)
+ (eax += z2)
+ (esi <- 5)
+ :loop
+ (esi -= 1)
+ (cjump esi < 0 :end :loop)
+ :end
+ (edi <- z1)
+ (esi <- z2)
+ (return))

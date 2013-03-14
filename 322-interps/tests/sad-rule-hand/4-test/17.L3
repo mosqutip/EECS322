@@ -1,0 +1,2 @@
+((let ((g189 (:g 0 0))) (let ((g190 (:h 0 0))) (:f g189 g190))) (:f (x y) (if 1 x y)) (:g (x y) (print 1)) (:h (x y) (print 2)))
+

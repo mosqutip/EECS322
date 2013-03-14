@@ -1,0 +1,11 @@
+((i <- 0)
+ :loop
+ (cjump i < 20 :continue :done)
+ :continue
+ (i <<= 1)	; tag
+ (i += 1)
+ (eax <- (print i))
+ (i >>= 1)	; untag
+ (i += 1)
+ (goto :loop)
+ :done) i -4 s_

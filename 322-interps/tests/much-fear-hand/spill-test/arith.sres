@@ -1,0 +1,5 @@
+((x <- 10)
+  ((mem ebp -4) <- 21)
+  (s_0 <- (mem ebp -4))
+  (x += s_0)
+  (eax <- (print x)))

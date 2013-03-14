@@ -1,0 +1,7 @@
+((x <- eax)
+ (y <- x)
+ (eax <- y)
+ (return))
+ y
+ -8
+ s

@@ -1,0 +1,2 @@
+((let ((arr (new-tuple 0 1 2)))
+   (aref arr 3)))

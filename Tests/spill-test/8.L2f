@@ -1,0 +1,7 @@
+((var <- 9)
+ :looprinter
+ (eax <- (print var))
+ (var -= 2)
+ (cjump var <= 0 :done :looprinter)
+ :done)
+var -4 s_

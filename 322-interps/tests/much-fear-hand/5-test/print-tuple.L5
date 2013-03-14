@@ -1,0 +1,6 @@
+((lambda (x)
+(let ([y (lambda (y x n)
+(if (= n 0) (print (aref x 0))
+(begin (y y x (- n 1)) (print (aref x n)))))])
+(y y x (- (alen x) 1))))
+(new-tuple 4 5 6 7))

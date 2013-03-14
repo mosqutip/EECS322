@@ -1,0 +1,5 @@
+((let ((x (new-array 0 3)))
+  (let ((xarr (a? x)))
+   (if xarr
+       (print 1)
+       (print 0)))))

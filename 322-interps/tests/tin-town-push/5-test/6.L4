@@ -1,0 +1,19 @@
+((let ((x_1 (make-closure :x_9 (new-tuple))))
+   (let ((x_7 (make-closure :x_10 (new-tuple x_1))))
+     (print (let ((x_13 x_7)) ((closure-proc x_13) (closure-vars x_13) x_1)))))
+ (:x_10
+  (frees x_8)
+  (let ((x_1 (aref frees 0)))
+    (+
+     (let ((x_11 x_8))
+       ((closure-proc x_11) (closure-vars x_11) (new-tuple 1 2 3 4 5)))
+     (let ((x_12 x_1))
+       ((closure-proc x_12) (closure-vars x_12) (new-tuple 1 2 3 4 5))))))
+ (:x_9
+  (frees args)
+  (let ((x_2 (aref args 0)))
+    (let ((x_3 (aref args 1)))
+      (let ((x_4 (aref args 2)))
+        (let ((x_5 (aref args 3)))
+          (let ((x_6 (aref args 4))) (+ (+ (+ x_2 x_3) (+ x_4 x_5)) x_6))))))))
+

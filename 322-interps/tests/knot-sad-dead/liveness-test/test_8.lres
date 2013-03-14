@@ -1,0 +1,6 @@
+((in
+  (ebx y z)
+  (ebx z))
+ (out
+  (ebx z)
+  ()))

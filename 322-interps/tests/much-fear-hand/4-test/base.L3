@@ -1,0 +1,11 @@
+((let ([__l4__tmp___var_0 (< 3 4)])
+(if __l4__tmp___var_0
+(let ([__l4__tmp___var_1 4])
+(let ([x (+ __l4__tmp___var_1 10)])
+(let ([__l4__tmp___var_2 (* x 2)])
+(print __l4__tmp___var_2))))
+(let ([__l4__tmp___var_1 5])
+(let ([x (+ __l4__tmp___var_1 10)])
+(let ([__l4__tmp___var_2 (* x 2)])
+(print __l4__tmp___var_2))))))
+)

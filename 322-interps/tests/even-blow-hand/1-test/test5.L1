@@ -1,0 +1,23 @@
+(
+(;;main
+    (call :f)
+    (cjump 1 = 1 :jmp2 :jmp1)
+    
+    :jmp1
+    (eax <- (print 3))
+    (goto :jmp3)
+    
+    :jmp2
+    (eax <- (print 5))
+    (goto :jmp1)
+    
+    :jmp3
+    (ebx <- 7)
+    (ebx <- ebx)
+    (eax <- (print ebx))
+)
+
+(:f
+    (return)
+)
+)

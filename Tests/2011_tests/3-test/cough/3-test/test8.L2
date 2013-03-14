@@ -1,0 +1,18 @@
+(((call :__main__))
+(:__main__
+(ecx <- 21)
+(tail-call :f))
+(:f
+(x <- ecx)
+(y <- 15)
+(__temp0 <- x)
+(__temp0 >>= 1)
+(z <- y)
+(z >>= 1)
+(z *= __temp0)
+(z <<= 1)
+(z += 1)
+(eax <- (print z))
+(eax <- eax)
+(return)
+(return)))

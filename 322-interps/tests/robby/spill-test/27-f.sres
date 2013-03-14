@@ -1,0 +1,1 @@
+((s0 <- (mem ebp -36)) (edx <- (mem s0 0)) (s1 <- (mem ebp -36)) (edx <- (mem s1 0)) (s2 <- (mem ebp -36)) (edx <- (mem s2 0)))

@@ -1,0 +1,1 @@
+(print ((lambda (a) a) 1))

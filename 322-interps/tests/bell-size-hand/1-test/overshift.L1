@@ -1,0 +1,4 @@
+(((ecx <- 1)
+  (ecx <<= 30)
+  (ecx >>= 30)
+  (eax <- (print ecx))))

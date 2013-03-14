@@ -1,0 +1,27 @@
+((
+  ((mem esp -4) <- 85) ;; 42
+  (esp -= 4)
+  (call :foo)
+  (esp += 4)
+  (call :bar))
+
+ (:foo
+  (edx <- (mem esp 8)) ;;due to calling convention the esp has been further decrement by 4
+  (eax <- (print edx))
+  (edx <- (mem esp 8))
+  (edx += 2) ;;43
+  ((mem esp -4) <- edx)
+  (esp -= 4)
+  (call :foo2)
+  (esp += 4)
+  (return))
+
+ (:bar
+  (eax <- 3969);;1984
+  (eax <- (print eax))
+  (return))
+
+ (:foo2
+  (edx <- (mem esp 8));;due to calling convention the esp has been further decrement by 4
+  (eax <- (print edx))
+  (return)))

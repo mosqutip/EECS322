@@ -1,0 +1,8 @@
+((
+  (a <- 13)
+  :loopstart
+  (eax <- (print a))
+  (a -= 2)
+  (cjump a < 1 :end :loopstart)
+  :end
+  ))

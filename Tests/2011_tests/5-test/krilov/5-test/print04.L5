@@ -1,0 +1,8 @@
+ (let ([x (print 1)])
+   (let ([x (print 2)])
+     (let ([x (print 3)])
+       (let ([x (print 4)])
+         (let ([x (print 5)])
+	   (let ([x (print 6)])
+	     (let ([x (print 7)])
+	       (print 8))))))))

@@ -1,0 +1,16 @@
+((	
+	(ebx <- 9)
+	(ebx += ebx)
+	(ebx += 1)
+
+	(ecx <- -9)
+	(ecx *= 2)
+	(ecx += 1)
+	
+	(ebx <- ecx < ebx)
+	(ebx <<= 1)
+	(ebx += 1)
+
+	(eax <- (print ebx))
+
+))

@@ -1,0 +1,13 @@
+((let ((allocatebinding (new-tuple 0))) (:f 200))
+ (:f
+  (x)
+  (let ((allocatebinding (new-array 1 1)))
+    (let ((done (<= x 0)))
+      (if done
+        (let ((allocatebindingx (new-tuple 0 1 2 3))) 11)
+        (let ((allocatebindingx (new-array 1 1)))
+          (let ((z (print x)))
+            (let ((allocatebindingxx (new-array 1 1)))
+              (let ((x1 (- x 1)))
+                (let ((allocatebindingxxx (new-tuple 0 1 2 3 4 5 6 7)))
+                  (:f x1)))))))))))

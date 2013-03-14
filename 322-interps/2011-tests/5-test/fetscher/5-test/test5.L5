@@ -1,0 +1,6 @@
+(let ([n 1])
+  (let ([f (lambda ()
+             (number? n))])
+    (let ([g (lambda ()
+               (= (f) 1))])
+      (print (g)))))

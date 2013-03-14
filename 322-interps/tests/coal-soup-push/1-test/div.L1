@@ -1,0 +1,26 @@
+;; divides a non-negative number in eax by a non-negative, non-zero number in ebx.
+;; ignores remainder
+(((eax <- 9)
+  (ebx <- 3)
+  (call :div)
+  (eax <<= 1)		;; tag
+  (eax += 1)
+  (eax <- (print eax))
+  (eax <- 17)
+  (ebx <- 4)
+  (call :div)
+  (eax <<= 1)		;; tag
+  (eax += 1)
+  (eax <- (print eax)))
+  
+  (:div
+  (ecx <- 0)
+  :loop
+  (cjump eax < ebx :done :continue)
+  :continue
+  (eax -= ebx)
+  (ecx += 1)
+  (goto :loop)
+  :done
+  (eax <- ecx)
+  (return)))

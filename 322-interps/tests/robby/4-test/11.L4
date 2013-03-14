@@ -1,0 +1,8 @@
+((print (:main))
+ (:main
+  ()
+  (if (aref (new-array 22 23) 11) (new-tuple 5 6 7) (new-tuple 8 9 10)))
+ (:fn (x y z) y)
+ (:gn (x y) y)
+ (:hn (x) (aref x 0))
+ (:in () 42))

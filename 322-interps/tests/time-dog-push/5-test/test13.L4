@@ -1,0 +1,3 @@
+((let ((a (new-array 1 1)))
+   (let ((b (aref a 3)))
+     (print b))))

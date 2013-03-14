@@ -1,0 +1,11 @@
+((let ([count (new-tuple 1984)])
+     (begin (aset count 0 (make-closure :func_0 (new-tuple count)))
+	    (print (let ([app1 (aref count 0)])
+     ((closure-proc app1) (closure-vars app1) 10)))))
+
+(:func_0 (vars rest)
+	 (let ([vars_0 (aref vars 0)])
+  	      (if (= rest 0)
+	          0
+	          (+ 1 (let ([app0 (aref vars_0 0)])
+     ((closure-proc app0) (closure-vars app0) (- rest 1))))))))

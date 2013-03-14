@@ -1,0 +1,7 @@
+((print (:funca (:funcb 3) (:funcc 4)))
+ (:funca (x y)
+         (+ x y))
+ (:funcb (z)
+         (* z 2))
+ (:funcc (a)
+         (* a a)))

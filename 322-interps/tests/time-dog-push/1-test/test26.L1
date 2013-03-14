@@ -1,0 +1,54 @@
+(((esi <- 21)
+  (eax <- (allocate esi 1))
+  (ecx <- 0)
+  (call :array_gen)
+  (edi <- 2)
+  (call :swap)
+  (edi <- 4)
+  (call :swap)
+ 
+  (eax <- (print eax))) 
+  
+  
+  (:array_gen 
+  :loop
+  (cjump ecx < 10 :assign :end)
+
+  :assign
+  (edx <- ecx)
+  (edx += 1)
+  (edx *= 4)
+  (edx += eax)
+  (ebx <- ecx)
+  (ebx += 1)
+  (ebx *= 2)
+  (ebx += 1)
+  ((mem edx 0) <- ebx)
+  (ecx += 1)
+  (goto :loop)
+
+  :end
+  (return))
+  
+  (:swap
+   (edx <- edi)
+   (edx *= 4)
+   (edx += eax)
+   (ecx <- (mem edx 0))
+   
+   (edx <- 10)
+   (edx -= edi)
+   (edx += 1)
+   (edx *= 4)
+   (edx += eax)
+   (ebx <- (mem edx 0))
+   ((mem edx 0) <- ecx)
+   
+   (edx <- edi)
+   (edx *= 4)
+   (edx += eax)
+   ((mem edx 0) <- ebx)
+   (return)))
+  
+   
+

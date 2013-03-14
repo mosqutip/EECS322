@@ -1,0 +1,12 @@
+((let ([x1 (:fun 1)])
+   (let ([x2 (:fun 2)])
+     (let ([x3 (:fun 3)])
+       (let ([x4 (:fun 4)])
+         (let ([x5 (:fun 5)])
+           (let ([x6 (:fun 6)])
+             (let ([x7 (:fun 7)])
+(if x1
+(if x2 (if x4 (print x6) (print x7)) (if x5 (print x6) (print x7)))
+(if x3 (if x4 (print x6) (print x7)) (if x5 (print x6) (print x7)))))))))))
+ (:fun (x)
+       (- x 1)))

@@ -1,0 +1,7 @@
+(:addl
+  (ebx <- 0)
+  (ebx += 37)
+  (ebx += 23)
+  (ebx += 120)
+ :compute
+  (tail-call ebx))

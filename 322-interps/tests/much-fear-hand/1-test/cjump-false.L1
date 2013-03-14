@@ -1,0 +1,10 @@
+(((eax <- 10)
+  (cjump eax = 10 :take :nottake)
+  :take
+  (eax += eax)
+  (eax += 1)
+  (eax <- (print eax))
+  :nottake
+  (eax += eax)
+  (eax += 1)
+  (eax <- (print eax))))

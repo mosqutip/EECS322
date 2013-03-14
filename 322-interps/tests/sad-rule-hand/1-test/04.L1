@@ -1,0 +1,3 @@
+(((ecx <- 5)
+  :loop
+  (eax <- (print ecx))))

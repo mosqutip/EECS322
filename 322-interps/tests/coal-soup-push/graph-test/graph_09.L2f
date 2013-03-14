@@ -1,0 +1,20 @@
+(
+	(max <- eax)
+	(tmp <- max)
+	(tmp <<= 1)
+	(tmp += 1)
+	(eax <- (allocate tmp 0))
+	(i <- 0)
+	:loop
+	(cjump i < max :continue :done)
+	:continue
+	(loc <- i)
+	(loc += 1)
+	(loc <<= 2)
+	(loc += eax)
+	((mem loc 0) <- i)
+	(i += 1)
+	(goto :loop)
+	:done
+	(return)
+)

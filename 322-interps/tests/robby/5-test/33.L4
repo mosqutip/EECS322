@@ -1,0 +1,1 @@
+((let ((x (new-tuple 0))) (begin (aset x 0 1) (print (aref x 0)))))

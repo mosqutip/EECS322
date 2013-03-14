@@ -1,0 +1,4 @@
+((eax <- (allocate eax x)))
+x
+-4
+spill_

@@ -1,0 +1,9 @@
+((print
+  (let ((pass (if (a? (new-array 0 0)) 0 1)))
+    (number?
+     (if (a?
+          (new-array
+           (number? (alen (new-tuple 4 4)))
+           (new-array (let ((x (if pass (new-tuple 1 2 3) 0))) x) pass)))
+       1
+       2)))))

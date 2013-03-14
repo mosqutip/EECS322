@@ -1,0 +1,10 @@
+((var <- 8)
+ (var += eax)
+ (eax += 5)
+ :lbl
+ (eax += var)
+ (var <- var)
+ (var <- 1 = ebx))
+var
+8
+s_

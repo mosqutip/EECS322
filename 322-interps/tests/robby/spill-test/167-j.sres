@@ -1,0 +1,1 @@
+((s0 <- (mem ebp -36)) (eax <- (allocate 3 s0)) (s1 <- (mem ebp -36)) (eax <- (allocate 3 s1)) (s2 <- (mem ebp -36)) (eax <- (allocate 3 s2)) (s3 <- (mem ebp -36)) (eax <- (allocate 3 s3)))

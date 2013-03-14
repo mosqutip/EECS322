@@ -1,0 +1,12 @@
+(((call :__main__))
+(:__main__
+(__temp0 <- 1)
+(cjump __temp0 = 1 :__temp2 :__temp1)
+:__temp1
+(eax <- (print 11))
+(eax <- eax)
+(return)
+:__temp2
+(eax <- (print 13))
+(eax <- eax)
+(return)))

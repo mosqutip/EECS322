@@ -1,0 +1,6 @@
+((cmp1 <- x < y)
+ (cmp2 <- z = q)
+ (cmp3 <- w <= z)
+ (eax <- (print cmp1))
+ (eax <- (print cmp2))
+ (eax <- (print cmp3)))

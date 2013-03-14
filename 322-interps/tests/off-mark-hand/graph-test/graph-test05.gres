@@ -1,0 +1,1 @@
+((cbit eax ecx edi edx esi tmp val) (eax cbit ebx ecx edi edx esi val) (ebx eax ecx edi edx esi) (ecx cbit eax ebx edi edx esi val) (edi cbit eax ebx ecx edx esi tmp val) (edx cbit eax ebx ecx edi esi val) (esi cbit eax ebx ecx edi edx tmp val) (tmp cbit edi esi val) (val cbit eax ecx edi edx esi tmp)) #f

@@ -1,0 +1,18 @@
+;calculates the nth triangular number
+(((eax <- 10)
+  (call :triNumber)
+  (eax += eax)
+  (eax += 1)
+  (eax <- (print eax)))
+ (:triNumber
+  (ebx <- eax)
+  (eax <- 0)
+  (tail-call :recursive))
+ (:recursive
+  (cjump ebx = 0 :done :recurse)
+  :recurse
+  (eax += ebx)
+  (ebx -= 1)
+  (tail-call :recursive)
+  :done
+  (return)))

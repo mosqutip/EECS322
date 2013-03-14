@@ -1,0 +1,4 @@
+((a <- eax)
+ (a += 4)
+ (eax <- a)
+ (return))

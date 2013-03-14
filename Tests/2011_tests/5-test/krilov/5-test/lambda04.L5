@@ -1,0 +1,4 @@
+(let ([adder (lambda (x y) (+ x y))])
+  (let ([subber (lambda (x y) (- x y))])
+    (print (adder (subber 20 5)
+                  (+ 7 3)))))

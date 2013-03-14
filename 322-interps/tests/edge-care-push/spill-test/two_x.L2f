@@ -1,0 +1,5 @@
+((b <- 1)
+ (c <- eax)
+ (b <<= c)
+ (eax <- b)
+ (return)) c -4 s

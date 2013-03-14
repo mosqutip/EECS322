@@ -1,0 +1,8 @@
+((let ((x 1))
+  (let ((y (number? x)))
+    (let ((z (:donothing x)))
+      (print x))))
+ (:donothing (x)
+   (let ((y (number? x)))
+     (let ((z (= y 1)))
+       z))))

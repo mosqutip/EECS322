@@ -1,0 +1,14 @@
+((
+(eax <- 3)
+(call :multby100)
+(eax <- (print eax)))
+
+(:multby100
+(x <- eax)
+(x >>= 1)
+(x *= 100)
+(x <<= 1)
+(x += 1)
+(eax <- x)
+(return)
+))

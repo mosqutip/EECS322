@@ -1,0 +1,10 @@
+; x = -36 / 2
+
+(((edx <- -36)
+  (edx >>= 1)
+
+  ;encode result
+  (edx <<= 1)
+  (edx += 1)
+
+  (eax <- (print edx))))

@@ -1,0 +1,13 @@
+(((eax <- 10)
+  (call :doubler)
+  (eax += 1)
+  (eax <- (print eax)))
+
+ (:doubler
+  (eax <<= 2)
+  (call :doublehelper)
+  (return))
+
+ (:doublehelper
+  (eax >>= 1)
+  (return)))

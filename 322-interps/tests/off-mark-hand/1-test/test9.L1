@@ -1,0 +1,16 @@
+((
+:comp1
+  (eax <- 7)
+  (edx <- 9)
+  (cjump eax < edx :print1 :exit)
+:comp2
+  (eax <- 7)
+  (edx <- 9)
+  (cjump eax = edx :exit :print2)
+:print1
+  (eax <- (print eax))
+  (goto :comp2)
+:print2
+  (eax <- (print edx))
+:exit
+))

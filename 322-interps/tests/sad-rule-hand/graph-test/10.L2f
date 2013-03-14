@@ -1,0 +1,7 @@
+((x <- 2)
+ (goto :next)
+ (x <- 3)
+ :next
+ (x += 3)
+ (eax *= x)
+ (return))

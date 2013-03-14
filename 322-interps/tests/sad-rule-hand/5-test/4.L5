@@ -1,0 +1,4 @@
+(print (let ([f 1])
+         (+ f (let ([x 0])
+                (let ([f (lambda (y) (+ f y))])
+                    (f 1))))))

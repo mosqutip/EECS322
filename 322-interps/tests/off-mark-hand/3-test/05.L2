@@ -1,0 +1,23 @@
+((
+ (ecx <- 5)
+ (ebx <- 5)
+ (eax <- 5)
+ (call :fun)
+ (res <- eax)
+ (eax <- (print res)))
+
+ (:fun
+  (x1 <- ecx)
+  (x2 <- ebx)
+  (x3 <- eax)
+  (f1 <- x1)
+  (f1 += x2)
+  (f1 -= 1)
+  (f2 <- x3)
+  (f2 += 5)
+  (f2 -= 1)
+  (final <- f1)
+  (final -= f2)
+  (final += 1)
+  (eax <- final)
+  (return)))

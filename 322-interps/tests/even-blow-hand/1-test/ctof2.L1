@@ -1,0 +1,57 @@
+((  (esi <- 201)                ;; go from 1 to 100 (201 = 100)
+    
+    (eax <- (allocate esi 1))
+    (edi <- eax)                ;; save pointer to beginning of array a
+    
+    (eax <- (allocate esi 1))
+    (ebx <- eax)                ;; save pointer to beginning of array b
+    
+    (ecx <- 3)                  ;; loop index variable (3 = 1)
+    
+    :loop
+    (cjump ecx <= esi :keep_going :done)
+    
+    :keep_going
+    ;; find a[ebx]
+    (edx <- ecx)
+    (edx -= 1)
+    (edx <<= 1)
+    (edx += edi)                ;; add base pointer
+    
+    ;; store ecx (the counter) in a[ecx]
+    ((mem edx 0) <- ecx)
+    
+    ;; find b[ecx]
+    (edx <- ecx)
+    (edx -= 1)
+    (edx <<= 1)
+    (edx += ebx)                ;; add base pointer
+    
+    ;; multiply by 2 (~~9/5) and add 32
+    (ecx <<= 1)
+    (ecx += 32)
+    
+    ;; encode
+    (ecx <<= 1)
+    (ecx += 1)
+    
+    ;; store result of calculation in b[counter]
+    ((mem edx 0) <- ecx)
+    
+    ;; decode
+    (ecx -= 1)
+    (ecx >>= 1)
+    
+    ;; undo temp conversion
+    (ecx -= 32)
+    (ecx >>= 1)
+    
+    ;; increment counter
+    (ecx += 2)
+    
+    (goto :loop)
+    
+    :done
+    ;; print results
+    (eax <- (print edi))
+    (eax <- (print ebx))))

@@ -1,0 +1,18 @@
+((let ([x 50])
+   (let ([g (make-closure :g (new-tuple x))])
+     (print ((closure-proc g)
+             (closure-vars g)
+             (new-tuple
+              (new-array 5 10)
+              3
+              (new-array 10 3)
+              6)))))
+ (:g (vars args)
+     (let ([y1 (aref vars 0)])
+       (let ([arg1 (aref args 0)])
+         (let ([arg2 (aref args 1)])
+           (let ([arg3 (aref args 2)])
+             (let ([arg4 (aref args 3)])
+               (+ (aref arg1 arg2)
+                  (* (aref arg3 arg4)
+                     y1)))))))))

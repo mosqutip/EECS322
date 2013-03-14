@@ -1,0 +1,13 @@
+(((mem eax 0) <- esi)
+ (esi <- 25)
+ (a <- :label)
+ :loop
+ (esi -= 1)
+ (call a)
+ (ecx <- eax)
+ (edx <- eax)
+ (cjump 1 < esi :loop :end)
+ :end
+ (esi <- (mem eax 0))
+ (eax <- 1)
+ (return))

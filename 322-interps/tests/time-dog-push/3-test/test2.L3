@@ -1,0 +1,2 @@
+((let ([arraypointer (new-array 1 1)])
+   (aref arraypointer 2)))

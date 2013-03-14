@@ -1,0 +1,23 @@
+(((esi <- 3)
+  (eax <- (allocate esi 61))
+  (ebx <- 1)
+  (edx <- ebx)
+  (edx *= 4)
+  (edx += eax)
+  (ebx <- (mem edx 0))
+  (edi <- 3)
+  (ecx <- edi)
+  (ebx <<= ecx)
+
+  (cjump ebx = 488 :true_print :false_print)
+  
+  :true_print
+  ((mem eax 4) <- 3)
+  (goto :print)
+  
+  :false_print
+   ((mem eax 4) <- 1)
+  (goto :print)
+  
+  :print
+  (eax <- (print eax)))) 

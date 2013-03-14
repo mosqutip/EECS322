@@ -1,0 +1,8 @@
+(((ebx <- 89)
+  (goto :skip)
+  (ebx *= 2)
+  (ebx -= 5)
+  (ebx += 10)
+  :skip
+  (eax <- (print ebx))))
+  

@@ -1,0 +1,7 @@
+;; Puts two numbers into registers, adds them, tags the sum, and prints their result. Woo.
+(((eax <- 3)
+  (ebx <- 4)
+  (eax += ebx)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))))

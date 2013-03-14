@@ -1,0 +1,8 @@
+((let ([n 10])
+(let ([base (new-array n n)]) 
+(let ([a1 (- n 1)])
+(let ([a2 (- a1 1)])
+(let ([ret1 (aset base a1 a1)])
+(let ([ret2 (aset base a2 a2)])
+(let ([ret3 (aref base a2)])
+(print ret3)))))))))

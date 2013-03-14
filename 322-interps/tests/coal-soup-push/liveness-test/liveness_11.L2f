@@ -1,0 +1,4 @@
+((esi <- 4)
+ :meaningless_label
+ (eax += esi)
+ (return))

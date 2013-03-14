@@ -1,0 +1,4 @@
+(let ([x 4])
+(let ([y (lambda (z) (print (+ z x)))])
+(let ([x 10])
+(y 4))))

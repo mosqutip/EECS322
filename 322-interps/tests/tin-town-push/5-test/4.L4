@@ -1,0 +1,16 @@
+((let ((x_1
+        (let ((x_2 (new-tuple 0)))
+          (begin
+            (aset x_2 0 (make-closure :x_5 (new-tuple x_2)))
+            (aref x_2 0)))))
+   (let ((x_7 x_1)) ((closure-proc x_7) (closure-vars x_7) 5)))
+ (:x_5
+  (frees x_4)
+  (let ((x_2 (aref frees 0)))
+    (if (< x_4 0)
+      0
+      (begin
+        (print x_4)
+        (let ((x_6 (aref x_2 0)))
+          ((closure-proc x_6) (closure-vars x_6) (- x_4 1))))))))
+

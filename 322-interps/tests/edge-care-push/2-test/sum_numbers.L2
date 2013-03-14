@@ -1,0 +1,22 @@
+(((i <- 90)
+
+  :compare
+  (cjump i <= 100 :funcCall :done)
+
+  :funcCall
+  (eax <- i)
+  (call :sum_num)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))
+  (i += 1)
+  (goto :compare)
+
+  :done)
+
+ (:sum_num
+  (b <- eax)
+  (eax += 1)
+  (eax *= b)
+  (eax >>= 1)
+  (return)))

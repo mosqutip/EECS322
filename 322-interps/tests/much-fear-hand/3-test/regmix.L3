@@ -1,0 +1,6 @@
+((let ([exax (:goo 10)])
+(let ([x (:goo 20)])
+(let ([y (+ x exax)])
+(print y))))
+(:goo (exax)
+exax))

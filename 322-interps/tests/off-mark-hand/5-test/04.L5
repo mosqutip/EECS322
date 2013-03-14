@@ -1,0 +1,4 @@
+(let ([x (lambda (func) (func 1 2))])
+     (let ([y (lambda (func) (func 100))])
+     	  (begin (print (x +))
+	  	 (y print))))

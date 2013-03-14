@@ -1,0 +1,6 @@
+(((call :__main__))
+(:__main__
+(eax <- 15)
+(eax += 21)
+(eax -= 1)
+(return)))

@@ -1,0 +1,6 @@
+((:f 3 2)
+ (:f (a b)
+   (let ((c (< a b)))
+     (if c
+         (print 0)
+	 (print 1)))))

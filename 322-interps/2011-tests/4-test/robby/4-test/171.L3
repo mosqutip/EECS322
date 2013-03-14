@@ -1,0 +1,10 @@
+((let ((x_7 (:main))) (print x_7))
+ (:main
+  ()
+  (let ((__8 35))
+    (let ((x_9 (new-tuple)))
+      (let ((x_10 (make-closure :fn x_9))) (closure-vars x_10)))))
+ (:fn (x_1 y_2 z_3) y_2)
+ (:gn (x_4 y_5) y_5)
+ (:hn (x_6) (aref x_6 0))
+ (:in () 42))

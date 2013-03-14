@@ -1,0 +1,6 @@
+(((x <- 13)
+  (eax <- (allocate x 11))
+  (y <- (mem eax 0))
+  (y += y)
+  (y += 1)
+  (eax <- (print y))))

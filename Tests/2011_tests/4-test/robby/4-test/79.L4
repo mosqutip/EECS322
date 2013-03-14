@@ -1,0 +1,10 @@
+((print (:main))
+ (:main
+  ()
+  (new-tuple
+   (let ((x 47))
+     (let ((y (+ x 1))) (let ((x (+ y 1))) (let ((y 11)) (+ x y)))))))
+ (:fn (x y z) y)
+ (:gn (x y) y)
+ (:hn (x) (aref x 0))
+ (:in () 42))

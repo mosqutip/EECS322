@@ -1,0 +1,6 @@
+((print (:main))
+ (:main () (new-array (:fn 30 11 31) 12))
+ (:fn (x y z) y)
+ (:gn (x y) y)
+ (:hn (x) (aref x 0))
+ (:in () 42))

@@ -1,0 +1,15 @@
+(((a <- 5)
+  (b <- 2)
+  (eax <- a)
+  (edx <- b)
+  (call :int_print)
+  (b += 1)
+  (eax <- (print b)))
+ (:int_print
+  (a <- eax)
+  (a += edx)
+  (eax <- (print a))
+  (tail-call :a1))
+ (:a1
+  (eax <- (print 1))
+  (return)))

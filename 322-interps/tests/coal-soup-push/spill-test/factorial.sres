@@ -1,0 +1,17 @@
+((acc <- 1)
+ ((mem ebp -4) <- 2)
+ (n <- 5)
+ :loop
+ (s_0 <- (mem ebp -4))
+ (cjump s_0 <= n :continue :done)
+ :continue
+ (s_1 <- (mem ebp -4))
+ (acc *= s_1)
+ (s_2 <- (mem ebp -4))
+ (s_2 += 1)
+ ((mem ebp -4) <- s_2)
+ (goto :loop)
+ :done
+ (acc <<= 1)
+ (acc += 1)
+ (eax <- (print acc)))

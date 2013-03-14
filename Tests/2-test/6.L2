@@ -1,0 +1,4 @@
+((var_0 <- 5)
+ (call :printer)
+ :printer
+  (eax <- (print var_0)))

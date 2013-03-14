@@ -1,0 +1,8 @@
+((let ([x 10])
+(let ([c (make-closure :goo x)])
+(let ([func (closure-proc c)])
+(let ([arg (closure-vars c)])
+(let ([ret (func arg)])
+(print ret))))))
+(:goo (x)
+(+ x x)))

@@ -1,0 +1,15 @@
+(((mem ebp -8) <- 21)
+  (s_0 <- (mem ebp -8))
+  (cjump s_0 = 10 :take :nottake)
+  :take
+  (s_1 <- (mem ebp -8))
+  (eax <- (print s_1))
+  :nottake
+  (s_2 <- (mem ebp -8))
+  (s_2 += s_2)
+  ((mem ebp -8) <- s_2)
+  (s_3 <- (mem ebp -8))
+  (s_3 += 1)
+  ((mem ebp -8) <- s_3)
+  (s_4 <- (mem ebp -8))
+  (eax <- (print s_4)))

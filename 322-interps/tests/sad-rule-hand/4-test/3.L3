@@ -1,0 +1,3 @@
+((let ([x (print 14)])
+    (let ([x (new-tuple x x x)])
+        (print x))))

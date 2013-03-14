@@ -1,0 +1,42 @@
+((  
+    (eax <- 3)  ;; 1
+    (edx <- 5)  ;; 2
+    (ecx <- 7)  ;; 3
+    (esi <- 11) ;; 5
+    (edi <- 13) ;; 6
+    (ebx <- 17) ;; 8
+    
+    (eax <- (print eax))
+    (edx <- 5)
+    (eax <- (print edx))
+    (ecx <- 7)
+    (eax <- (print ecx))
+    (eax <- (print esi))
+    (eax <- (print edi))
+    (eax <- (print ebx))
+    
+    (eax <- 19) ;; 9
+    (edx <- 23) ;; 11
+    (ecx <- 29) ;; 14
+    (esi <- 31) ;; 15
+    (edi <- 37) ;; 18
+    (ebx <- 41) ;; 20
+    
+    (eax <- (print eax))
+    (edx <- 23)
+    (eax <- (print edx))
+    (ecx <- 29)
+    (eax <- (print ecx))
+    (eax <- (print esi))
+    (eax <- (print edi))
+    (eax <- (print ebx))
+    
+    (eax <- 43) ;; 21
+    (edx <- eax)
+    (ecx <- edx)
+    (esi <- ecx)
+    (edi <- esi)
+    (ebx <- edi)
+    
+    (eax <- (print ebx))    ;; 43 (21)
+))

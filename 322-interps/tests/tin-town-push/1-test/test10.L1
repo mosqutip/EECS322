@@ -1,0 +1,6 @@
+(((eax <- 12 < 7)
+  (cjump eax <= 0 :dosomething :dosomethingelse)
+  :dosomething
+  (eax <- (print 5))
+  :dosomethingelse
+  (eax <- (print 7))))

@@ -1,0 +1,4 @@
+((let ((x (:addsome 5)))
+  (print x))
+ (:addsome (x)
+   (+ x 2)))

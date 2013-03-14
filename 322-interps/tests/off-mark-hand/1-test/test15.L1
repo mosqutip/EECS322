@@ -1,0 +1,31 @@
+((
+ (edx <- 21)
+ (ecx <- :factorial)
+ (call ecx)
+ (eax <- (print eax)))
+
+ (:factorial
+  ((mem esp -4) <- edx)
+  (esp -= 4)
+
+  (cjump edx <= 3 :ret :cont)
+  :ret
+  (eax <- 3)
+
+  (edx <- (mem esp 0))
+  (esp += 4)
+  (return)
+  :cont
+  (edx -= 2)
+
+  (call :factorial)
+  (edx += 2)
+  (edx >>= 1)
+  (eax >>= 1)
+  (eax *= edx)
+  (eax <<= 1)
+  (eax += 1)
+  (edx <- (mem esp 0))
+  (esp += 4)
+  (return)))
+  

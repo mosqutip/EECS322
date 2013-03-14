@@ -1,0 +1,13 @@
+((q <- 59)
+ (jmp :nd)
+ :top
+ (q += 79)
+ (jmp :dn)
+ :nd
+ (q += 2)
+ (jmp :top)
+ :dn
+ (eax <- (print q))
+ (jmp :exit)
+ :exit)
+q -32 s_

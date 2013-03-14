@@ -1,0 +1,12 @@
+(((eax <- 1)
+  (ebx <- 2)
+  (ecx <- 3)
+  (call :callee)
+  (ecx += eax)
+  (eax <- (print ecx)))
+
+ (:callee
+  (ebx <- 10)
+  (eax <- 5)
+  (eax *= ebx)
+  (return)))

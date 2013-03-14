@@ -1,0 +1,1 @@
+((eax <- (allocate 1 l)) (eax <- (allocate 1 l)) (eax <- (allocate 1 l))) l -12 s

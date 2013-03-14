@@ -1,0 +1,7 @@
+; a[4] = {2,2,2,2}
+; x = a[1]
+
+(((esi <- 9)
+  (eax <- (allocate esi 5))
+  (edx <- (mem eax 8))
+  (eax <- (print edx))))

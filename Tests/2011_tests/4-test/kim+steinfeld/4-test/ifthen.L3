@@ -1,0 +1,17 @@
+((let ([x_1 (<= 3 4)])
+  (let ([y (new-array 10 5)])
+    (let ([x 3])
+      (if x_1
+        (let ([x_2 (+ 3 1)])
+            (let ([x_3 (* 2 x_2)])
+              (let ([x_4 (aset y 2 x_3)])
+                (let ([x_5 (+ 1 1)])
+                  (let ([x_10 (aref y x_5)])
+                    (print x_10))))))
+        (let ([x_6 (= 4 x)])
+          (let ([x_7 (* 2 x_6)])
+            (let ([x_8 (aset y 2 x_7)])
+              (let ([x_9 (+ 1 1)])
+                (let ([x_11 (aref y x_9)])
+                  (print x_11)))))))))))
+                   

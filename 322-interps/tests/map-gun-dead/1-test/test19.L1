@@ -1,0 +1,13 @@
+((
+	(ecx <- 2147483647)
+	(ebx <- 100)
+	:loop
+	(cjump ebx = 0 :end :continue)
+	:continue
+	(ecx >>= 0)
+	(ebx -= 1)
+	(goto :loop)
+	:end
+
+	(eax <- (print ecx))
+))

@@ -1,0 +1,9 @@
+((a eax ebx ecx edi esi y)
+ (eax a ebx ecx edi edx esi y)
+ (ebx a eax ecx edi edx esi y)
+ (ecx a eax ebx edi edx esi y)
+ (edi a eax ebx ecx edx esi y)
+ (edx eax ebx ecx edi esi)
+ (esi a eax ebx ecx edi edx y)
+ (y a eax ebx ecx edi esi))
+#f

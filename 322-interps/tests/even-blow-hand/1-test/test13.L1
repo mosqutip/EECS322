@@ -1,0 +1,35 @@
+(
+(;;main
+    (goto :z)
+    
+    :a
+    :b
+    (goto :end)
+    
+    :u
+    (eax <- (print edi))
+    (goto :b)
+    
+    :v
+    (edi += 2)
+    (goto :u)
+    
+    :w
+    (eax <- (print edi))
+    (goto :v)
+    
+    :x
+    (edi += 10)
+    (goto :w)
+    
+    :y
+    (eax <- (print edi))
+    (goto :x)
+    
+    :z
+    (edi <- 1)
+    (goto :y)
+    
+    :end
+)
+)

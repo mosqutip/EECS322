@@ -1,0 +1,30 @@
+(((eax <- 5)
+  (call :foo1))
+ (:foo1
+  (cjump eax = 0 :out1 :recur1)
+  :recur1
+  (ebx <- eax)
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx))
+  (eax <- ebx)
+  (eax -= 1)
+  (eax >>= 1)
+  (eax -= 1)
+  (call :foo2)
+  :out1
+  (return))
+ (:foo2
+  (cjump eax = 0 :out2 :recur2)
+  :recur2
+  (ebx <- eax)
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx))
+  (eax <- ebx)
+  (eax -= 1)
+  (eax >>= 1)
+  (eax -= 1)
+  (call :foo1)
+  :out2
+  (return)))

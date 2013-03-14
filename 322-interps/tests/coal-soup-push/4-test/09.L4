@@ -1,0 +1,6 @@
+((:iter (new-tuple 1 2 3 4 5) 0)
+ (:iter (a i)
+  (if (< i (alen a))
+  	  (begin (print (aref a i))
+  	  		 (:iter a (+ i 1)))
+  	  (print -1))))

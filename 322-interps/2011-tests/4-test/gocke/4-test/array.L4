@@ -1,0 +1,2 @@
+((let ((l4 0)) 
+   (print (alen (new-array (+ 3 4) l4)))))

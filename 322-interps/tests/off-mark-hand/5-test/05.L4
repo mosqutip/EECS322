@@ -1,0 +1,2 @@
+(
+(let ((x 10)) (begin (print x) (let ((y (new-tuple 1 2 3 4 5))) (begin (print (alen y)) (print (aref y 2)))))))

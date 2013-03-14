@@ -1,0 +1,8 @@
+((
+  (eax <- (allocate 11 1))
+  (arrayptr <- eax)
+  ((mem arrayptr 4) <- 3)
+  ((mem arrayptr 8) <- 5)
+  ((mem arrayptr 16) <- 9)
+  (x <- (mem arrayptr 12))
+  (eax <- (print x))))

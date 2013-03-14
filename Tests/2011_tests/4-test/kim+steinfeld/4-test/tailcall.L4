@@ -1,0 +1,5 @@
+((print (:exp 5 3 1))
+ (:exp (x y r)
+       (if (= y 0)
+           r
+           (:exp x (- y 1) (* r x)))))

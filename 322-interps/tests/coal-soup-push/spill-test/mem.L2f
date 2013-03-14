@@ -1,0 +1,5 @@
+((num <- 2)
+ (num <<= 1)
+ (num += 1)
+ (eax <- (allocate 11 num))
+ (eax <- (print eax))) num -4 s_

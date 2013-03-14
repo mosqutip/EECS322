@@ -1,0 +1,5 @@
+((let ((allocatebinding (new-array 1 1)))
+   (let ((x (new-array 10 0)))
+     (let ((allocatebindingx (new-array 1 1)))
+       (let ((y (number? x)))
+         (let ((allocatebindingxx (new-tuple 0 1 2 3 4))) (print y)))))))

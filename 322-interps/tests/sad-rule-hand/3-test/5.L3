@@ -1,0 +1,4 @@
+((let ([x1 (new-array 1 1)])
+    (let ([x2 (aref x1 0)])
+        (let ([x3 (number? x2)])
+            (print x3)))))

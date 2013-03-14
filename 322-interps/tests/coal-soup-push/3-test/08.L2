@@ -1,0 +1,12 @@
+(((eax <- (allocate 11 3))
+  (a <- eax)
+  (tmp0 <- (mem a 0))
+  (cjump tmp0 <= 5 :error :continue)
+  :error
+  (eax <- (array-error a 11))
+  :continue
+  (val <- (mem aref 24))
+  (tmp1 <- val)
+  (tmp1 <<= 1)
+  (tmp1 += 1)
+  (eax <- (print tmp1))))

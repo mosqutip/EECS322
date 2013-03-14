@@ -1,0 +1,19 @@
+(((var1 <- -2)
+
+  :compare
+  (cjump var1 <= 2 :funcCall :done)
+
+  :funcCall
+  (eax <- var1)
+  (call :negate)
+  (eax <<= 1)
+  (eax += 1)
+  (eax <- (print eax))
+  (var1 += 1)
+  (goto :compare)
+
+  :done)
+
+ (:negate
+  (eax *= -1)
+  (return)))

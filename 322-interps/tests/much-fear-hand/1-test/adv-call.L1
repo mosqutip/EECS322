@@ -1,0 +1,11 @@
+(((eax <- 10)
+  (ebx <- 20)
+  (eax += ebx)
+  (call :foo)
+  (eax <- (print eax)))
+ (:foo
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx))
+  (eax <- ebx)
+  (return)))

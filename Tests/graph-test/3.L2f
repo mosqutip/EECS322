@@ -1,0 +1,8 @@
+((x <- ebx)
+ (x *= x)
+ (x *= 3)
+ (call :f)
+ (y <- ecx)
+ (y >>= 2)
+ (y -= 1)
+ (tail-call u))

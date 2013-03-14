@@ -1,0 +1,6 @@
+((let ([x (< 5 3)])
+   (if x
+       (let ([y (* 40 2)])
+         (print y))
+       (let ([y (- 40 2)])
+         (print y)))))

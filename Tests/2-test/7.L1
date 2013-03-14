@@ -1,0 +1,9 @@
+((eax <- 12)
+ (call :solver)
+ (eax *= 2)
+ (eax <- (print eax))
+ :solver
+  (ebx <- eax)
+  (ebx -= 1)
+  (ebx <<= eax)
+  (eax <- ebx))

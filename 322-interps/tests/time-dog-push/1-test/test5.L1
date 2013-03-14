@@ -1,0 +1,10 @@
+(((eax <- 4)
+  (ebx <- 5)
+  (ecx <- eax < ebx)
+  (cjump ecx = 0 :true :false)
+
+  :true
+  (eax <- (print 3))
+
+  :false
+  (eax <- (print 1))))

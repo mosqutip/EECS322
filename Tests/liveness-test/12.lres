@@ -1,0 +1,4 @@
+((in () (eax) (eax x) (eax x) (eax x) (eax x) (eax edx x) (eax ecx edx) (eax ecx
+y) (eax y z) (eax y) (eax y) (eax y) (eax))
+ (out (eax) (x eax) (x eax) (x eax) (x eax) (eax edx x) (eax ecx edx) (eax ecx
+ y) (eax y z) (eax y) (eax y) (eax y) (eax)))

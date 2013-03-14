@@ -1,0 +1,28 @@
+(((eax <- 11) ;; compute factorial of 1
+  (call :factorial)
+  (eax <- (print eax)))
+  
+  (:factorial
+   
+   (var1 <- 1) ;; initialize product to 1 
+   
+   ;decode eax
+   (eax -= 1)
+   (eax >>= 1)   
+
+   :loop
+   (cjump 0 < eax :do_work :done)
+   
+   :do_work
+   (var1 *= eax) ;; do multiplication
+   (eax -= 1) ;; decrement counter
+   (goto :loop)   
+
+   :done
+   ;; reeencode output
+   (var1 <<= 1)
+   (var1 += 1)
+
+   ;; save output to eax
+   (eax <- var1)
+   (return)))

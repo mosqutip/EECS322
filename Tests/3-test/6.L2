@@ -1,0 +1,15 @@
+(((a <- 0)
+  (cjump a = 0 :firstfalse :firsttrue)
+  :firsttrue
+   (eax <- (print 3))
+   (goto :done1)
+  :firstfalse
+   (b <- 0)
+   (cjump b = 0 :secondfalse :secondtrue)
+  :secondtrue
+   (eax <- (print 3))
+   (goto :done2)
+  :secondfalse
+   (eax <- (print 5))
+  :done1
+  :done2))

@@ -1,0 +1,16 @@
+((
+  (temp <- 11)
+  (cjump temp < 9 :increase :decrease)
+  :increase
+  (temp >>= 1)
+  (temp *= 2)
+  (temp <<= 1)
+  (temp += 1)
+  (goto :done)
+  :decrease
+  (temp >>= 1)
+  (temp -= 1)
+  (temp <<= 1)
+  (temp += 1)
+  :done 
+  (eax <- (print temp))))

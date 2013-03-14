@@ -1,0 +1,4 @@
+(let ([adder +])
+  (let ([subber -])
+    (print (adder (subber 20 5)
+                  (+ 7 3)))))

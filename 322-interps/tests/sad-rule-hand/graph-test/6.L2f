@@ -1,0 +1,27 @@
+(:func
+ (a <- 1071)
+ (b <- 462)
+
+ (cjump a = 0 :then :else)
+ :then
+ (res <- b)
+      (goto :exit_if)
+ :else
+ :while
+	(cjump b = 0 :exit_while :cont_while)
+ 	:cont_while
+	      (cjump b < a :then1 :else1)
+	       :then1
+	       		(a -= b)
+ 			(goto :exit_if1)
+ 	      :else1
+			(b -= a)
+	      :exit_if1
+	(goto :while)
+	:exit_while
+ (res <- a)
+ :exit_if
+ (res <<= 1)
+ (res += 1)
+ (eax <- res)
+ (return))

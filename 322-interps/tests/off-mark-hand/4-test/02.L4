@@ -1,0 +1,7 @@
+((:call1 (:call2))
+(:call1 (x)
+ (if x
+     (print (- x x))
+     (print x)))
+(:call2 ()
+	10))

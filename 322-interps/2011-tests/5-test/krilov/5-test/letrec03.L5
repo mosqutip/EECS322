@@ -1,0 +1,7 @@
+(letrec ([f (let ([f (lambda (f)
+                       (lambda (x)
+                         (if (= x 1)
+                             x
+                             (* x ((f f) (- x 1))))))])
+               (f f))])
+  (print (f 5)))

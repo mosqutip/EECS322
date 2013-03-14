@@ -1,0 +1,10 @@
+(((call :fun1))
+ 
+ (:fun1
+  (x <- 3)
+  (y <- 5)
+  (eax <- (allocate x y))
+  (x <- eax)
+  (result <- (mem x 4))
+  (eax <- (print result))
+  (return)))

@@ -1,0 +1,12 @@
+(
+ (eax <- 1)
+ (x <- eax)
+ (x <- x)
+ (xx <- x)
+ (x <- xx)
+ (x += xx)
+ (eax <- x)
+)
+xx
+-4
+tmp_

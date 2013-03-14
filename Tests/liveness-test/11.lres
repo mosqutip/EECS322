@@ -1,0 +1,4 @@
+((in () (ebx) (ebx x) (ebx edx x) (ebx edx x) (ebx edx x) (ebx x) (ebx x) (ebx)
+(ebx) (ebx))
+(out (ebx) (ebx x) (ebx edx x) (ebx edx x) (ebx edx x) (ebx x) (ebx x) (ebx)
+(ebx) (ebx) ()))

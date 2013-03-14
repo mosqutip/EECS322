@@ -1,0 +1,4 @@
+((y <- 5)
+ (eax <- y)
+ (eax += eax)
+ (eax <- (mem ebp -8)))

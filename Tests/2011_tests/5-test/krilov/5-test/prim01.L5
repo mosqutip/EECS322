@@ -1,0 +1,5 @@
+(let ([f2 (lambda (op arg1 arg2)
+            (op arg1 arg2))])
+  (let ([f3 (lambda (op arg1 arg2 arg3)
+              (op arg1 arg2 arg3))])
+    (print (f2 aref (f2 new-array 3 7) 2))))

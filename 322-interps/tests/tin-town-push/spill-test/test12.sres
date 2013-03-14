@@ -1,0 +1,6 @@
+(((mem ebp -4) <- 10)
+ (s0 <- (mem ebp -4))
+ (eax <- s0 <= s0)
+ (eax <- (mem ebp -4))
+ (return))
+ 

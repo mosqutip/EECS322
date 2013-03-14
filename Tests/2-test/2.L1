@@ -1,0 +1,4 @@
+((edx += ebx)
+ (edx <<= 2)
+ (edx >>= ecx)
+ (edx >>= eax))

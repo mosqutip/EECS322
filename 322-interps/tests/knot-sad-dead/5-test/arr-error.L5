@@ -1,0 +1,3 @@
+(let ((arr (new-tuple 0 1 2)))
+  (let ((access (lambda (n) (aref arr n))))
+    (access 3)))

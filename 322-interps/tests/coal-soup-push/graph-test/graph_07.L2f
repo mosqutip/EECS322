@@ -1,0 +1,10 @@
+(
+	(x <- eax)
+	(x *= 2)
+	(goto :next)
+	:useless
+	(y <- 3)
+	:next
+	(eax <- x)
+	(return)
+)

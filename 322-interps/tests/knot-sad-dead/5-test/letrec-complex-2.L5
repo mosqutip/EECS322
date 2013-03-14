@@ -1,0 +1,6 @@
+(letrec ((f (new-tuple
+             (lambda (x) (if (< x 1) 1 (* x ((aref f 0) (- x 1)))))
+             (lambda (x) (if (< x 2) 1 (+ ((aref f 1) (- x 1)) ((aref f 1) (- x 2))))))))
+  (let ((fact (aref f 0)))
+    (let ((fib (aref f 1)))
+      (print (new-tuple (fact 5) (fib 6))))))

@@ -1,0 +1,3 @@
+  (let ([y 7])
+    (let ([x (number? y)])
+      (print x)))

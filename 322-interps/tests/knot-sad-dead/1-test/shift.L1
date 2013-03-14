@@ -1,0 +1,20 @@
+(((ebx <- 10)
+  (ebx <<= 2)
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx)) ;40
+  (ebx <- 48)
+  (ebx >>= 3)
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx)) ;6
+  (ebx <- -10)
+  (ebx <<= 2)
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx)) ;-40
+  (ebx <- -48)
+  (ebx >>= 3)
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx)))) ;-6

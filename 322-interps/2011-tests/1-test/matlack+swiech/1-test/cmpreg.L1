@@ -1,0 +1,12 @@
+(((eax <- 14)
+  (ebx <- 144)
+  (ecx <- :lessthan)
+  (edx <- :greaterthan)
+  (edi <- :equalto)
+  (cjump ebx < eax :lessthan :greaterthan)
+  :equalto
+   (eax <- (print eax))
+  :lessthan
+   (eax <- (print 0))
+  :greaterthan
+   (eax <- (print 3))))

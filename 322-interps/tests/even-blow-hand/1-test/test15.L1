@@ -1,0 +1,16 @@
+(
+(;;main
+    (edx <- :f)
+    (call :jmp)
+)
+
+(:jmp
+    (call edx)
+    (return)
+)
+
+(:f
+    (eax <- (print 901))    ;; 450
+    (return)
+)
+)

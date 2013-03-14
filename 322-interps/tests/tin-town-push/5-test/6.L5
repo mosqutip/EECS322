@@ -1,0 +1,5 @@
+(let ((a (lambda (a b c d e)
+           (+ (+ (+ a b) (+ c d)) e))))
+  (let ((b (lambda (f)
+             (+ (f 1 2 3 4 5) (a 1 2 3 4 5)))))
+    (print (b a))))

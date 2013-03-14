@@ -1,0 +1,5 @@
+((let ([x 10])
+     (let ([mult (make-closure :func_0 (new-tuple x))])
+     	  (print ((closure-proc mult) (closure-vars mult) 10))))
+(:func_0 (vars y)
+	 (* (aref vars 0) y)))

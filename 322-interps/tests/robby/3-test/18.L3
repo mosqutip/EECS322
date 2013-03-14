@@ -1,0 +1,1 @@
+((let ((arr (new-tuple 1))) (let ((x (aset arr 0 2))) (print x))))

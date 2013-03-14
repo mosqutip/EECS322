@@ -1,0 +1,21 @@
+(((call :main))
+ (:main
+  (eax <- 7)
+  (call :f)
+  (x1 <- eax)
+  (eax <- x1)
+  (call :f)
+  (x2 <- eax)
+  (eax <- x2)
+  (tail-call :do_print))
+ (:do_print
+  (v <- eax)
+  (eax <- (print v))
+  (eax <- 1)
+  (return))
+ (:f
+  (x <- eax)
+  (eax <- x)
+  (eax += 3)
+  (eax -= 1)
+  (return)))

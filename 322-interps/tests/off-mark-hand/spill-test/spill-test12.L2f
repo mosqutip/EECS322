@@ -1,0 +1,17 @@
+(:y
+:_p
+(k <- 1)
+:_e
+(be <- k)
+(cmp <- :_e)
+(te <- :_p)
+(e <- te)
+(g <- e)
+(e_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee <- 1000)
+(te <- e)
+:z
+(ee <- e_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee)
+)
+e
+-4
+foo_

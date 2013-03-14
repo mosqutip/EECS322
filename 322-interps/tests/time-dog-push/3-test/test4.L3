@@ -1,0 +1,10 @@
+((let ([result (:timestwo 4 1)])
+   (print result))
+ 
+ (:timestwo (count result)
+            (let ([end (= count 0)])
+              (if end
+                  result
+                  (let ([newcount (- count 1)])
+                    (let ([newresult (* result 2)])
+                      (:timestwo newcount newresult)))))))

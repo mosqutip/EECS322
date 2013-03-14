@@ -1,0 +1,19 @@
+;; increments by 2, then decrements by 1, from 0 to 10
+(((esi <- 0)
+  (edi <- 10)
+  (eax <- (print 1))	;; print 0 to start
+  :loop
+  (cjump esi <= edi :continue :done)
+  :continue
+  (esi += 2)
+  (ebx <- esi)
+  (ebx <<= 1)	;; tag
+  (ebx += 1)
+  (eax <- (print ebx))
+  (esi -= 1)
+  (ebx <- esi)
+  (ebx <<= 1)	;; tag
+  (ebx += 1)
+  (eax <- (print ebx))
+  (goto :loop)
+  :done))

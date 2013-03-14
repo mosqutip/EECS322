@@ -1,0 +1,6 @@
+((print (:main))
+ (:main () (begin 45 (begin 46 (new-tuple 13 11))))
+ (:fn (x y z) y)
+ (:gn (x y) y)
+ (:hn (x) (aref x 0))
+ (:in () 42))

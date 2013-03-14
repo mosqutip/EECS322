@@ -1,0 +1,13 @@
+(((call :__main__))
+(:__main__
+(eax <- (allocate 13 1))
+((mem eax 4) <- 7)
+((mem eax 8) <- 59)
+((mem eax 12) <- 1)
+((mem eax 16) <- -9)
+((mem eax 20) <- -1)
+((mem eax 24) <- 3)
+(x <- eax)
+(eax <- (print x))
+(eax <- eax)
+(return)))

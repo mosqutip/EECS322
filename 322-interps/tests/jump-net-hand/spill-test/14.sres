@@ -1,0 +1,14 @@
+(:start
+ (count <- 8)
+ ((mem ebp -12) <- 1)
+ :again
+ (z_0 <- (mem ebp -12))
+ (z_0 *= count)
+ ((mem ebp -12) <- z_0)
+ (count -= 1)
+ (cjump count <= 0 :again :finish)
+ :finish
+ (z_1 <- (mem ebp -12))
+ (eax <- (print z_1))
+ (eax <- 0)
+ (return))

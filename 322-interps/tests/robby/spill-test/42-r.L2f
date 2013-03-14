@@ -1,0 +1,1 @@
+(((mem eax 0) <- 3) ((mem eax 0) <- 3) ((mem eax 0) <- 3)) r -32 s

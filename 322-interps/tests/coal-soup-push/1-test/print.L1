@@ -1,0 +1,6 @@
+;; prints the number 1234, then prints the return value of (print) (should always be zero)
+(((ebx <- 1234)
+  (ebx <<= 1) ;; tag
+  (ebx += 1)
+  (eax <- (print ebx))
+  (eax <- (print eax))))

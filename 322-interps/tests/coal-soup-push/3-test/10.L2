@@ -1,0 +1,7 @@
+(((x <- 5)
+  (num <- x)
+  (num &= 1)
+  (tmp0 <- num)
+  (tmp0 <<= 1)
+  (tmp0 += 1)
+  (eax <- (print tmp0))))

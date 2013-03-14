@@ -1,0 +1,5 @@
+((num <- 1234)
+ (num <<= 1)
+ (num += 1)
+ (eax <- (print num))
+ (eax <- (print eax))) num -4 s_

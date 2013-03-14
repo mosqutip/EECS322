@@ -1,0 +1,7 @@
+((let ([w (:g 1 2 3)])
+    (print w))
+ (:g (x y z)
+     (:f x y z))
+ (:f (x y z)
+     (let ([x1 (+ x y)])
+        (+ x1 z))))

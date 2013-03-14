@@ -1,0 +1,6 @@
+ (let ([x 17])
+   (let ([y x])
+     (let ([x x])
+       (let ([y y])
+         (let ([x (+ x y)])
+	   (print x))))))

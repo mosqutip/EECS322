@@ -1,0 +1,6 @@
+((ebx <- (mem ecx 4))
+ (edx <- (mem ecx 8))
+ (ebx *= edx)
+ (edx <- (mem edx 12))
+ (ebx += edx)
+ (return))

@@ -1,0 +1,35 @@
+((
+  (eax <- (allocate 21 1))
+  (array <- eax)
+  ((mem array 4)  <- 19)
+  ((mem array 8)  <- 17)
+  ((mem array 12) <- 15)
+  ((mem array 16) <- 13)
+  ((mem array 20) <- 11)
+  ((mem array 24) <-  9)
+  ((mem array 28) <-  7)
+  ((mem array 32) <-  5)
+  ((mem array 36) <-  3)
+  ((mem array 40) <-  1)
+
+  (arraySize <- (mem array 0))
+  (offset <- 11)
+  (offset >>= 1)
+  (cjump arraySize < offset :then0 :else0)
+  :then0
+  (offset <<= 1)
+  (offset += 1)
+  (eax <- (array-error array offset))
+  :else0
+  (arrayp <- array)
+  (offset *= 4)
+  (arrayp += offset)
+  (arrayFive <- (mem arrayp 4))  
+  (compare <- arrayFive = 9)
+  (cjump compare = 1 :then1 :else1)
+  :then1
+  (eax <- (print 3))
+  (goto :exit1)
+  :else1
+  (eax <- (print 1))
+  :exit1))

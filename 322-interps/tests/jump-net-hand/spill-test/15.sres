@@ -1,0 +1,21 @@
+((ebx <- eax)
+ (ebx *= ebx)
+ ((mem ebp -4) <- ebx)
+ (c <- 10)
+ (goto :label2)
+ :label1
+ (z_0 <- (mem ebp -4))
+ (z_0 -= 3)
+ ((mem ebp -4) <- z_0)
+ (z_1 <- (mem ebp -4))
+ (eax += z_1)
+ (eax -= 1)
+ :label2
+ (c -= 1)
+ (cjump c <= 0 :label3 :label1)
+ :label3
+ (z_2 <- (mem ebp -4))
+ (eax <- (print z_2))
+ (eax <- (print eax))
+ (eax <- (print 7))
+ (return))

@@ -1,0 +1,2 @@
+ (let ([x (let ([x 7]) x)])
+       (print x))

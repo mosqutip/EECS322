@@ -1,0 +1,15 @@
+((print (:main))
+ (:main
+  ()
+  (new-tuple
+   15
+   (<= 16 17)
+   18
+   19
+   (let ((x 41)) (let ((y (- x x))) (let ((x 11)) x)))
+   20
+   21))
+ (:fn (x y z) y)
+ (:gn (x y) y)
+ (:hn (x) (aref x 0))
+ (:in () 42))

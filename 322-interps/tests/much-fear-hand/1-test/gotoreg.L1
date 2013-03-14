@@ -1,0 +1,10 @@
+(((eax <- :goto)
+  (ebx <- 11)
+  (goto :goto)
+  (eax <- (print ebx))
+  :cc
+  :goto
+  :cef
+  (ebx += ebx)
+  (ebx += 1)
+  (eax <- (print ebx))))

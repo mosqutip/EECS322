@@ -1,0 +1,22 @@
+(((esi <- 21)
+  (eax <- (allocate esi 1))
+  (ecx <- 1)
+  
+  :loop
+  (cjump ecx < 10 :assign :print_value)
+  
+  :assign
+  (edx <- ecx)
+  (edx += 1)
+  (edx *= 4)
+  (edx += eax)
+  (ebx <- ecx)
+  (ebx *= ebx)
+  (ebx *= 2)
+  (ebx += 1)
+  ((mem edx 0) <- ebx)
+  (ecx += 1)
+  (goto :loop)
+  
+  :print_value
+  (eax <- (print eax)))) 

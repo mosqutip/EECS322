@@ -1,0 +1,1 @@
+((let ((x (:f))) (print x)) (:f () (number? :f)))

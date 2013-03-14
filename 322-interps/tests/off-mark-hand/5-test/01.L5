@@ -1,0 +1,4 @@
+(letrec ([count (lambda (rest) (if (= rest 0) 
+			       	   0
+				   (+ 1 (count (- rest 1)))))])
+	 (print (count 10)))

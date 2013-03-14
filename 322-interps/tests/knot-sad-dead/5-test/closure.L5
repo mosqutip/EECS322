@@ -1,0 +1,10 @@
+(letrec ((f (let ((x (new-tuple 3)))
+              (lambda (z)
+                (if (< z 1)
+                    0
+                    (begin
+                      (aset x 0 (+ 1 (aref x 0)))
+                      (+ (f (- z 1)) (aref x 0))))))))
+  (begin
+    (print (f 4))
+    (print (f 4))))

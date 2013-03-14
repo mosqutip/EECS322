@@ -1,0 +1,4 @@
+;; prints some random numbers :)
+(((eax <- (print 14957))
+  (eax <- (print 1337))
+  (eax <- (print 8675309))))

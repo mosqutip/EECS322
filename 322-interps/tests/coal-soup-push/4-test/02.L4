@@ -1,0 +1,7 @@
+((let ([t (new-tuple 1 2 3 4 5)])
+	(:p t))
+ (:p (x)
+  (if (a? x)
+  	(begin (print 1)
+  		   (print x))
+  	(print x))))

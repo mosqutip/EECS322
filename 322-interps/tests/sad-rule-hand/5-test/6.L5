@@ -1,0 +1,3 @@
+(print (let ((f (lambda (x y z m n)
+                    (+ x (+ y (+ z (+ m n)))))))
+        (f 1 1 1 1 1)))

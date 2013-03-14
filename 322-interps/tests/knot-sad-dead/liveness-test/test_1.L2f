@@ -1,0 +1,4 @@
+((eax <- z)
+ (ebx += z)
+ (z += esi)
+ (y <- eax))

@@ -1,0 +1,14 @@
+((
+  (eax <- 3)
+  (call :fun)
+  (eax <- (print eax)))
+ 
+ (:fun
+  (eax += 2)
+  (tail-call :tailfun)
+  (return))
+ 
+ (:tailfun
+  (ecx <- 2)
+  (eax >>= ecx)
+  (return)))

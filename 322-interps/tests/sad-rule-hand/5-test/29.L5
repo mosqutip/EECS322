@@ -1,0 +1,3 @@
+(letrec ((f (lambda (x) (+ x 10))))
+    (let ((g (if 1 f (lambda (x) (* x 2)))))
+        (print (g 1))))

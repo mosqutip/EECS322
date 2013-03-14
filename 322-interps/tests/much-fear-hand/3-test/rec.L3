@@ -1,0 +1,11 @@
+((let ([arr (new-array 10 10)])
+(let ([ret (:init arr 9)])
+(let ([y1 (aref arr 5)])
+(print y1))))
+(:init (arr i)
+(let ([ret (aset arr i i)])
+(let ([cond (= i 0)])
+(if cond
+  1
+  (let ([nexti (- i 1)])
+  (:init arr nexti)))))))

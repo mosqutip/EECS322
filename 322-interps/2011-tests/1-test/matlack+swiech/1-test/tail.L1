@@ -1,0 +1,9 @@
+(((ebx <- 59)
+  (call :nippledicks)
+  (ebx += 79))
+ (:nippledicks
+  (ebx += 2)
+  (tail-call :dicknipples))
+ (:dicknipples
+  (eax <- (print ebx))
+  (return)))

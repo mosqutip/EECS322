@@ -1,0 +1,4 @@
+((eax <- (allocate 21 eax))
+ (array <- eax)
+ ((mem array 4) <- 3)
+ (eax <- (array-error array 31)))

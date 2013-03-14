@@ -1,0 +1,17 @@
+((let ((g11 (new-tuple 0)))
+   (begin
+     (aset g11 0 (make-closure :g12 (new-tuple g11)))
+     (print
+      (+
+       ((closure-proc (aref g11 0)) (closure-vars (aref g11 0)) 5)
+       (let ((g13 (make-closure :g14 (new-tuple))))
+         ((closure-proc g13) (closure-vars g13) 1))))))
+ (:g14 (vars f) (+ f 10))
+ (:g12
+  (vars x)
+  (let ((f (aref vars 0)))
+    (if (< x 2)
+      1
+      (+
+       ((closure-proc (aref f 0)) (closure-vars (aref f 0)) (- x 1))
+       ((closure-proc (aref f 0)) (closure-vars (aref f 0)) (- x 2)))))))

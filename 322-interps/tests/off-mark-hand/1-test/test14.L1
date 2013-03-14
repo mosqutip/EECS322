@@ -1,0 +1,8 @@
+((
+  (ecx <- 1)
+  :do_loop
+  (ecx += 2)
+  (cjump ecx < 1000 :do_loop :exit_do_loop)
+  :exit_do_loop
+  (eax <- (print ecx))
+))

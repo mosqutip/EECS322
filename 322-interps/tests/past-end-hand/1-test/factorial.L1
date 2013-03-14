@@ -1,0 +1,15 @@
+(((ebx <- 5)
+  (ecx <- ebx)
+  (ecx -= 1)
+  (call :fact)
+  (ebx *= 2)
+  (ebx += 1)
+  (eax <- (print ebx)))
+
+  (:fact
+   :loop
+    (ebx *= ecx)
+    (ecx -= 1)
+    (cjump ecx = 0 :done :loop)
+   :done
+    (return)))

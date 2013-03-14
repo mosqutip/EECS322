@@ -1,0 +1,10 @@
+((b <- eax)
+ (a <- 8)
+ (b += b)
+ (c <- 9)
+ (c += b)
+ (eax <- c)
+ (return))
+b
+-4
+spilled_

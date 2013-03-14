@@ -1,0 +1,23 @@
+(((esi <- 100)
+  (eax <- (allocate 201 1))
+  (ebx <- 0)
+  (ecx <- 0)
+
+  :loop
+  (cjump ebx < 100 :add :done)
+  
+
+  :add
+  (edx <- ebx)
+  (edx += 1)
+  (edx *= 4)
+  (edx += eax)
+  (edx <- (mem edx 0))
+  (ecx += edx)
+  (ebx += 1)
+  (goto :loop)
+
+  :done
+  (ecx <<= 1)
+  (ecx += 1)
+  (eax <- (print ecx)))) 

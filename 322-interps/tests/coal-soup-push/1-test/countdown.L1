@@ -1,0 +1,12 @@
+;; counts down from 10 to 0
+(((esi <- 10)
+  :loop
+  (cjump esi < 0 :done :continue)
+  :continue
+  (ebx <- esi)
+  (ebx <<= 1)
+  (ebx += 1)
+  (eax <- (print ebx))
+  (esi -= 1)
+  (goto :loop)
+  :done))

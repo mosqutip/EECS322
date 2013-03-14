@@ -1,0 +1,8 @@
+((x <- eax)
+ (y <- eax)
+ (eax += x)
+ (eax *= y)
+ (z <- y)
+ (z >>= 2)
+ (eax += z)
+ (return))

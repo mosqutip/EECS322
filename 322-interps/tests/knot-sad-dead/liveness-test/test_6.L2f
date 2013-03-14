@@ -1,0 +1,2 @@
+((tail-call s)
+ (eax <- (mem x 8)))

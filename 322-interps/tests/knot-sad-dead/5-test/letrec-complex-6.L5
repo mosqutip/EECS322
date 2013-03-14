@@ -1,0 +1,42 @@
+(let ((cons (lambda (a b) (new-tuple a b))))
+  (let ((car (lambda (l) (aref l 0))))
+    (let ((cdr (lambda (l) (aref l 1))))
+      (let ((nil (new-tuple)))
+        (let ((nullp (lambda (l) (= 0 (alen l)))))
+          (let ((pairp (lambda (l) (if (a? l) (= 2 (alen l)) 0))))
+            (letrec ((length (lambda (l) (if (nullp l)
+                                             0
+                                             (+ 1 (length (cdr l)))))))
+              (letrec ((tuple-to-list (letrec ((tuple-to-list-rec
+                                                (lambda (arr n)
+                                                  (if (= n (alen arr))
+                                                      nil
+                                                      (let ((first (aref arr n)))
+                                                        (cons (if (number? first) first (tuple-to-list first))
+                                                              (tuple-to-list-rec arr (+ n 1))))))))
+                                        (lambda (arr) (tuple-to-list-rec arr 0)))))
+                (letrec ((list-to-tuple (letrec ((list-to-tuple-rec
+                                                  (lambda (l arr n)
+                                                    (if (nullp l)
+                                                        arr
+                                                        (let ((first (if (number? (car l))
+                                                                         (car l)
+                                                                         (list-to-tuple (car l)))))
+                                                          (begin (aset arr n first)
+                                                                 (list-to-tuple-rec (cdr l) arr (+ n 1))))))))
+                                          (lambda (l) (list-to-tuple-rec l (new-array (length l) 0) 0)))))
+                  (let ((print-list (lambda (l) (print (list-to-tuple l)))))
+                    (letrec ((map (lambda (f l)
+                                    (if (nullp l)
+                                        nil
+                                        (new-tuple (f (car l)) (map f (cdr l)))))))
+                      (letrec ((fact (lambda (n) (if (= 0 n)
+                                                     1
+                                                     (* n (fact (- n 1)))))))
+                        (letrec ((map-rec (lambda (f l)
+                                            (if (pairp l)
+                                                (map (lambda (l) (map-rec f l)) l)
+                                                (f l)))))
+                          (print-list
+                           (map-rec fact
+                                    (tuple-to-list (new-tuple 0 1 (new-tuple 2 3 4) 5 6)))))))))))))))))

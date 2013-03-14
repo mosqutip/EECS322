@@ -1,0 +1,1 @@
+((let ([a (new-array 3 7)]) (let ([b (aset a 2 9)]) (let ((v (aref a 2))) (print v))))))

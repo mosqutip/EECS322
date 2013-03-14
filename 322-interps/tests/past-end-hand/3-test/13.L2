@@ -1,0 +1,24 @@
+(((x <- 5)
+  (y <- 10)
+  (z <- 15)
+  (eax <- 0)
+  (ebx <- 1)
+  (cjump eax = 0 :true1 :false1)
+  :true1
+   (cjump ebx = 0 :true2 :false2)
+   :true2
+    (x <<= 1)
+    (x += 1)
+    (eax <- (print x))
+   (goto :done2)
+   :false2
+    (y <<= 1)
+    (y += 1)
+    (eax <- (print y))
+    (goto :done1)
+  :false1
+   (z <<= 1)
+   (z += 1)
+   (eax <- (print z))
+  :done2
+  :done1))

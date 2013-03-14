@@ -1,0 +1,13 @@
+((x <- 5)
+ (n <- 3)
+ (eax <- 1)
+ :loop
+ (cjump n = 0 :done :continue)
+ :continue
+ (eax *= x)
+ (n -= 1)
+ (goto :loop)
+ :done
+ (eax <<= 1)	; tag
+ (eax += 1)
+ (eax <- (print eax))) x -4 s_

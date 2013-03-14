@@ -1,0 +1,8 @@
+((let ([f (make-closure :f 1)])
+   (let ([x (closure-vars f)])
+     (let ([x (print x)])
+       (let ([lbl (closure-proc f)])
+         (lbl 2)))))
+ (:f (x)
+     (let ([z (+ x x)])
+       (print z))))

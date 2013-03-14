@@ -1,0 +1,7 @@
+(letrec ([fill (lambda (a i)
+               (if (< (alen a) i)
+	         a
+		 (begin
+		   (aset a (- i 1) i)
+		   (fill a (+ i 1)))))])
+  (print (fill (new-array 10 0) 1)))

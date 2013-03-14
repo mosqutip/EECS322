@@ -1,0 +1,23 @@
+(((eax <- 9)
+  (ebx <- 3)
+  (call :timestwo)
+  (result <- eax)
+  (eax <- (print eax)))
+ 
+ (:timestwo
+  (count <- eax)
+  (temp <- ebx)
+  (cjump count = 1 :finish :continue)
+  :finish
+  (eax <- temp)
+  (return)
+  :continue
+  (count -= 2)
+  (temp -= 1)
+  (temp >>= 1)
+  (temp *= 2)
+  (temp <<= 1)
+  (temp += 1)
+  (eax <- count)
+  (ebx <- temp)
+  (tail-call :timestwo)))

@@ -1,0 +1,8 @@
+(((eax <- (allocate 9 0))
+  (x <- eax)
+  (y <- 0)
+  ((mem ebp -16) <- 42)
+  (z <- (mem ebp -16))
+  (z <<= 1)
+  (z += 1)
+  (eax <- (print z))))

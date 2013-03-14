@@ -1,0 +1,6 @@
+((let ((f (new-tuple 0)))
+   (begin
+     (aset f 0 (begin (print 2) (make-closure :l_1 (new-tuple))))
+     (print
+      (let ((xx_2 (aref f 0))) ((closure-proc xx_2) (closure-vars xx_2) 2)))))
+ (:l_1 (xx_1 x) 1))

@@ -1,0 +1,8 @@
+(let ([x 4])
+  (let ([y 6])
+    (let ([z 7])
+      (let ([f (lambda (a b)
+                 (+ (+ a x)
+                    (* (- b y)
+                       z)))])
+        (print (f 5 10))))))

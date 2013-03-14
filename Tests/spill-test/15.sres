@@ -1,0 +1,8 @@
+(((mem ebp -16) <- 5)
+ (ecx <- (mem ebp -16))
+ (ecx -= 1)
+ (call :fact)
+ (s_0 <- (mem ebp -16))
+ (s_0 *= 2)
+ (s_0 += 1)
+ (eax <- (print s_0)))

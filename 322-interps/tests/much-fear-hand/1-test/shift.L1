@@ -1,0 +1,4 @@
+(((eax <- 20)
+  (eax <<= 2)
+  (eax += 1)
+  (eax <- (print eax))))

@@ -1,0 +1,18 @@
+; a[2] = {5,10}
+; x = a[0] * a[1]
+
+(((esi <- 5)
+  (eax <- (allocate esi 3))
+  ((mem eax 4) <- 5)
+  ((mem eax 8) <- 10)
+
+  (edx <- (mem eax 4))
+  (ebx <- (mem eax 8))
+
+  (edx *= ebx)
+
+  ; encode result
+  (edx *= 2)
+  (edx += 1)
+
+  (eax <- (print edx))))

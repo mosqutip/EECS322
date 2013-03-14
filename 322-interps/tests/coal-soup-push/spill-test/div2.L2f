@@ -1,0 +1,5 @@
+((num <- 10)
+ (num >>= 1)
+ (num <<= 1)	; tag
+ (num += 1)
+ (eax <- (print num))) num -4 s_
